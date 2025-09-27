@@ -1,0 +1,95 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.perfil {
+    padding: 2rem;
+    color: v.$blanco;
+    border-radius: 2rem;
+    background-color: rgba(255, 166, 0, 0);
+    backdrop-filter: blur(.6rem);
+    border: 1px solid #ffffff20; 
+
+    text-align: center;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    @include m.tablet {
+        flex-direction: column;
+        text-align: left;
+        gap: 0;
+    }
+   
+}
+
+.logo {
+    position: relative;
+    
+}
+
+    .logo img {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+
+        @include m.tablet {
+            width: 10rem;
+            height: 10rem;
+        }
+}
+
+.mis-datos {
+
+        color: #aaa;
+        text-align: left;
+
+
+        @include m.tablet {
+            text-align: center;
+        }
+
+        span {
+            display: block;
+            margin-bottom: .4rem;
+        }
+
+        .nombre {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: v.$blanco;
+            margin: .8rem 0;
+        }
+}
+
+
+.pulse {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        background-color: v.$primario;
+        border-radius: 50%;
+        bottom: 1rem;
+        right: 1rem;
+        animation: pulso 2s infinite;
+}
+
+@keyframes pulso {
+    0% {
+        box-shadow: 0 0 0 0 rgba(200, 200, 200, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(200, 200, 200, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(200, 200, 200, 0);
+    }
+}

@@ -1,0 +1,189 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+/* contenedor */
+.contenedor_info{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* información */
+
+.informacion {
+    @include m.bento(v.$f-primario);
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        color: #fff;
+    }
+
+    .info div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .row .value {
+        color: #aaa;
+    }
+
+}
+
+/* Idiomas */
+
+.idiomas {
+    @include m.bento(v.$f-primario);
+
+    .idioma {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        color: #fff;
+    }
+
+    .circulo_idioma {
+        text-align: center;
+
+        p {
+            font-size: 1.6rem;
+            margin: 0;
+        }
+    }
+
+    .circle {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .bg {
+        fill: none;
+        stroke: #222;
+        stroke-width: 2.8;
+    }
+
+    .progress {
+        fill: none;
+        stroke: v.$primario;
+        stroke-width: 2.8;
+        stroke-linecap: round;
+        transform: rotate(-90deg);
+        transform-origin: center;
+    }
+
+    .percentage {
+        font-size: .8rem;
+        text-anchor: middle;
+        fill: #fff;
+    }
+}
+
+/* Habilidades */
+
+.habilidades {
+  @include m.bento(v.$f-primario);
+}
+
+.habilidad {
+  margin-bottom: 20px;
+}
+
+.hab-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.value {
+  text-align: right;
+}
+
+.bar {
+  background: #222; /* fondo barra */
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 5px;
+  position: relative;
+}
+
+.fill {
+  background: v.$primario; /* color de progreso */
+  height: 100%;
+  border-radius: 3px;
+  width: 0; /* arranca vacía */
+  animation: cargar 2s ease forwards;
+}
+
+/* Animación de carga */
+@keyframes cargar {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--ancho);
+  }
+}
+
+/* Animación escalonada (opcional) */
+.habilidad:nth-child(1) .fill { animation-delay: 0s; }
+.habilidad:nth-child(2) .fill { animation-delay: 0.3s; }
+.habilidad:nth-child(3) .fill { animation-delay: 0.6s; }
+.habilidad:nth-child(4) .fill { animation-delay: 0.9s; }
+.habilidad:nth-child(5) .fill { animation-delay: 1.2s; }
+
+
+
+/* Conocimientos */
+
+.conocimientos {
+    @include m.bento(v.$f-primario);
+
+    .skills-list {
+        font-size: 1.6rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .skills-list li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 10px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    .skills-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: v.$primario;
+        font-size: 1.2rem;
+    }
+}
+
+/* Curriculum */
+
+.curriculum {
+    @include m.bento(v.$f-primario);
+
+    .link-descarga {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #aaa;
+        display: inline-block;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            cursor: pointer;
+            color: v.$blanco;
+            transform: translateX(1rem);
+        }
+    }
+}

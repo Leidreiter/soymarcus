@@ -1,0 +1,95 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.trabajos h2 {
+    color: v.$blanco;
+    margin: 3rem 1rem;
+}
+
+.galeria {
+    margin-bottom: 1rem;
+    
+    img {
+        height: 20rem;
+    }
+
+    @include m.bento(v.$f-primario);
+
+    &-imagenes {
+        @include m.grid(1, 2rem);
+
+        @include m.tablet {
+            @include m.grid(3, 2rem)
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: .8rem;
+            filter:  grayscale(100%);
+            transition: filter 0.5s ease;
+        }
+
+        img:hover {
+            cursor: pointer;
+            filter:  grayscale(0%);
+        }
+    }
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(v.$negro, 0.5);
+    display: grid;
+    place-items: center;
+    z-index: 10000;
+
+    animation: fadeIn ease-in 0.5s;
+
+    &.fade-out {
+        animation: fadeOut ease-in 0.5s;
+    }
+
+    img {
+        max-width: 60rem;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 100;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.btn-cerrar {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: v.$blanco;
+    border: none;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    cursor: pointer;
+    color: v.$negro;
+
+    &:hover {
+        background-color: v.$primario;
+        color: v.$blanco;
+    }
+}

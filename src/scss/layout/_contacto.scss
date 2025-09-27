@@ -1,0 +1,79 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contacto h2 {
+    color: v.$blanco;
+    margin: 3rem 1rem;
+}
+
+
+.contacto-grid{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @include m.tablet{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }  
+}
+
+.contacto-form{
+    @include m.bento(v.$f-primario);
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-size: 1.4rem;
+}
+.field{
+    display: flex;
+    align-items: center;
+}
+
+.icon-form {
+  color: var(--f-terciario);
+  font-size: 1.4rem;
+  background-color: var(--primario);
+  padding: 1.4rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: v.$primario;
+}
+.campo{
+    padding: 2rem;
+    border-radius: .4rem;
+    border: none;
+    background-color: v.$f-terciario;
+    color: v.$blanco;
+    flex: 1;
+}
+
+  .boton button{
+    background-color: v.$primario;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: v.$blanco;
+    padding: 2rem 3rem;
+    letter-spacing: .1rem;
+    border-radius: 5rem;
+    border: none;
+    width: 100%;
+    transition: transform 0.3s ease;
+
+    @include m.tablet{
+        width: auto;
+        font-size: 1.4rem;
+        padding: 1.4rem 3rem;
+    }
+    &:hover{
+        cursor:pointer;
+        transform: translateY(-5px);
+    }
+  }

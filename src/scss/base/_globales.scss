@@ -1,0 +1,101 @@
+@use 'base/variables' as v;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-padding-top: 0rem;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: v.$fuente_principal;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: v.$negro;
+    font-size: 1.6rem;
+    background-color: #191923;
+
+    &.contenido {
+        padding: 2rem;
+    }
+
+    &.overflow-hidden {
+        overflow: hidden;
+    }
+}
+
+p {
+    line-height: 1.6;
+}
+
+span {
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+}
+h3{
+  line-height: 1.8;
+}
+
+h1, h2, h3, p, a {
+  margin: 0;
+}
+
+/* --- Base (Móvil ≤480px) --- */
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.5rem; }
+p  { font-size: 1.4rem; }
+a  { font-size: 1.4rem; }
+
+/* --- Tablet (≥481px) --- */
+@media (min-width: 481px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.6rem; }
+  p  { font-size: 1.5rem; }
+  a  { font-size: 1.5rem; }
+}
+
+/* --- Laptop (≥769px) --- */
+@media (min-width: 769px) {
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.7rem; font-weight: normal;}
+  p  { font-size: 1.6rem; }
+  a  { font-size: 1.6rem; }
+}
+
+/* --- Desktop (≥1201px) --- */
+@media (min-width: 1201px) {
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.8rem; }
+  p  { font-size: 1.4rem; }
+  a  { font-size: 1.4rem; }
+}
+
+/* --- XL (≥1441px) --- */
+@media (min-width: 1441px) {
+  h1 { font-size: 4.6rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.8rem; }
+  p  { font-size: 1.4rem; }
+  a  { font-size: 1.4rem; }
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+

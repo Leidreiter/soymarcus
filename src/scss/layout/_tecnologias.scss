@@ -1,0 +1,25 @@
+@use 'base/mixins' as m;
+
+.tecnologias{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0;
+    @include m.tablet{
+        margin: 8rem 0;
+    }
+
+    img{
+        height: 3rem;
+        @include m.tablet{
+            height: 6rem;
+        }
+        object-fit: contain;
+        filter: grayscale(100%);
+        transition: filter 0.5s ease;
+        &:hover{
+            filter: grayscale(0%);
+        }
+    }
+
+}

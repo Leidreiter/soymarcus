@@ -1,0 +1,46 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.redes {
+    @include m.bento(v.$f-secundario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    a {
+        font-size: 1.8rem;
+        color: #aaa;
+
+        &:hover {
+            cursor: pointer;
+            color: v.$blanco;
+        }
+    }
+
+    ;
+}
+
+.footer {
+    @include m.bento(v.$f-secundario);
+
+    color: v.$grisClaro;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    a {
+        color: v.$grisClaro;
+
+        &:hover {
+            color: v.$blanco;
+        }
+    }
+
+    @include m.tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

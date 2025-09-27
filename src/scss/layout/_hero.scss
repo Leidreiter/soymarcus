@@ -1,0 +1,134 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+/* Hero */
+
+.hero {
+  background: url('../../../src/img/hero.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 26rem;
+  position: relative;
+  border-radius: 2rem;
+  margin-top: 1rem;
+
+  @include m.tablet {
+    height: 30rem;
+    margin-top: 0px;
+  }
+
+  @include m.xl {
+    height: 40rem;
+    margin-top: 0px;
+  }
+
+  .overlay {
+    position: absolute;
+    background-image: linear-gradient(90deg, rgba(45, 45, 58, .9) 15%, rgba(45, 45, 58, .7) 50%, rgba(43, 43, 53, .7) 100%);
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @include m.tablet {
+      text-align: left;
+    }
+
+    border-radius: 2rem;
+  }
+
+  .hero-titulo h1 {
+    color: v.$blanco;
+    font-weight: bold;
+    margin: 0;
+    font-size: 2.2rem;
+
+    @include m.tablet {
+      font-size: 3rem;
+    }
+
+    @include m.xl {
+      font-size: 4.6rem;
+    }
+  }
+
+  .typewriter {
+    color: v.$blanco;
+    display: inline-block;
+    border-right: 1px solid v.$grisClaro;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 2rem 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .texto-color {
+    color: v.$primario;
+    font-weight: bold;
+  }
+
+  .hero-copy {
+    width: 80%;
+    padding: 2rem;
+
+    @include m.tablet {
+      padding: 4rem;
+
+    }
+  }
+
+  .hero-boton a {
+    background-color: v.$primario;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: v.$blanco;
+    padding: 1rem 3rem;
+    letter-spacing: .1rem;
+    border: none;
+    border-radius: 5rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-5px);
+    }
+
+    @include m.tablet {
+      font-size: 1.4rem;
+      padding: 1.4rem 3rem;
+    }
+  }
+
+  .hero-imagen {
+    display: none;
+
+    @include m.tablet {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      opacity: 0;
+      animation: fadeIn 4s forwards;
+    }
+  }
+
+  @keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+  .hero-imagen img {
+    max-width: 80%;
+    filter: grayscale(100%);
+  }
+}
