@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     animarCirculos()
     animarNumeros()
-    crearGaleria()
+    // crearGaleria()
     type()
     
 })
@@ -59,63 +59,63 @@ function type() {
 
 /* Galería trabajos */
 
-function crearGaleria() {
+// function crearGaleria() {
 
-    const CANTIDAD_IMG = 1
-    const galeria = document.querySelector('.galeria-imagenes')
+//     const CANTIDAD_IMG = 1
+//     const galeria = document.querySelector('.galeria-imagenes')
 
-    for (let i = 1; i <= CANTIDAD_IMG; i++) {
-        const imagen = document.createElement('IMG')
-        imagen.src = `src/img/gallery/full/${i}.png`
-        imagen.alt = 'imagen galería'
+//     for (let i = 1; i <= CANTIDAD_IMG; i++) {
+//         const imagen = document.createElement('IMG')
+//         imagen.src = `src/img/gallery/thumbs/${i}.png`
+//         imagen.alt = 'imagen galería'
 
-        // Event Handler
-        imagen.onclick = function () {
-            mostrarImagen(i)
-        }
+//         // Event Handler
+//         imagen.onclick = function () {
+//             mostrarImagen(i)
+//         }
 
-        galeria.appendChild(imagen)
-    }
-}
+//         galeria.appendChild(imagen)
+//     }
+// }
 
-function mostrarImagen(i) {
+// function mostrarImagen(i) {
 
-    // Mostrar imagen en modal
-    const imagen = document.createElement('IMG')
-    imagen.src = `src/img/gallery/full/${i}.png`
-    imagen.alt = 'imagen galería'
+//     // Mostrar imagen en modal
+//     const imagen = document.createElement('IMG')
+//     imagen.src = `src/img/gallery/full/${i}.png`
+//     imagen.alt = 'imagen galería'
 
-    // Generar Modal
-    const modal = document.createElement('DIV')
-    modal.classList.add('modal')
-    modal.onclick = cerrarModal
+//     // Generar Modal
+//     const modal = document.createElement('DIV')
+//     modal.classList.add('modal')
+//     modal.onclick = cerrarModal
 
-    // Boton cerrar modal
-    const cerrarModalBtn = document.createElement('BUTTON')
-    cerrarModalBtn.textContent = 'X'
-    cerrarModalBtn.classList.add('btn-cerrar')
-    cerrarModalBtn.onclick = cerrarModal
+//     // Boton cerrar modal
+//     const cerrarModalBtn = document.createElement('BUTTON')
+//     cerrarModalBtn.textContent = 'X'
+//     cerrarModalBtn.classList.add('btn-cerrar')
+//     cerrarModalBtn.onclick = cerrarModal
 
-    modal.appendChild(imagen)
-    modal.appendChild(cerrarModalBtn)
+//     modal.appendChild(imagen)
+//     modal.appendChild(cerrarModalBtn)
 
-    // Agregar al HTML
-    const body = document.querySelector('body')
-    body.classList.add('overflow-hidden')
-    body.appendChild(modal)
-}
+//     // Agregar al HTML
+//     const body = document.querySelector('body')
+//     body.classList.add('overflow-hidden')
+//     body.appendChild(modal)
+// }
 
-function cerrarModal() {
-    const modal = document.querySelector('.modal')
-    modal.classList.add('fade-out')
+// function cerrarModal() {
+//     const modal = document.querySelector('.modal')
+//     modal.classList.add('fade-out')
 
-    setTimeout(() => {
-        modal?.remove()
+//     setTimeout(() => {
+//         modal?.remove()
 
-        const body = document.querySelector('body')
-        body.classList.remove('overflow-hidden')
-    }, 500);
-}
+//         const body = document.querySelector('body')
+//         body.classList.remove('overflow-hidden')
+//     }, 500);
+// }
 
 /* Números */
 function animarNumeros() {
@@ -170,3 +170,65 @@ function animarCirculos() {
     }, idx * 300); // retraso escalonado
   });
 }
+
+/* Carrusel testimoniales */
+
+  const track = document.querySelector('.testimonial-track');
+  const testimonials = Array.from(document.querySelectorAll('.testimonial'));
+  const dotsContainer = document.querySelector('.dots');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+
+  let index = 0;
+
+  function testimoniosPorVista() {
+    return window.innerWidth <= 768 ? 1 : 2;
+  }
+
+  function crearDots() {
+    dotsContainer.innerHTML = '';
+    const cantidad = Math.ceil(testimonials.length / testimoniosPorVista());
+    for (let i = 0; i < cantidad; i++) {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => moverA(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function actualizarDots() {
+    document.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === Math.floor(index / testimoniosPorVista()));
+    });
+  }
+
+  function moverA(pos) {
+    index = pos * testimoniosPorVista();
+    moverCarrusel();
+  }
+
+  function moverCarrusel() {
+    const ancho = testimonials[0].clientWidth;
+    track.style.transform = `translateX(-${index * ancho}px)`;
+    actualizarDots();
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (index < testimonials.length - 1) index++;
+    else index = 0;
+    moverCarrusel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (index > 0) index--;
+    else index = testimonials.length - 1;
+    moverCarrusel();
+  });
+
+  window.addEventListener('resize', () => {
+    crearDots();
+    moverCarrusel();
+  });
+
+  crearDots();

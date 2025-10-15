@@ -1,54 +1,75 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-
 .layout {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    margin: 0 auto;
-    @include m.tablet{
-        max-width: 90%;
-        flex-direction: row;
-        gap: 1rem;
-        padding: 2rem;
-    }
-}
-.contenedor_info{
-    flex-basis: 30%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0 auto;
+
+  @include m.tablet {
+    max-width: 144rem;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+  }
 }
 
+.contenedor_info {
+  flex-basis: 20%;
+}
+
+/* MAIN como grid: 1fr (contenido) + var(--sidebar-width) (sidebar) */
 .main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    flex-basis: 70%;
-    @include m.tablet {
-        display: grid;
-        grid-template-columns: 1fr 8rem;
-        gap: 1rem;
-    }
-    transition: grid-template-columns 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-basis: 80%;
+  transition: all 0.25s ease;
+
+  @include m.tablet {
+    display: grid;
+    /* minmax(0,1fr) permite que la primera columna se reduzca correctamente */
+    grid-template-columns: minmax(0, 1fr) var(--sidebar-width, 8rem);
+    gap: 2rem;
+    align-items: start;
+  }
 }
 
-.main-content.open {
-    grid-template-columns: 80% 20%;
-    transition: grid-template-columns 0.5s ease;
-}
-
+/* Contenido principal: permitir shrink interno */
 .content {
   grid-column: 1 / 2;
+  min-width: 0; /* CRUCIAL: permite que el content se reduzca en grid */
+  position: relative;
+  z-index: 1;
 }
 
+/* Sidebar: su ancho viene de la variable; no usamos transform ni absolute */
 .sidebar {
-  grid-column: 2 / 3;
-  box-sizing: border-box;
+  @include m.tablet{
+    grid-column: 2 / 3;
+    width: var(--sidebar-width, 8rem);
+  }
+
   width: 100%;
-  margin: 0 auto;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
   padding: 2rem;
-  transition: width 0.5s ease;
+  transition: width 0.25s ease; /* ancho animado */
   background: v.$f-primario;
   border-radius: 1rem;
   overflow: hidden;
+}
+
+/* Estado abierto: cambiamos la variable para expandir */
+.main-content.open {
+  --sidebar-width: 20rem; /* ajustá al ancho deseado */
+}
+
+/* (Opcional) pequeña mejora visual: que el contenido haga un shift sutil */
+.main-content.open .content {
+  transition: margin 0.25s ease;
+  /* margin-right: 0;  <- no necesario, dejo preparado si querés animar */
 }

@@ -45,16 +45,14 @@
 
     .circulo_idioma {
         text-align: center;
-
-        p {
-            font-size: 1.6rem;
-            margin: 0;
+        p{
+            font-size: 1.2rem;
         }
     }
 
     .circle {
-        width: 6rem;
-        height: 6rem;
+        width: 5rem;
+        height: 5rem;
     }
 
     .bg {
@@ -73,9 +71,9 @@
     }
 
     .percentage {
-        font-size: .8rem;
         text-anchor: middle;
         fill: #fff;
+        font-size: .8rem;
     }
 }
 
@@ -141,7 +139,6 @@
     @include m.bento(v.$f-primario);
 
     .skills-list {
-        font-size: 1.6rem;
         list-style: none;
         padding: 0;
         margin: 0;
@@ -163,7 +160,6 @@
         left: 0;
         top: 0;
         color: v.$primario;
-        font-size: 1.2rem;
     }
 }
 
@@ -173,7 +169,6 @@
     @include m.bento(v.$f-primario);
 
     .link-descarga {
-        font-size: 1.6rem;
         text-transform: uppercase;
         font-weight: bold;
         color: #aaa;

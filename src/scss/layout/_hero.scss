@@ -44,15 +44,6 @@
     color: v.$blanco;
     font-weight: bold;
     margin: 0;
-    font-size: 2.2rem;
-
-    @include m.tablet {
-      font-size: 3rem;
-    }
-
-    @include m.xl {
-      font-size: 4.6rem;
-    }
   }
 
   .typewriter {
@@ -65,6 +56,10 @@
 
     p {
       margin: 0;
+    }
+
+    span {
+      font-size: 2rem;
     }
   }
 
@@ -85,7 +80,6 @@
 
   .hero-boton a {
     background-color: v.$primario;
-    font-size: 1.4rem;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
@@ -103,7 +97,6 @@
     }
 
     @include m.tablet {
-      font-size: 1.4rem;
       padding: 1.4rem 3rem;
     }
   }
@@ -124,8 +117,10 @@
   }
 
   @keyframes fadeIn {
-  to { opacity: 1; }
-}
+    to {
+      opacity: 1;
+    }
+  }
 
   .hero-imagen img {
     max-width: 80%;

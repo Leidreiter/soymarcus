@@ -13,7 +13,6 @@
     }
 
     span{
-            font-size: 3rem;
             color: v.$primario;
             font-weight: bold;
         }
@@ -33,8 +32,8 @@
                 text-align: left;
             }
             span{
-                font-size: 2.8rem;
                 text-align: right;
+                font-size: 3rem;
             }
         }
     }

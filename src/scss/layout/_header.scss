@@ -18,10 +18,12 @@
 
     text-align: center;
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     align-items: center;
+    justify-content: center;
 
     @include m.tablet {
+
         flex-direction: column;
         text-align: left;
         gap: 0;
@@ -37,12 +39,7 @@
     .logo img {
         width: 8rem;
         height: 8rem;
-        border-radius: 50%;
-
-        @include m.tablet {
-            width: 10rem;
-            height: 10rem;
-        }
+        border-radius: 5rem;
 }
 
 .mis-datos {
@@ -61,7 +58,6 @@
         }
 
         .nombre {
-            font-size: 1.8rem;
             font-weight: bold;
             color: v.$blanco;
             margin: .8rem 0;

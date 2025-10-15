@@ -31,14 +31,13 @@
 
     &-precio {
         text-align: center;
-        font-size: 1.2rem;
         margin: 1rem;
     }
 
     .precio {
         color: v.$primario;
-        font-weight: bold;
         font-size: 3rem;
+        font-weight: bold;
         margin-right: 1rem;
     }
 
@@ -46,7 +45,7 @@
         list-style: none;
         text-align: center;
         line-height: 1.6;
-        font-size: 1.4rem;
+
         color: v.$grisClaro;
         width: 100%;
         padding: 0;
@@ -60,7 +59,6 @@
     &-link {
         color: v.$primario;
         font-weight: bold;
-        font-size: 1.4rem;
         text-transform: uppercase;
         transition: transform 0.3s ease;
     }
@@ -73,13 +71,13 @@
 }
 
 .ribbon {
+    font-size: .8rem;
     position: absolute;
     width: 120px;
     background-color: v.$primario;
     color: v.$blanco;
     text-align: center;
     font-weight: bold;
-    font-size: 1rem;
     text-transform: uppercase;
     top: 20px;
     right: -30px;

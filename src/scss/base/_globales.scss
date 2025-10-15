@@ -31,14 +31,16 @@ body {
 }
 
 p {
+    font-size: 1.4rem;
     line-height: 1.6;
 }
 
 span {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 a {
+    font-size: 1.4rem;
     text-decoration: none;
 }
 h3{
@@ -53,16 +55,12 @@ h1, h2, h3, p, a {
 h1 { font-size: 1.8rem; }
 h2 { font-size: 1.6rem; }
 h3 { font-size: 1.5rem; }
-p  { font-size: 1.4rem; }
-a  { font-size: 1.4rem; }
 
 /* --- Tablet (≥481px) --- */
 @media (min-width: 481px) {
   h1 { font-size: 2rem; }
   h2 { font-size: 1.8rem; }
   h3 { font-size: 1.6rem; }
-  p  { font-size: 1.5rem; }
-  a  { font-size: 1.5rem; }
 }
 
 /* --- Laptop (≥769px) --- */
@@ -70,8 +68,6 @@ a  { font-size: 1.4rem; }
   h1 { font-size: 2.4rem; }
   h2 { font-size: 2rem; }
   h3 { font-size: 1.7rem; font-weight: normal;}
-  p  { font-size: 1.6rem; }
-  a  { font-size: 1.6rem; }
 }
 
 /* --- Desktop (≥1201px) --- */
@@ -79,8 +75,6 @@ a  { font-size: 1.4rem; }
   h1 { font-size: 3rem; }
   h2 { font-size: 2rem; }
   h3 { font-size: 1.8rem; }
-  p  { font-size: 1.4rem; }
-  a  { font-size: 1.4rem; }
 }
 
 /* --- XL (≥1441px) --- */
@@ -88,8 +82,6 @@ a  { font-size: 1.4rem; }
   h1 { font-size: 4.6rem; }
   h2 { font-size: 2rem; }
   h3 { font-size: 1.8rem; }
-  p  { font-size: 1.4rem; }
-  a  { font-size: 1.4rem; }
 }
 
 img {
