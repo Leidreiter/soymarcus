@@ -1,0 +1,11 @@
+# robots.txt para Marcus | Diseñador UX/UI & Web Developer
+# Control de rastreo y SEO optimizado
+
+User-agent: *
+Disallow: /assets/
+Disallow: /scripts/
+Disallow: /scss/
+Allow: /
+
+# Sitemap para mejorar indexación
+Sitemap: https://soymarcus.pages.dev/sitemap.xml

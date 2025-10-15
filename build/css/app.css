@@ -338,7 +338,7 @@ body.overflow-hidden {
   overflow: hidden;
 }
 
-p {
+p, li {
   font-size: 1.4rem;
   line-height: 1.6;
 }
@@ -490,7 +490,7 @@ img {
   position: absolute;
   width: 1rem;
   height: 1rem;
-  background-color: #21759B;
+  background-color: #00B8D9;
   border-radius: 50%;
   bottom: 1rem;
   right: 1rem;
@@ -609,7 +609,7 @@ img {
 }
 .idiomas .progress {
   fill: none;
-  stroke: #21759B;
+  stroke: #00B8D9;
   stroke-width: 2.8;
   stroke-linecap: round;
   transform: rotate(-90deg);
@@ -653,7 +653,7 @@ img {
 }
 
 .fill {
-  background: #21759B; /* color de progreso */
+  background: #00B8D9; /* color de progreso */
   height: 100%;
   border-radius: 3px;
   width: 0; /* arranca vacía */
@@ -715,7 +715,7 @@ img {
   position: absolute;
   left: 0;
   top: 0;
-  color: #21759B;
+  color: #00B8D9;
 }
 
 /* Curriculum */
@@ -875,7 +875,7 @@ img {
   font-size: 2rem;
 }
 .hero .texto-color {
-  color: #21759B;
+  color: #00B8D9;
   font-weight: bold;
 }
 .hero .hero-copy {
@@ -888,7 +888,7 @@ img {
   }
 }
 .hero .hero-boton a {
-  background-color: #21759B;
+  background-color: #00B8D9;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
@@ -1003,7 +1003,7 @@ body {
 }
 
 .menu-items a:hover {
-  color: #21759B;
+  color: #00B8D9;
 }
 
 .numeros {
@@ -1018,7 +1018,7 @@ body {
   }
 }
 .numeros span {
-  color: #21759B;
+  color: #00B8D9;
   font-weight: bold;
 }
 .numeros .numero {
@@ -1072,7 +1072,7 @@ body {
   margin-bottom: 1rem;
 }
 .grid-servicios .servicio-link {
-  color: #21759B;
+  color: #00B8D9;
   font-weight: bold;
   text-transform: uppercase;
   transition: transform 0.3s ease;
@@ -1085,7 +1085,7 @@ body {
   text-align: left;
 }
 .grid-servicios .servicio p {
-  color: #aaa;
+  color: #FFFFFF;
 }
 
 .paquetes h2 {
@@ -1127,7 +1127,7 @@ body {
   margin: 1rem;
 }
 .paquete .precio {
-  color: #21759B;
+  color: #00B8D9;
   font-size: 3rem;
   font-weight: bold;
   margin-right: 1rem;
@@ -1142,10 +1142,10 @@ body {
   margin: 0 auto;
 }
 .paquete .lista li {
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 .paquete-link {
-  color: #21759B;
+  color: #00B8D9;
   font-weight: bold;
   text-transform: uppercase;
   transition: transform 0.3s ease;
@@ -1159,7 +1159,7 @@ body {
   font-size: 0.8rem;
   position: absolute;
   width: 120px;
-  background-color: #21759B;
+  background-color: #00B8D9;
   color: #FFFFFF;
   text-align: center;
   font-weight: bold;
@@ -1271,7 +1271,7 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #21759B;
+  background: #00B8D9;
   cursor: pointer;
 }
 
@@ -1359,7 +1359,7 @@ body {
 }
 
 .card-info a {
-  color: #21759B;
+  color: #00B8D9;
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
@@ -1436,7 +1436,7 @@ body {
   left: -1rem;
   width: 1.6rem;
   height: 1.6rem;
-  color: #21759B;
+  color: #00B8D9;
   animation: pulso 2s infinite;
   border-radius: 50%;
 }
@@ -1504,7 +1504,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #21759B;
+  background-color: #00B8D9;
 }
 
 .campo {
@@ -1517,7 +1517,7 @@ body {
 }
 
 .boton button {
-  background-color: #21759B;
+  background-color: #00B8D9;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
