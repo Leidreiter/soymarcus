@@ -20,7 +20,7 @@
   flex-basis: 20%;
 }
 
-/* MAIN como grid: 1fr (contenido) + var(--sidebar-width) (sidebar) */
+
 .main-content {
   display: flex;
   flex-direction: column;
@@ -30,46 +30,39 @@
 
   @include m.tablet {
     display: grid;
-    /* minmax(0,1fr) permite que la primera columna se reduzca correctamente */
     grid-template-columns: minmax(0, 1fr) var(--sidebar-width, 8rem);
     gap: 2rem;
     align-items: start;
   }
 }
 
-/* Contenido principal: permitir shrink interno */
 .content {
   grid-column: 1 / 2;
-  min-width: 0; /* CRUCIAL: permite que el content se reduzca en grid */
+  min-width: 0; 
   position: relative;
   z-index: 1;
 }
 
-/* Sidebar: su ancho viene de la variable; no usamos transform ni absolute */
 .sidebar {
   @include m.tablet{
     grid-column: 2 / 3;
     width: var(--sidebar-width, 8rem);
   }
 
+  @include m.bento(v.$f-primario);
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   margin: 0;
-  padding: 2rem;
-  transition: width 0.25s ease; /* ancho animado */
-  background: v.$f-primario;
-  border-radius: 1rem;
+  transition: width 0.25s ease; 
   overflow: hidden;
 }
 
-/* Estado abierto: cambiamos la variable para expandir */
 .main-content.open {
-  --sidebar-width: 20rem; /* ajustá al ancho deseado */
+  --sidebar-width: 20rem; 
 }
 
-/* (Opcional) pequeña mejora visual: que el contenido haga un shift sutil */
+
 .main-content.open .content {
   transition: margin 0.25s ease;
-  /* margin-right: 0;  <- no necesario, dejo preparado si querés animar */
 }

@@ -34,9 +34,8 @@
 }
 
 .testimonial-card {
-    background: v.$f-primario;
-    border-radius: 12px;
-    padding: 20px;
+    @include m.bento(v.$f-primario);
+
     height: 100%;
     display: flex;
     flex-direction: column;

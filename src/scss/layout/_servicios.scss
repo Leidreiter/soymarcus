@@ -22,10 +22,7 @@
         justify-content: space-between;
         gap: 1rem;
 
-        padding: 2rem;
-        background: v.$f-secundario;
-        color: v.$blanco;
-        border-radius: 2rem;
+       @include m.bento(v.$f-primario);
         margin-bottom: 1rem;
         
 

@@ -59,7 +59,10 @@
     }
 
     span {
-      font-size: 2rem;
+      font-size: 1.6rem;
+      @include m.tablet{
+        font-size: 2rem;
+      }
     }
   }
 

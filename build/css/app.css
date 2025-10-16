@@ -310,6 +310,15 @@ template {
   display: none;
 }
 
+/* Sobrescribe el comportamiento por defecto de Font Awesome */
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-display: swap;
+}
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-display: swap;
+}
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -362,7 +371,7 @@ h1, h2, h3, p, a {
 
 /* --- Base (Móvil ≤480px) --- */
 h1 {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 
 h2 {
@@ -512,7 +521,7 @@ img {
   padding: 2rem;
   background: #242430;
   color: #FFFFFF;
-  border-radius: 2rem;
+  border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -520,6 +529,7 @@ img {
 }
 .redes a {
   color: #aaa;
+  font-size: 2rem;
 }
 .redes a:hover {
   cursor: pointer;
@@ -530,7 +540,7 @@ img {
   padding: 2rem;
   background: #242430;
   color: #FFFFFF;
-  border-radius: 2rem;
+  border-radius: 1rem;
   color: #aaa;
   text-align: center;
   display: flex;
@@ -563,7 +573,7 @@ img {
   padding: 2rem;
   background: #20202a;
   color: #FFFFFF;
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 .informacion .info {
   display: flex;
@@ -584,7 +594,7 @@ img {
   padding: 2rem;
   background: #20202a;
   color: #FFFFFF;
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 .idiomas .idioma {
   display: flex;
@@ -626,7 +636,7 @@ img {
   padding: 2rem;
   background: #20202a;
   color: #FFFFFF;
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 .habilidad {
@@ -695,7 +705,7 @@ img {
   padding: 2rem;
   background: #20202a;
   color: #FFFFFF;
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 .conocimientos .skills-list {
   list-style: none;
@@ -723,7 +733,7 @@ img {
   padding: 2rem;
   background: #20202a;
   color: #FFFFFF;
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 .curriculum .link-descarga {
   text-transform: uppercase;
@@ -758,7 +768,6 @@ img {
   flex-basis: 20%;
 }
 
-/* MAIN como grid: 1fr (contenido) + var(--sidebar-width) (sidebar) */
 .main-content {
   display: flex;
   flex-direction: column;
@@ -769,22 +778,19 @@ img {
 @media (min-width: 768px) {
   .main-content {
     display: grid;
-    /* minmax(0,1fr) permite que la primera columna se reduzca correctamente */
     grid-template-columns: minmax(0, 1fr) var(--sidebar-width, 8rem);
     gap: 2rem;
     align-items: start;
   }
 }
 
-/* Contenido principal: permitir shrink interno */
 .content {
   grid-column: 1/2;
-  min-width: 0; /* CRUCIAL: permite que el content se reduzca en grid */
+  min-width: 0;
   position: relative;
   z-index: 1;
 }
 
-/* Sidebar: su ancho viene de la variable; no usamos transform ni absolute */
 @media (min-width: 768px) {
   .sidebar {
     grid-column: 2/3;
@@ -792,26 +798,24 @@ img {
   }
 }
 .sidebar {
+  padding: 2rem;
+  background: #20202a;
+  color: #FFFFFF;
+  border-radius: 1rem;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   margin: 0;
-  padding: 2rem;
-  transition: width 0.25s ease; /* ancho animado */
-  background: #20202a;
-  border-radius: 1rem;
+  transition: width 0.25s ease;
   overflow: hidden;
 }
 
-/* Estado abierto: cambiamos la variable para expandir */
 .main-content.open {
-  --sidebar-width: 20rem; /* ajustá al ancho deseado */
+  --sidebar-width: 20rem;
 }
 
-/* (Opcional) pequeña mejora visual: que el contenido haga un shift sutil */
 .main-content.open .content {
   transition: margin 0.25s ease;
-  /* margin-right: 0;  <- no necesario, dejo preparado si querés animar */
 }
 
 /* Hero */
@@ -872,7 +876,12 @@ img {
   margin: 0;
 }
 .hero .typewriter span {
-  font-size: 2rem;
+  font-size: 1.6rem;
+}
+@media (min-width: 768px) {
+  .hero .typewriter span {
+    font-size: 2rem;
+  }
 }
 .hero .texto-color {
   color: #00B8D9;
@@ -1025,8 +1034,11 @@ body {
   padding: 2rem;
   background: #20202a;
   color: #FFFFFF;
-  border-radius: 2rem;
+  border-radius: 1rem;
   text-align: center;
+}
+.numeros .numero span {
+  font-size: 3rem;
 }
 @media (min-width: 768px) {
   .numeros .numero {
@@ -1041,7 +1053,6 @@ body {
   }
   .numeros .numero span {
     text-align: right;
-    font-size: 3rem;
   }
 }
 
@@ -1066,9 +1077,9 @@ body {
   justify-content: space-between;
   gap: 1rem;
   padding: 2rem;
-  background: #242430;
+  background: #20202a;
   color: #FFFFFF;
-  border-radius: 2rem;
+  border-radius: 1rem;
   margin-bottom: 1rem;
 }
 .grid-servicios .servicio-link {
@@ -1110,7 +1121,7 @@ body {
   padding: 2rem;
   background: #20202a;
   color: #FFFFFF;
-  border-radius: 2rem;
+  border-radius: 1rem;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -1118,6 +1129,7 @@ body {
   justify-content: space-between;
   gap: 0.4rem;
   text-align: center;
+  padding: 4rem;
 }
 .paquete-titulo {
   font-weight: 600;
@@ -1201,9 +1213,10 @@ body {
   }
 }
 .testimonial-card {
+  padding: 2rem;
   background: #20202a;
-  border-radius: 12px;
-  padding: 20px;
+  color: #FFFFFF;
+  border-radius: 1rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1413,7 +1426,7 @@ body {
   padding: 2rem;
   background: #20202a;
   color: #FFFFFF;
-  border-radius: 2rem;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   border-radius: 2rem;
@@ -1483,7 +1496,7 @@ body {
   padding: 2rem;
   background: #20202a;
   color: #FFFFFF;
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 .formulario {
@@ -1494,26 +1507,30 @@ body {
 
 .field {
   display: flex;
-  align-items: center;
+  align-items: stretch;
+  border-radius: 0.4rem;
+  overflow: hidden;
 }
 
 .icon-form {
   color: var(--f-terciario);
-  background-color: var(--primario);
-  padding: 1.4rem;
+  background-color: #00B8D9;
+  padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #00B8D9;
+  flex-shrink: 0;
 }
 
 .campo {
   padding: 2rem;
-  border-radius: 0.4rem;
   border: none;
   background-color: #1a1a22;
   color: #FFFFFF;
   flex: 1;
+  width: 100%;
+  font-size: 1.6rem;
+  border-radius: 0;
 }
 
 .boton button {
