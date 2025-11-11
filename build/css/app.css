@@ -410,7 +410,7 @@ h3 {
 /* --- Desktop (≥1201px) --- */
 @media (min-width: 1201px) {
   h1 {
-    font-size: 3rem;
+    font-size: 3.6rem;
   }
   h2 {
     font-size: 2rem;
@@ -820,7 +820,7 @@ img {
 
 /* Hero */
 .hero {
-  background: url("../../../src/img/hero.jpg");
+  background: url("../../../src/img/bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -940,7 +940,6 @@ img {
 }
 .hero .hero-imagen img {
   max-width: 80%;
-  filter: grayscale(100%);
 }
 
 body {
@@ -1098,6 +1097,13 @@ body {
 .grid-servicios .servicio p {
   color: #FFFFFF;
 }
+.grid-servicios .servicio .emoji {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
 
 .paquetes h2 {
   color: #FFFFFF;
@@ -1168,11 +1174,11 @@ body {
 }
 
 .ribbon {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   position: absolute;
   width: 120px;
   background-color: #00B8D9;
-  color: #FFFFFF;
+  color: #000000;
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;

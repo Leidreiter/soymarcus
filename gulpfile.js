@@ -25,6 +25,5 @@ export function dev() {
 
 // Nueva tarea que solo compila y termina
 export const build = series(js, css)
-export default series(build, dev)
-
 // export default series(js, css, dev)
+export default series(build, dev)

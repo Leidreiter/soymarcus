@@ -4,7 +4,7 @@
 /* Hero */
 
 .hero {
-  background: url('../../../src/img/hero.jpg');
+  background: url('../../../src/img/bg.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -127,6 +127,5 @@
 
   .hero-imagen img {
     max-width: 80%;
-    filter: grayscale(100%);
   }
 }
