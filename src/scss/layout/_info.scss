@@ -39,12 +39,14 @@
     .idioma {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 2rem;
         color: #fff;
     }
 
     .circulo_idioma {
         text-align: center;
+        flex: 1;
 
         p {
             font-size: 1.2rem;
@@ -78,6 +80,18 @@
     }
 }
 
+.bitmoji{
+    width: fit-content;
+    flex: 1;
+    margin: 0;
+    background-color: v.$f-terciario;
+    border-radius: 50%;
+}
+
+.bitmoji img{
+    width: 100%;
+    border-radius: 50%;
+}
 /* Habilidades */
 
 .habilidades {
