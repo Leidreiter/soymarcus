@@ -15,7 +15,7 @@
   margin-top: 1rem;
 
   @include m.tablet {
-    height: 30rem;
+    height: 34rem;
     margin-top: 0px;
   }
 
@@ -121,7 +121,6 @@
 
 .hero-imagen img {
     width: 100%;
-    height: 100%;
     object-fit: contain;    
     max-width: none;
     display: block;
