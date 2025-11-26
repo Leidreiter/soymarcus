@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   animarNumeros();
   // crearGaleria();
   type();
+  initDarkMode();
 });
 
 /* Menu hamburguesa (optimizado solo para escritorio) */
@@ -180,3 +181,38 @@ window.addEventListener('resize', () => {
 });
 
 crearDots();
+
+/* Dark Mode / Light Mode Toggle */
+function initDarkMode() {
+  const checkbox = document.getElementById('checkbox');
+  const body = document.body;
+
+  // Cargar preferencia guardada o usar dark mode por defecto
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+  // Si hay tema guardado, usarlo; si no, usar preferencia del sistema o dark por defecto
+  const isDark = savedTheme ? savedTheme === 'dark' : (savedTheme === null && prefersDark);
+  
+  // Aplicar tema inicial
+  if (isDark) {
+    body.classList.remove('light-mode');
+    checkbox.checked = true;
+  } else {
+    body.classList.add('light-mode');
+    checkbox.checked = false;
+  }
+
+  // Escuchar cambios en el checkbox
+  checkbox.addEventListener('change', function() {
+    if (this.checked) {
+      // Modo dark activado
+      body.classList.remove('light-mode');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      // Modo light activado
+      body.classList.add('light-mode');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+}

@@ -54,8 +54,8 @@
     }
 
     .circle {
-        width: 5rem;
-        height: 5rem;
+        width: 90%;
+        height: 90%;
     }
 
     .bg {
@@ -80,7 +80,7 @@
     }
 }
 
-.bitmoji{
+.bitmoji {
     width: fit-content;
     flex: 1;
     margin: 0;
@@ -88,10 +88,11 @@
     border-radius: 50%;
 }
 
-.bitmoji img{
+.bitmoji img {
     width: 100%;
     border-radius: 50%;
 }
+
 /* Habilidades */
 
 .habilidades {

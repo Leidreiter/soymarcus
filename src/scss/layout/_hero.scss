@@ -60,7 +60,8 @@
 
     span {
       font-size: 1.6rem;
-      @include m.tablet{
+
+      @include m.tablet {
         font-size: 2rem;
       }
     }
@@ -104,27 +105,32 @@
     }
   }
 
-.hero-imagen {
+  
+  /* From Uiverse.io by Creatlydev */ 
+
+
+  .hero-imagen {
     display: none;
 
     @include m.tablet {
-        width: 50%;
-        height: 100%;       
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: stretch;
-        opacity: 0;
-        animation: fadeIn 4s forwards;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: stretch;
+      opacity: 0;
+      animation: fadeIn 4s forwards;
     }
-}
+  }
 
-.hero-imagen img {
+  .hero-imagen img {
     width: 100%;
-    object-fit: contain;    
+    object-fit: contain;
     max-width: none;
     display: block;
-}
+  }
+
   @keyframes fadeIn {
     to {
       opacity: 1;

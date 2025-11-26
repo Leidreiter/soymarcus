@@ -1,0 +1,407 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+/* From Uiverse.io by JustCode14 */ 
+/* Theme Switch */
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 4em;
+    height: 2.2em;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2a2a2a;
+    transition: 0.4s;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.2em;
+    width: 1.2em;
+    border-radius: 20px;
+    left: 0.5em;
+    bottom: 0.5em;
+    transition: 0.4s;
+    transition-timing-function: cubic-bezier(0.81, -0.04, 0.38, 1.5);
+    box-shadow: inset 8px -4px 0px 0px #fff;
+  }
+  
+  .switch input:checked + .slider {
+    background-color: #00a6ff;
+  }
+  
+  .switch input:checked + .slider:before {
+    transform: translateX(1.8em);
+    box-shadow: inset 15px -4px 0px 15px #ffcf48;
+  }
+  
+  .star {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    width: 5px;
+    transition: all 0.4s;
+    height: 5px;
+  }
+  
+  .star_1 {
+    left: 2.5em;
+    top: 0.5em;
+  }
+  
+  .star_2 {
+    left: 2.2em;
+    top: 1.2em;
+  }
+  
+  .star_3 {
+    left: 3em;
+    top: 0.9em;
+  }
+  
+  .switch input:checked ~ .slider .star {
+    opacity: 0;
+  }
+  
+  .cloud {
+    width: 3.5em;
+    position: absolute;
+    bottom: -1.4em;
+    left: -1.1em;
+    opacity: 0;
+    transition: all 0.4s;
+  }
+  
+  .switch input:checked ~ .slider .cloud {
+    opacity: 1;
+  }
+
+/* Posicionamiento del switch */
+.switch {
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  z-index: 10000;
+
+  @include m.tablet{
+    top: 3rem;
+    right: 14rem;
+  }
+  @include m.xl{
+    top: 3rem;
+    right: 3rem;
+  }
+}
+
+/* ============================================
+   ESTILOS PARA MODO LIGHT
+   ============================================
+   Cuando el body tiene la clase .light-mode,
+   se aplican estos estilos para cambiar de
+   modo dark a modo light.
+   ============================================ */
+
+/* Cambio de fondo del body - de dark (#191923) a light (#f5f5f5) */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Cambio de color de texto en h2 - de blanco a gradiente oscuro */
+body.light-mode h2 {
+  color: #333;
+}
+body.light-mode h3 {
+    color: #333;
+  }
+
+/* Cambio de fondo en contenedores de información - de dark (#20202a) a light (#ffffff) */
+body.light-mode .informacion,
+body.light-mode .idiomas,
+body.light-mode .habilidades,
+body.light-mode .conocimientos,
+body.light-mode .curriculum,
+body.light-mode .sidebar {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+/* Cambio de color de texto en información - de blanco a oscuro */
+body.light-mode .informacion .info,
+body.light-mode .idiomas .idioma {
+  color: #333;
+}
+
+/* Cambio de color de valores secundarios - de gris claro (#aaa) a gris oscuro (#666) */
+body.light-mode .row .value,
+body.light-mode .mis-datos {
+  color: #666;
+}
+
+/* Cambio de color de nombre en header - de blanco a oscuro */
+body.light-mode .mis-datos .nombre {
+  color: #333;
+}
+
+/* Cambio de fondo del círculo de idiomas - de dark (#1a1a22) a light (#f0f0f0) */
+body.light-mode .bitmoji {
+  background-color: #f0f0f0;
+}
+
+/* Cambio de color del círculo de progreso - de dark (#222) a light (#e0e0e0) */
+body.light-mode .idiomas .bg {
+  stroke: #e0e0e0;
+}
+
+/* Cambio de color del porcentaje - de blanco a oscuro */
+body.light-mode .idiomas .percentage {
+  fill: #333;
+}
+
+body.light-mode .hamburger-menu{
+    color: #333;
+}
+
+/* Cambio de fondo de la barra de habilidades - de dark (#222) a light (#e0e0e0) */
+body.light-mode .bar {
+  background: #e0e0e0;
+}
+
+/* Cambio de color de texto en habilidades - de blanco a oscuro */
+body.light-mode .habilidades,
+body.light-mode .conocimientos {
+  color: #333;
+}
+
+/* Cambio de color de enlace de descarga - de gris claro a oscuro */
+body.light-mode .curriculum .link-descarga {
+  color: #666;
+}
+
+body.light-mode .curriculum .link-descarga:hover {
+  color: #333;
+}
+
+/* Cambio de fondo del header/perfil - de dark a light */
+body.light-mode .perfil {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #e0e0e0;
+  color: #333;
+}
+
+/* Cambio de color de texto en servicios - de blanco a oscuro */
+body.light-mode .servicios h2,
+body.light-mode .servicio p {
+  color: #333;
+}
+
+/* Cambio de fondo de tarjetas de servicios - de dark (#20202a) a light (#ffffff) */
+body.light-mode .servicio {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+/* Cambio de color de texto en paquetes - de blanco a oscuro */
+body.light-mode .paquetes h2 {
+  color: #333;
+}
+
+/* Cambio de fondo de tarjetas de paquetes - de dark (#20202a) a light (#ffffff) */
+body.light-mode .paquete {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+/* Cambio de color de texto en lista de paquetes - de gris claro a oscuro */
+body.light-mode .paquete .lista {
+  color: #666;
+}
+
+/* Cambio de color de texto en testimonios - de blanco a oscuro */
+body.light-mode .testimonials,
+body.light-mode .testimonials h2 {
+  color: #333;
+}
+
+/* Cambio de fondo de tarjetas de testimonios - de dark (#20202a) a light (#ffffff) */
+body.light-mode .testimonial-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+/* Cambio de color de texto en testimonios - de gris claro a oscuro */
+body.light-mode .testimonial-text,
+body.light-mode .testimonial-info p {
+  color: #666;
+}
+
+/* Cambio de fondo de estrellas - de dark (#1a1a22) a light (#f0f0f0) */
+body.light-mode .stars {
+  background-color: #f0f0f0;
+}
+
+/* Cambio de fondo de botones de navegación - de dark (#333) a light (#e0e0e0) */
+body.light-mode .arrow {
+  background: #e0e0e0;
+  color: #333;
+}
+
+body.light-mode .arrow:hover {
+  background: #d0d0d0;
+}
+
+/* Cambio de color de dot activo - de dark (#333) a light (#999) */
+body.light-mode .dot.active {
+  background: #999;
+}
+
+/* Cambio de color de texto en trabajos - de blanco a oscuro */
+body.light-mode .trabajos h2 {
+  color: #333;
+}
+
+/* Cambio de fondo de info de tarjetas - de dark (#242430) a light (#ffffff) */
+body.light-mode .card-info {
+  background: #ffffff;
+  color: #333;
+  border: 1px solid #e0e0e0;
+}
+
+/* En móvil, cambio de fondo de info de tarjetas - de dark (#222) a light (#f5f5f5) */
+@media (max-width: 768px) {
+  body.light-mode .card-info {
+    background: #f5f5f5;
+  }
+}
+
+/* Cambio de color de texto en contacto - de blanco a oscuro */
+body.light-mode .contacto h2 {
+  color: #333;
+}
+
+/* Cambio de fondo del formulario - de dark (#20202a) a light (#ffffff) */
+body.light-mode .contacto-form {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+/* Cambio de fondo de campos del formulario - de dark (#1a1a22) a light (#f5f5f5) */
+body.light-mode .campo {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #e0e0e0;
+}
+
+/* Cambio de fondo de redes sociales - de dark (#242430) a light (#ffffff) */
+body.light-mode .redes {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+/* Cambio de color de iconos de redes - de gris claro a oscuro */
+body.light-mode .redes a {
+  color: #666;
+}
+
+body.light-mode .redes a:hover {
+  color: #333;
+}
+
+/* Cambio de fondo del footer - de dark (#242430) a light (#ffffff) */
+body.light-mode .footer {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  color: #666;
+}
+
+/* Cambio de color de enlaces del footer - de gris claro a oscuro */
+body.light-mode .footer a {
+  color: #666;
+}
+
+body.light-mode .footer a:hover {
+  color: #333;
+}
+
+/* Cambio de overlay del hero - de dark a light */
+body.light-mode .hero .overlay {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, .9) 15%, rgba(255, 255, 255, .7) 50%, rgba(250, 250, 250, .7) 100%);
+}
+
+/* Cambio de color de texto en hero - de blanco a oscuro */
+body.light-mode .hero-titulo h1,
+body.light-mode .typewriter {
+  color: #333;
+}
+
+/* Cambio de color del borde del typewriter - de gris claro a oscuro */
+body.light-mode .typewriter {
+  border-right-color: #666;
+}
+
+/* Cambio de fondo de números - de dark (#20202a) a light (#ffffff) */
+body.light-mode .numero {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  color: #333;
+}
+
+/* Cambio de color de texto en números - de blanco a oscuro */
+body.light-mode .numero p {
+  color: #666;
+}
+
+/* Cambio de fondo de timeline - de dark (#20202a) a light (#ffffff) */
+body.light-mode .timeline-column {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+/* Cambio de color de texto en timeline - de blanco a oscuro */
+body.light-mode .timeline-column h2,
+body.light-mode .timeline-item h3 {
+  color: #333;
+}
+
+/* Cambio de color de borde izquierdo - de dark (#1a1a22) a light (#e0e0e0) */
+body.light-mode .timeline-item {
+  border-left-color: #e0e0e0;
+}
+
+/* Cambio de fondo de fecha - de dark (#1a1a22) a light (#f0f0f0) */
+body.light-mode .timeline-item .date {
+  background: #f0f0f0;
+  color: #666;
+}
+
+/* Cambio de color de texto en timeline - de gris claro a oscuro */
+body.light-mode .timeline-item p {
+  color: #666;
+}
+
+/* Cambio de fondo de tecnologías - mantener transparente pero ajustar si es necesario */
+body.light-mode .tecnologias {
+  background-color: transparent;
+}
+  
