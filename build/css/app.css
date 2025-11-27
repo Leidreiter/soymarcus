@@ -564,7 +564,24 @@ img {
 /* From Uiverse.io by JustCode14 */
 /* Theme Switch */
 /* The switch - the box around the slider */
-.switch {
+.switchs {
+  display: flex;
+  gap: 1rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 10000;
+}
+@media (min-width: 768px) {
+  .switchs {
+    position: relative;
+    bottom: auto;
+    right: auto;
+  }
+}
+
+/* Switch Dark Mode */
+.switch-dark {
   font-size: 17px;
   position: relative;
   display: inline-block;
@@ -575,14 +592,14 @@ img {
 }
 
 /* Hide default HTML checkbox */
-.switch input {
+.switch-dark input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
-.slider {
+/* The slider for dark mode */
+.slider-dark {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -595,7 +612,7 @@ img {
   overflow: hidden;
 }
 
-.slider:before {
+.slider-dark:before {
   position: absolute;
   content: "";
   height: 1.2em;
@@ -608,11 +625,11 @@ img {
   box-shadow: inset 8px -4px 0px 0px #fff;
 }
 
-.switch input:checked + .slider {
-  background-color: #00a6ff;
+.switch-dark input:checked + .slider-dark {
+  background-color: #00B8D9;
 }
 
-.switch input:checked + .slider:before {
+.switch-dark input:checked + .slider-dark:before {
   transform: translateX(1.8em);
   box-shadow: inset 15px -4px 0px 15px #ffcf48;
 }
@@ -641,7 +658,7 @@ img {
   top: 0.9em;
 }
 
-.switch input:checked ~ .slider .star {
+.switch-dark input:checked ~ .slider-dark .star {
   opacity: 0;
 }
 
@@ -654,23 +671,8 @@ img {
   transition: all 0.4s;
 }
 
-.switch input:checked ~ .slider .cloud {
+.switch-dark input:checked ~ .slider-dark .cloud {
   opacity: 1;
-}
-
-/* Posicionamiento del switch */
-.switch {
-  position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-  z-index: 10000;
-}
-@media (min-width: 768px) {
-  .switch {
-    position: relative;
-    bottom: auto;
-    right: auto;
-  }
 }
 
 /* ============================================
@@ -961,6 +963,75 @@ body.light-mode .timeline-item p {
 /* Cambio de fondo de tecnologías - mantener transparente pero ajustar si es necesario */
 body.light-mode .tecnologias {
   background-color: transparent;
+}
+
+/* Switch Idioma */
+.switch-idioma {
+  position: relative;
+  display: inline-block;
+  width: 8rem;
+  border-radius: 30px;
+}
+
+.switch-idioma input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider-idioma {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2a2a2a;
+  transition: 0.4s;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  column-gap: 1.4rem;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+
+.slider-idioma .flag {
+  transition: opacity 0.4s;
+  display: inline-block;
+}
+.slider-idioma .flag img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+@media (min-width: 768px) {
+  .slider-idioma .flag img {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+/* Cuando español está activo (input no checked) */
+.switch-idioma input:not(:checked) + .slider-idioma .flag-es {
+  opacity: 1;
+}
+
+.switch-idioma input:not(:checked) + .slider-idioma .flag-us {
+  opacity: 0.4;
+}
+
+/* Cuando inglés está activo (input checked) */
+.switch-idioma input:checked + .slider-idioma .flag-us {
+  opacity: 1;
+}
+
+.switch-idioma input:checked + .slider-idioma .flag-es {
+  opacity: 0.4;
+}
+
+.switch-idioma input:checked + .slider-idioma {
+  background-color: #1a1a22;
 }
 
 /* contenedor */
@@ -1297,13 +1368,13 @@ body.light-mode .tecnologias {
 }
 @media (min-width: 768px) {
   .hero {
-    height: 36rem;
+    height: 38rem;
     margin-top: 0px;
   }
 }
 @media (min-width: 1400px) {
   .hero {
-    height: 42rem;
+    height: 44rem;
     margin-top: 0px;
   }
 }
@@ -1385,6 +1456,9 @@ body.light-mode .tecnologias {
   .hero .hero-boton a {
     padding: 1.4rem 3rem;
   }
+}
+.hero .hero-imagen {
+  position: relative;
 }
 @media (min-width: 768px) {
   .hero .hero-imagen {

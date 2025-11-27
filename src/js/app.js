@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* Texto type hero */
-const texts = [
+let texts = [
   "creo marcas memorables.",
   "diseño interfaces únicas.",
   "programo código limpio.",
@@ -47,29 +47,59 @@ let isDeleting = false;
 const speed = 100;   // velocidad de tipeo
 const eraseSpeed = 50; // velocidad de borrado
 const delay = 1500;  // pausa antes de borrar
+let typeTimeout = null; // Variable para almacenar el timeout actual
 
 function type() {
   const element = document.getElementById("typewriter");
+  if (!element) return;
+
+  // Limpiar timeout anterior si existe
+  if (typeTimeout) {
+    clearTimeout(typeTimeout);
+    typeTimeout = null;
+  }
 
   if (i < texts.length) {
     if (!isDeleting && j <= texts[i].length) {
       currentText = texts[i].substring(0, j++);
       element.textContent = currentText;
-      setTimeout(type, speed);
+      typeTimeout = setTimeout(type, speed);
     } else if (isDeleting && j >= 0) {
       currentText = texts[i].substring(0, j--);
       element.textContent = currentText;
-      setTimeout(type, eraseSpeed);
+      typeTimeout = setTimeout(type, eraseSpeed);
     } else if (!isDeleting && j > texts[i].length) {
       isDeleting = true;
-      setTimeout(type, delay);
+      typeTimeout = setTimeout(type, delay);
     } else if (isDeleting && j < 0) {
       isDeleting = false;
       i = (i + 1) % texts.length;
-      setTimeout(type, speed);
+      typeTimeout = setTimeout(type, speed);
     }
   }
 }
+
+// Función para actualizar los textos del typewriter (usada por idiomas.js)
+window.updateTypewriterTexts = function(newTexts) {
+  // Cancelar cualquier timeout activo
+  if (typeTimeout) {
+    clearTimeout(typeTimeout);
+    typeTimeout = null;
+  }
+  
+  texts = newTexts;
+  // Reiniciar el typewriter con los nuevos textos
+  i = 0;
+  j = 0;
+  currentText = "";
+  isDeleting = false;
+  const element = document.getElementById("typewriter");
+  if (element) {
+    element.textContent = "";
+    // Iniciar el typewriter de nuevo
+    type();
+  }
+};
 
 /* Números */
 function animarNumeros() {

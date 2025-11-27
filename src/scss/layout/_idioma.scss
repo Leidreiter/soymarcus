@@ -1,0 +1,74 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+/* Switch Idioma */
+.switch-idioma {
+    position: relative;
+    display: inline-block;
+    width: 8rem;
+    border-radius: 30px;
+  }
+  
+  .switch-idioma input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider-idioma {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2a2a2a;
+    transition: 0.4s;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    column-gap: 1.4rem;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1rem;
+  }
+  
+  
+  .slider-idioma .flag {
+    transition: opacity 0.4s;
+    display: inline-block;
+    img {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+
+    @include m.tablet{
+        img {
+            width: 2.4rem;
+            height: 2.4rem;
+          }
+    }
+  }
+  
+  /* Cuando español está activo (input no checked) */
+  .switch-idioma input:not(:checked) + .slider-idioma .flag-es {
+    opacity: 1;
+  }
+  
+  .switch-idioma input:not(:checked) + .slider-idioma .flag-us {
+    opacity: 0.4;
+  }
+  
+  /* Cuando inglés está activo (input checked) */
+  .switch-idioma input:checked + .slider-idioma .flag-us {
+    opacity: 1;
+  }
+  
+  .switch-idioma input:checked + .slider-idioma .flag-es {
+    opacity: 0.4;
+  }
+  
+  .switch-idioma input:checked + .slider-idioma {
+    background-color: v.$f-terciario;
+  }
