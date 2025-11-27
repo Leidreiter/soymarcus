@@ -15,12 +15,12 @@
   margin-top: 1rem;
 
   @include m.tablet {
-    height: 34rem;
+    height: 36rem;
     margin-top: 0px;
   }
 
   @include m.xl {
-    height: 40rem;
+    height: 42rem;
     margin-top: 0px;
   }
 
@@ -32,9 +32,11 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
 
     @include m.tablet {
       text-align: left;
+      flex-direction: row;
     }
 
     border-radius: 2rem;
@@ -44,6 +46,7 @@
     color: v.$blanco;
     font-weight: bold;
     margin: 0;
+    text-wrap: balance;
   }
 
   .typewriter {
@@ -105,30 +108,33 @@
     }
   }
 
-  
-  /* From Uiverse.io by Creatlydev */ 
 
 
   .hero-imagen {
-    display: none;
 
     @include m.tablet {
       width: 50%;
       height: 100%;
+      margin-right: 2.4rem;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      align-items: stretch;
+      align-items: flex-end;
       opacity: 0;
       animation: fadeIn 4s forwards;
     }
   }
 
   .hero-imagen img {
-    width: 100%;
-    object-fit: contain;
-    max-width: none;
-    display: block;
+    display: none;
+
+    @include m.tablet{
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      max-width: none;
+      display: block;
+    }
   }
 
   @keyframes fadeIn {

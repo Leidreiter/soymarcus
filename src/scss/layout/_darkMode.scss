@@ -98,21 +98,19 @@
   }
 
 /* Posicionamiento del switch */
+
 .switch {
   position: fixed;
-  top: 3rem;
+  bottom: 3rem;
   right: 3rem;
   z-index: 10000;
-
   @include m.tablet{
-    top: 3rem;
-    right: 14rem;
-  }
-  @include m.xl{
-    top: 3rem;
-    right: 3rem;
+    position: relative; // o relative, absolute, lo que quieras
+    bottom: auto;
+    right: auto;
   }
 }
+
 
 /* ============================================
    ESTILOS PARA MODO LIGHT
