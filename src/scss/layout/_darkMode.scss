@@ -15,6 +15,7 @@
     position: relative;
     bottom: auto;
     right: auto;
+    margin-top: 2rem;
   }
 }
 /* Switch Dark Mode */
@@ -206,7 +207,9 @@ body.light-mode .curriculum .link-descarga:hover {
 
 /* Cambio de fondo del header/perfil - de dark a light */
 body.light-mode .perfil {
-  background-color: rgba(255, 255, 255, 0.95);
+  /* background-color: rgba(255, 255, 255, 0.95); */
+  background-color: rgba(255, 166, 0, 0);
+  backdrop-filter: blur(.6rem);
   border: 1px solid #e0e0e0;
   color: #333;
 }

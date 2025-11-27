@@ -49,7 +49,7 @@
         flex: 1;
 
         p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
     }
 
@@ -204,9 +204,10 @@
 
     .link-descarga {
         text-transform: uppercase;
+        text-align: center;
         font-weight: bold;
         color: #aaa;
-        display: inline-block;
+        display: block;
         transition: transform 0.3s ease;
 
         &:hover {

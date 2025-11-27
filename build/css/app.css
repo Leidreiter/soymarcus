@@ -581,6 +581,7 @@ img {
     position: relative;
     bottom: auto;
     right: auto;
+    margin-top: 2rem;
   }
 }
 
@@ -770,7 +771,9 @@ body.light-mode .curriculum .link-descarga:hover {
 
 /* Cambio de fondo del header/perfil - de dark a light */
 body.light-mode .perfil {
-  background-color: rgba(255, 255, 255, 0.95);
+  /* background-color: rgba(255, 255, 255, 0.95); */
+  background-color: rgba(255, 166, 0, 0);
+  backdrop-filter: blur(0.6rem);
   border: 1px solid #e0e0e0;
   color: #333;
 }
@@ -1085,7 +1088,7 @@ body.light-mode .tecnologias {
   flex: 1;
 }
 .idiomas .circulo_idioma p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .idiomas .circle {
   width: 90%;
@@ -1232,9 +1235,10 @@ body.light-mode .tecnologias {
 }
 .curriculum .link-descarga {
   text-transform: uppercase;
+  text-align: center;
   font-weight: bold;
   color: #aaa;
-  display: inline-block;
+  display: block;
   transition: transform 0.3s ease;
 }
 .curriculum .link-descarga:hover {
@@ -1448,9 +1452,8 @@ body.light-mode .tecnologias {
 .hero .hero-boton a {
   background-color: #00B8D9;
   font-weight: bold;
-  text-transform: uppercase;
   text-align: center;
-  color: #FFFFFF;
+  color: #006c9c;
   padding: 1rem 3rem;
   letter-spacing: 0.1rem;
   border: none;
@@ -1459,6 +1462,7 @@ body.light-mode .tecnologias {
   transition: transform 0.3s ease;
 }
 .hero .hero-boton a:hover {
+  color: #FFFFFF;
   cursor: pointer;
   transform: translateY(-5px);
 }
@@ -1477,7 +1481,7 @@ body.light-mode .tecnologias {
     margin-right: 2.4rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-end;
     opacity: 0;
     animation: fadeIn 4s forwards;
