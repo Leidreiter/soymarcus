@@ -347,6 +347,10 @@ body.overflow-hidden {
   overflow: hidden;
 }
 
+p {
+  text-wrap: balance;
+}
+
 p, li {
   font-size: 1.4rem;
   line-height: 1.6;
@@ -1252,7 +1256,7 @@ body.light-mode .tecnologias {
   height: object-fit;
 }
 .tienda .logo-tienda {
-  width: 6rem;
+  width: 5rem;
   margin: 0 auto;
 }
 .tienda .tienda-overlay {
@@ -1265,12 +1269,17 @@ body.light-mode .tecnologias {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
+  padding: 2rem;
 }
 .tienda .tienda-sabias {
   display: flex;
   align-items: center;
   column-gap: 2rem;
+}
+.tienda .tienda-sabias p {
+  text-align: left;
+  text-wrap: balance;
 }
 .tienda .tienda-link {
   text-transform: uppercase;
@@ -1425,6 +1434,7 @@ body.light-mode .tecnologias {
 .hero .texto-color {
   color: #00B8D9;
   font-weight: bold;
+  font-style: italic;
 }
 .hero .hero-copy {
   width: 80%;

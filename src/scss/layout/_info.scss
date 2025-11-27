@@ -227,7 +227,7 @@
     height: object-fit;
 
     .logo-tienda {
-        width: 6rem;
+        width: 5rem;
         margin: 0 auto;
     }
 
@@ -241,13 +241,18 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
+        gap: 1rem;
+        padding: 2rem;
     }
 
     .tienda-sabias {
         display: flex;
         align-items: center;
         column-gap: 2rem;
+    }
+    .tienda-sabias p{
+        text-align: left;
+        text-wrap: balance;
     }
 
     .tienda-link {

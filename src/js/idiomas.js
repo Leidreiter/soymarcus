@@ -4,6 +4,7 @@ const translations = {
   es: {
     // Hero
     heroTitle: "Transformo ideas en experiencias digitales.",
+    heroP: "< Yo > ",
     heroTypewriter1: "creo marcas memorables.",
     heroTypewriter2: "diseño interfaces únicas.",
     heroTypewriter3: "programo código limpio.",
@@ -98,7 +99,7 @@ const translations = {
     descargarCV: "Descargar CV",
     
     // Tienda
-    sabiasTienda: "¿Sabías que tengo<br>una tienda online?",
+    sabiasTienda: "¿Sabías que tengo una tienda online?",
     visitaTienda: "Visita la tienda",
     
     // Descripciones de trabajos
@@ -114,10 +115,11 @@ const translations = {
   },
   en: {
     // Hero
-    heroTitle: "I transform ideas into digital experiences.",
-    heroTypewriter1: "I create memorable brands.",
-    heroTypewriter2: "I design unique interfaces.",
-    heroTypewriter3: "I code clean code.",
+    heroTitle: "Transform ideas into digital experiences.",
+    heroP: "< I > ",
+    heroTypewriter1: "create memorable brands.",
+    heroTypewriter2: "design unique interfaces.",
+    heroTypewriter3: "code clean code.",
     heroButton: "Discover it now",
     
     // Números
@@ -209,7 +211,7 @@ const translations = {
     descargarCV: "Download CV",
     
     // Tienda
-    sabiasTienda: "Did you know I have<br>an online store?",
+    sabiasTienda: "Did you know I have an online store?",
     visitaTienda: "Visit the store",
     
     // Descripciones de trabajos
@@ -245,6 +247,9 @@ function translatePage(lang) {
   // Hero
   const heroTitle = document.querySelector('.hero-titulo h1');
   if (heroTitle) heroTitle.textContent = t.heroTitle;
+
+  const heroP = document.querySelector('.typewriter span');
+  if (heroP) heroP.textContent = t.heroP;
   
   const heroButton = document.querySelector('.hero-boton a');
   if (heroButton) heroButton.textContent = t.heroButton;
