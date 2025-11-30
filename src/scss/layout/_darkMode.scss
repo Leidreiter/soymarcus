@@ -408,4 +408,25 @@ body.light-mode .timeline-item p {
 body.light-mode .tecnologias {
   background-color: transparent;
 }
-  
+
+/* Cambio de fondo de tienda */
+body.light-mode .tienda {
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+}
+
+
+body.light-mode .tienda-overlay{
+  background: rgba(255, 255, 255, 0.835);
+}
+
+body.light-mode .tienda-link{
+  color: #333;
+}
+body.light-mode .tienda-sabias p{
+  color: #333;
+}
+
+body.light-mode .logo-tienda{
+  background-image: url('/src/img/logo-hms-dm.svg');
+}
