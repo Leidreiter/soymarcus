@@ -422,7 +422,7 @@ h3 {
 /* --- XL (≥1441px) --- */
 @media (min-width: 1441px) {
   h1 {
-    font-size: 4.6rem;
+    font-size: 4.4rem;
   }
   h2 {
     font-size: 2rem;
@@ -436,6 +436,18 @@ img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .header {
@@ -698,6 +710,41 @@ body.light-mode h3 {
   color: #333;
 }
 
+/* Cambio color circulo idiomas */
+body.light-mode .progress {
+  stroke: #006c9c;
+}
+
+/* Cambio color habilidades y dot testimoniales*/
+body.light-mode .fill,
+body.light-mode .dot {
+  background: #006c9c;
+}
+
+/* Cambio color conocimientos, link tienda, yo(hero), btn hero, dot testimoniales, dots timeline, menu*/
+body.light-mode .skills-list li::before,
+body.light-mode .tienda-link:hover,
+body.light-mode .texto-color,
+body.light-mode .servicio-link,
+body.light-mode .card-info a,
+body.light-mode .timeline-item::before,
+body.light-mode .menu-items a:hover {
+  color: #006c9c;
+}
+
+/* Cambio color btn hero, icono formulario, iconos formulario, btn contacto*/
+body.light-mode .hero-boton a,
+body.light-mode .icon-form,
+body.light-mode .boton button {
+  background-color: #006c9c;
+}
+
+/* Cambio color ribbon paquetes */
+body.light-mode .ribbon {
+  background-color: #006c9c;
+  color: #FFFFFF;
+}
+
 /* Cambio de fondo en contenedores de información - de dark (#20202a) a light (#ffffff) */
 body.light-mode .informacion,
 body.light-mode .idiomas,
@@ -933,6 +980,11 @@ body.light-mode .numero {
 /* Cambio de color de texto en números - de blanco a oscuro */
 body.light-mode .numero p {
   color: #666;
+}
+
+/* Cambio de color de texto en números - de blanco a oscuro */
+body.light-mode .numero span {
+  color: #006c9c;
 }
 
 /* Cambio de fondo de timeline - de dark (#20202a) a light (#ffffff) */
@@ -1416,7 +1468,7 @@ body.light-mode .logo-tienda {
 }
 @media (min-width: 1400px) {
   .hero {
-    height: 44rem;
+    height: 46rem;
     margin-top: 0px;
   }
 }
@@ -1482,7 +1534,7 @@ body.light-mode .logo-tienda {
   background-color: #00B8D9;
   font-weight: bold;
   text-align: center;
-  color: #006c9c;
+  color: #FFFFFF;
   padding: 1rem 3rem;
   letter-spacing: 0.1rem;
   border: none;
@@ -1491,7 +1543,6 @@ body.light-mode .logo-tienda {
   transition: transform 0.3s ease;
 }
 .hero .hero-boton a:hover {
-  color: #FFFFFF;
   cursor: pointer;
   transform: translateY(-5px);
 }
@@ -1630,6 +1681,7 @@ body {
 }
 .numeros .numero span {
   font-size: 3rem;
+  color: #00B8D9;
 }
 @media (min-width: 768px) {
   .numeros .numero {
@@ -2138,7 +2190,6 @@ body {
 .boton button {
   background-color: #00B8D9;
   font-weight: bold;
-  text-transform: uppercase;
   text-align: center;
   color: #FFFFFF;
   padding: 2rem 3rem;

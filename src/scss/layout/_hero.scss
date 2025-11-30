@@ -20,7 +20,7 @@
   }
 
   @include m.xl {
-    height: 44rem;
+    height: 46rem;
     margin-top: 0px;
   }
 
@@ -90,7 +90,7 @@
     background-color: v.$primario;
     font-weight: bold;
     text-align: center;
-    color: v.$primario-hover;
+    color: v.$blanco;
     padding: 1rem 3rem;
     letter-spacing: .1rem;
     border: none;
@@ -99,7 +99,6 @@
     transition: transform 0.3s ease;
 
     &:hover {
-      color: v.$blanco;
       cursor: pointer;
       transform: translateY(-5px);
     }

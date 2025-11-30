@@ -23,6 +23,7 @@
 
         span{
             font-size: 3rem;
+            color: v.$primario;
         }
         
         @include m.tablet{

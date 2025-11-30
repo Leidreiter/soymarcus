@@ -227,31 +227,39 @@
                         </div>
 
                         <div class="hero-imagen">
-                            <!-- Switch darkMode -->
+
                             <div class="switchs">
-                                <label class="switch-dark">
-                                    <input checked="true" id="checkbox" type="checkbox" />
-                                    <span class="slider-dark">
-                                        <div class="star star_1"></div>
-                                        <div class="star star_2"></div>
-                                        <div class="star star_3"></div>
-                                        <svg viewBox="0 0 16 16" class="cloud_1 cloud">
-                                            <path transform="matrix(.77976 0 0 .78395-299.99-418.63)" fill="#fff"
-                                                d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                </label>
-                                <!-- Switch Idioma -->
-                                <label class="switch-idioma">
-                                    <input type="checkbox" id="language-switch" />
-                                    <span class="slider-idioma">
-                                        <span class="flag flag-es"><img src="/src/img/ES.png"
-                                                alt="idioma español"></span>
-                                        <span class="flag flag-us"><img src="/src/img/EN.png"
-                                                alt="idioma ingles"></span>
-                                    </span>
-                                </label>
+                                <!-- Switch darkMode -->
+                                <div class="switchs">
+                                    <label class="switch-dark">
+                                        <span class="sr-only">Cambiar entre modo claro y oscuro</span>
+                                        <input checked="true" id="checkbox" type="checkbox" />
+                                        <span class="slider-dark">
+                                            <div class="star star_1"></div>
+                                            <div class="star star_2"></div>
+                                            <div class="star star_3"></div>
+                                            <svg viewBox="0 0 16 16" class="cloud_1 cloud" aria-hidden="true">
+                                                <path transform="matrix(.77976 0 0 .78395-299.99-418.63)" fill="#fff"
+                                                    d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <!-- Switch Idioma -->
+                                    <label class="switch-idioma">
+                                        <span class="sr-only">Cambiar idioma entre español e inglés</span>
+                                        <input type="checkbox" id="language-switch" />
+                                        <span class="slider-idioma">
+                                            <span class="flag flag-es"><img src="/src/img/ES.png" alt=""
+                                                    aria-hidden="true"></span>
+                                            <span class="flag flag-us"><img src="/src/img/EN.png" alt=""
+                                                    aria-hidden="true"></span>
+                                        </span>
+                                    </label>
+                                </div>
+
+
+
                             </div>
 
                             <img src="src/img/Leidreiter_Martin.png" alt="Martin Leidreiter - Fotografía de estudio">
@@ -579,7 +587,7 @@
 
                         <div class="card">
                             <div class="card-image">
-                                <img src="src/img/portfolio/voedia.png" alt="Tecnocell Company">
+                                <img src="src/img/portfolio/voedia.png" alt="Voedia">
                             </div>
                             <div class="card-info">
                                 <h3>Voedia</h3>
@@ -590,7 +598,7 @@
 
                         <div class="card">
                             <div class="card-image">
-                                <img src="src/img/portfolio/aural-sounds.png" alt="Tecnocell Company">
+                                <img src="src/img/portfolio/aural-sounds.png" alt="Aural Sounds">
                             </div>
                             <div class="card-info">
                                 <h3>Aural Sounds</h3>
@@ -602,7 +610,7 @@
 
                         <div class="card">
                             <div class="card-image">
-                                <img src="src/img/portfolio/cm-power-tech.png" alt="Tecnocell Company">
+                                <img src="src/img/portfolio/cm-power-tech.png" alt="CMPowerTech">
                             </div>
                             <div class="card-info">
                                 <h3>CMPowerTech</h3>
@@ -614,7 +622,7 @@
 
                         <div class="card">
                             <div class="card-image">
-                                <img src="src/img/portfolio/marcelo-jaime.png" alt="Tecnocell Company">
+                                <img src="src/img/portfolio/marcelo-jaime.png" alt="Marcelo Jaime">
                             </div>
                             <div class="card-info">
                                 <h3>Marcelo Jaime</h3>
@@ -627,7 +635,7 @@
 
                         <div class="card">
                             <div class="card-image">
-                                <img src="src/img/portfolio/kalcker-institute.png" alt="Tecnocell Company">
+                                <img src="src/img/portfolio/kalcker-institute.png" alt="Kalcker Institute">
                             </div>
                             <div class="card-info">
                                 <h3>Kalcker Institute</h3>
@@ -640,7 +648,7 @@
 
                         <div class="card">
                             <div class="card-image">
-                                <img src="src/img/portfolio/constanza-estevan.png" alt="Tecnocell Company">
+                                <img src="src/img/portfolio/constanza-estevan.png" alt="Constanza Estevan">
                             </div>
                             <div class="card-info">
                                 <h3>Constanza Estevan</h3>
@@ -652,7 +660,7 @@
 
                         <div class="card">
                             <div class="card-image">
-                                <img src="src/img/portfolio/qunan-arquitectos.png" alt="Tecnocell Company">
+                                <img src="src/img/portfolio/qunan-arquitectos.png" alt="Qunan Arquitectos">
                             </div>
                             <div class="card-info">
                                 <h3>Qunan Arquitectos</h3>
@@ -664,7 +672,7 @@
 
                         <div class="card">
                             <div class="card-image">
-                                <img src="src/img/portfolio/simonetta.png" alt="Tecnocell Company">
+                                <img src="src/img/portfolio/simonetta.png" alt="Simonetta">
                             </div>
                             <div class="card-info">
                                 <h3>Simonetta</h3>
@@ -825,28 +833,23 @@
                     <div class="contacto-form">
 
                         <form id="contactForm" onsubmit="return sendMessage()" class="formulario">
+
                             <div class="field">
+                                <label for="origen" class="sr-only">Cómo llegaste a mi web</label>
                                 <div class="icon-form">
                                     <i class="fa-solid fa-circle-question"></i>
                                 </div>
 
                                 <select id="origen" name="origen" required class="campo">
-                                    <div class="option">
-                                        <option value="" disabled selected>¿Cómo llegaste a mi web?</option>
-                                        <option value="redes sociales">
-                                            Redes sociales
-                                        </option>
-                                        <option value="google">
-                                            Google
-                                        </option>
-                                        <option value="recomendacion">
-                                            Recomendación
-                                        </option>
-                                    </div>
+                                    <option value="" disabled selected>¿Cómo llegaste a mi web?</option>
+                                    <option value="redes sociales">Redes sociales</option>
+                                    <option value="google">Google</option>
+                                    <option value="recomendacion">Recomendación</option>
                                 </select>
                             </div>
 
                             <div class="field">
+                                <label for="fullName" class="sr-only">Tu nombre</label>
                                 <div class="icon-form">
                                     <i class="fa-solid fa-user"></i>
                                 </div>
@@ -856,6 +859,7 @@
                             </div>
 
                             <div class="field">
+                                <label for="email" class="sr-only">Tu email</label>
                                 <div class="icon-form">
                                     <i class="fa-solid fa-at"></i>
                                 </div>
@@ -865,6 +869,7 @@
                             </div>
 
                             <div class="field">
+                                <label for="consulta" class="sr-only">Tu mensaje</label>
                                 <div class="icon-form">
                                     <i class="fa-solid fa-comment"></i>
                                 </div>
@@ -876,6 +881,7 @@
                             <div class="boton">
                                 <button type="submit"><i class="fab fa-whatsapp"></i> Enviar mensaje</button>
                             </div>
+
                         </form>
                     </div>
                 </div>
