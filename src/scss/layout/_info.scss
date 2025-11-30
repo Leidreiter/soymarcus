@@ -76,7 +76,7 @@
     .percentage {
         text-anchor: middle;
         fill: #fff;
-        font-size: .8rem;
+        font-size: .6rem;
     }
 }
 
@@ -242,8 +242,8 @@
         background-size: contain;
         
         @include m.tablet{
-        width: 10rem;
-        height: 10rem;
+        width: 8rem;
+        height: 8rem;
         }
     }
 

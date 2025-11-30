@@ -727,6 +727,7 @@ body.light-mode .tienda-link:hover,
 body.light-mode .texto-color,
 body.light-mode .servicio-link,
 body.light-mode .card-info a,
+body.light-mode .paquete-link,
 body.light-mode .timeline-item::before,
 body.light-mode .menu-items a:hover {
   color: #006c9c;
@@ -1180,7 +1181,7 @@ body.light-mode .logo-tienda {
 .idiomas .percentage {
   text-anchor: middle;
   fill: #fff;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 
 .bitmoji {
@@ -1340,8 +1341,8 @@ body.light-mode .logo-tienda {
 }
 @media (min-width: 768px) {
   .tienda .logo-tienda {
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
   }
 }
 .tienda .tienda-overlay {
