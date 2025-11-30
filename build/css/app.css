@@ -1181,7 +1181,8 @@ body.light-mode .logo-tienda {
 .idiomas .percentage {
   text-anchor: middle;
   fill: #fff;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
+  font-weight: bold;
 }
 
 .bitmoji {
@@ -1318,6 +1319,14 @@ body.light-mode .logo-tienda {
   transform: translateX(1rem);
 }
 
+.webp .hero {
+  background-image: url("/src/img/bg-tienda.webp");
+}
+
+.no-webp .hero {
+  background-image: url("/src/img/bg-tienda.png");
+}
+
 .tienda {
   background-color: #1e1e28;
   padding: 2rem;
@@ -1450,6 +1459,14 @@ body.light-mode .logo-tienda {
 }
 
 /* Hero */
+.webp .hero {
+  background-image: url("/src/img/bg.webp");
+}
+
+.no-webp .hero {
+  background-image: url("/src/img/bg.jpg");
+}
+
 .hero {
   background: url("/src/img/bg.jpg");
   background-position: center center;

@@ -2,7 +2,12 @@
 @use 'base/mixins' as m;
 
 /* Hero */
-
+.webp .hero{
+    background-image: url('/src/img/bg.webp');
+}
+.no-webp .hero{
+    background-image: url('/src/img/bg.jpg');
+}
 .hero {
   background: url('/src/img/bg.jpg');
   background-position: center center;

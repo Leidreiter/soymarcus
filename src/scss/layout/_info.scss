@@ -76,7 +76,8 @@
     .percentage {
         text-anchor: middle;
         fill: #fff;
-        font-size: .6rem;
+        font-size: .7rem;
+        font-weight: bold;
     }
 }
 
@@ -218,12 +219,17 @@
     }
 }
 
+.webp .hero {
+    background-image: url('/src/img/bg-tienda.webp');
+}
+
+.no-webp .hero {
+    background-image: url('/src/img/bg-tienda.png');
+}
 
 .tienda {
-    // --- CAPA 1: color base ---
     background-color: #1e1e28;
 
-    // --- CAPA 2: mixin bento (imagen y otras propiedades) ---
     @include m.bento(url('/src/img/bg-tienda.png'));
 
     text-align: center;
@@ -240,10 +246,10 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
-        
-        @include m.tablet{
-        width: 8rem;
-        height: 8rem;
+
+        @include m.tablet {
+            width: 8rem;
+            height: 8rem;
         }
     }
 
