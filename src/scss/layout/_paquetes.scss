@@ -24,7 +24,7 @@
     justify-content: space-between;
     gap: .4rem;
     text-align: center;
-    padding: 4rem;
+    padding: 2rem;
 
     &-titulo {
         font-weight: 600;
@@ -69,6 +69,29 @@
         transform: translateX(1rem);
     }
 
+}
+.icono_paq{
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem auto;
+}
+.paq1{
+    background-image: url('/src/img/iconos/icon1DM.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.paq2{
+    background-image: url('/src/img/iconos/icon2DM.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.paq3{
+    background-image: url('/src/img/iconos/icon3DM.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ribbon {

@@ -589,6 +589,11 @@ img {
     position: relative;
     bottom: auto;
     right: auto;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 1400px) {
+  .switchs {
     margin-top: 2rem;
   }
 }
@@ -744,6 +749,18 @@ body.light-mode .boton button {
 body.light-mode .ribbon {
   background-color: #006c9c;
   color: #FFFFFF;
+}
+
+body.light-mode .paq1 {
+  background-image: url("/src/img/iconos/icon1LM.svg");
+}
+
+body.light-mode .paq2 {
+  background-image: url("/src/img/iconos/icon2LM.svg");
+}
+
+body.light-mode .paq3 {
+  background-image: url("/src/img/iconos/icon3LM.svg");
 }
 
 /* Cambio de fondo en contenedores de información - de dark (#20202a) a light (#ffffff) */
@@ -1595,6 +1612,7 @@ body.light-mode .logo-tienda {
     object-fit: contain;
     max-width: none;
     display: block;
+    overflow: hidden;
   }
 }
 @keyframes fadeIn {
@@ -1797,7 +1815,7 @@ body {
   justify-content: space-between;
   gap: 0.4rem;
   text-align: center;
-  padding: 4rem;
+  padding: 2rem;
 }
 .paquete-titulo {
   font-weight: 600;
@@ -1833,6 +1851,33 @@ body {
 .paquete-link:hover {
   cursor: pointer;
   transform: translateX(1rem);
+}
+
+.icono_paq {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem auto;
+}
+
+.paq1 {
+  background-image: url("/src/img/iconos/icon1DM.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.paq2 {
+  background-image: url("/src/img/iconos/icon2DM.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.paq3 {
+  background-image: url("/src/img/iconos/icon3DM.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .ribbon {
