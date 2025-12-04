@@ -1386,11 +1386,12 @@ body.light-mode .logo-tienda {
 .tienda .tienda-sabias {
   display: flex;
   align-items: center;
+  justify-content: center;
   column-gap: 1rem;
 }
 .tienda .tienda-sabias p {
   text-align: left;
-  text-wrap: balance;
+  display: block;
   color: #FFFFFF;
 }
 .tienda .tienda-link {

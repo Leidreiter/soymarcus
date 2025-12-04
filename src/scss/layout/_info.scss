@@ -272,11 +272,12 @@
     .tienda-sabias {
         display: flex;
         align-items: center;
+        justify-content: center;
         column-gap: 1rem;
 
         p {
             text-align: left;
-            text-wrap: balance;
+            display: block;
             color: v.$blanco;
         }
     }

@@ -99,7 +99,7 @@ const translations = {
     descargarCV: "Descargar CV",
     
     // Tienda
-    sabiasTienda: "¿Sabías que tengo una tienda online?",
+    sabiasTienda: "¿Sabías que tengo una tienda online de merch para devs?",
     visitaTienda: "Visita la tienda",
     
     // Descripciones de trabajos
@@ -211,7 +211,7 @@ const translations = {
     descargarCV: "Download CV",
     
     // Tienda
-    sabiasTienda: "Did you know I have an online store?",
+    sabiasTienda: "Did you know I have an online store for devs?",
     visitaTienda: "Visit the store",
     
     // Descripciones de trabajos
