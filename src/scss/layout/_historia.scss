@@ -15,7 +15,7 @@
 }
 
 .timeline-column {
-    @include m.bento(v.$f-primario);
+    @include m.bento(v.$f-secundario);
     display: flex;
     flex-direction: column;
     border-radius: 2rem;

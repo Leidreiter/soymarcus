@@ -18,7 +18,7 @@
         }
     
     .numero{
-        @include m.bento(v.$f-primario);
+        @include m.bento(v.$f-secundario);
         text-align: center;
 
         span{

@@ -93,11 +93,10 @@
 
   .hero-boton a {
     background-color: v.$primario;
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
     color: v.$blanco;
     padding: 1rem 3rem;
-    letter-spacing: .1rem;
     border: none;
     border-radius: 5rem;
     display: inline-block;
@@ -133,12 +132,12 @@
     
     @include m.tablet {
       position: relative;
-      width: 50%;
+      width: 60%;
       height: 100%;
       margin-right: 2.4rem;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: flex-end;
       opacity: 0;
       animation: fadeIn 3s forwards;
@@ -179,6 +178,10 @@
   }
 
 }
+
+
+// Menu móvil 
+
 .icon-home{
   background-image: url('/src/img/home.svg');
   background-repeat: no-repeat;
@@ -188,7 +191,7 @@
   background-size: contain;
   border-radius: 50%;
   background-color: #2a2a2a;
-  border: 6px solid #2a2a2a;
+  border: 1rem solid #2a2a2a;
   @include m.tablet{
    display: none;
   }

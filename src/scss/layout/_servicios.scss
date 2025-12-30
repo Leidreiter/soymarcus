@@ -22,7 +22,7 @@
         justify-content: space-between;
         gap: 1rem;
 
-       @include m.bento(v.$f-primario);
+       @include m.bento(v.$f-secundario);
         margin-bottom: 1rem;
         
 

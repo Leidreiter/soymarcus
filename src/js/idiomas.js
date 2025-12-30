@@ -3,7 +3,7 @@
 const translations = {
   es: {
     // Hero
-    heroTitle: "Transformo ideas en experiencias digitales.",
+    heroTitle: "Diseño y Desarrollo web profesional a medida.",
     heroP: "< Yo > ",
     heroTypewriter1: "creo marcas memorables.",
     heroTypewriter2: "diseño interfaces únicas.",
@@ -103,19 +103,22 @@ const translations = {
     visitaTienda: "Visita la tienda",
     
     // Descripciones de trabajos
-    tecnocellDesc: "Simil E-commerce tech con catálogo moderno y usabilidad fluida.",
-    voediaDesc: "Tienda online elegante con enfoque en experiencia visual",
-    auralDesc: "E-commerce musical con foco en su diseño audiovisual",
-    cmpowerDesc: "Sitio institucional informativo con comunicación clara y profesional",
-    marceloDesc: "One-page para estudio de abogados con estilo minimalista informativo y conciso.",
+    vidafreelancerDesc: "One-page site para escuchar el podcast vida freelancer y descargar recursos adicionales.",
+    edenaguaDesc: "Web profesional corporativo: servicios, productos y trayectoria de Eden Agua, Perú.",
+    venecianaDesc: "Web corporativa sencilla para comunicación de productos y sucursales.",
+    tecnocellDesc: "Catálogo web moderno y usabilidad fluida para toma de pedidos directa.",
+    voediaDesc: "Tienda online elegante con enfoque en experiencia visual.",
+    auralDesc: "E-commerce musical con foco en su diseño audiovisual.",
+    cmpowerDesc: "Sitio institucional informativo con comunicación clara y profesional.",
+    marceloDesc: "Landing-page para estudio de abogados con estilo minimalista informativo y conciso.",
     kalckerDesc: "E-commerce / Plataforma educativa con interfaz amigable y funcionalidad clara.",
     constanzaDesc: "Sitio personal con estética cuidada y presentación profesional.",
-    qunanDesc: "Web institucional arquitectónica con diseño limpio y visual potente",
+    qunanDesc: "Web institucional arquitectónica con diseño limpio y visual potente.",
     simonettaDesc: "Página institucional corporativa con estructura clara y presencia sólida.",
   },
   en: {
     // Hero
-    heroTitle: "Transform ideas into digital experiences.",
+    heroTitle: "Professional Custom Web Design and Development",
     heroP: "< I > ",
     heroTypewriter1: "create memorable brands.",
     heroTypewriter2: "design unique interfaces.",
@@ -215,14 +218,18 @@ const translations = {
     visitaTienda: "Visit the store",
     
     // Descripciones de trabajos
+    
+    vidafreelancerDesc: "One-page website to listen to the Vida Freelancer podcast and download additional resources.",
+    edenaguaDesc: "Professional corporate website: services, products, and company background of Eden Agua, Peru.",
+    venecianaDesc: "Simple corporate website for communicating products and branch locations.",
     tecnocellDesc: "Tech E-commerce similar with modern catalog and fluid usability.",
-    voediaDesc: "Elegant online store with focus on visual experience",
-    auralDesc: "Musical e-commerce with focus on its audiovisual design",
-    cmpowerDesc: "Informative institutional site with clear and professional communication",
-    marceloDesc: "One-page for law firm with informative and concise minimalist style.",
+    voediaDesc: "Elegant online store with focus on visual experience.",
+    auralDesc: "Musical e-commerce with focus on its audiovisual design.",
+    cmpowerDesc: "Informative institutional site with clear and professional communication.",
+    marceloDesc: "Landing-page for law firm with informative and concise minimalist style.",
     kalckerDesc: "E-commerce / Educational platform with friendly interface and clear functionality.",
     constanzaDesc: "Personal site with careful aesthetics and professional presentation.",
-    qunanDesc: "Architectural institutional website with clean design and powerful visuals",
+    qunanDesc: "Architectural institutional website with clean design and powerful visuals.",
     simonettaDesc: "Corporate institutional page with clear structure and solid presence.",
   }
 };
@@ -352,10 +359,11 @@ function translatePage(lang) {
   
   // Actualizar descripciones de trabajos
   const cardInfos = document.querySelectorAll('.card-info p');
-  if (cardInfos.length >= 9) {
+  if (cardInfos.length >= 12) {
     const descKeys = [
-      'tecnocellDesc', 'voediaDesc', 'auralDesc', 'cmpowerDesc',
-      'marceloDesc', 'kalckerDesc', 'constanzaDesc', 'qunanDesc', 'simonettaDesc'
+      'vidafreelancerDesc', 'edenaguaDesc', 'venecianaDesc','tecnocellDesc', 
+      'voediaDesc', 'auralDesc', 'cmpowerDesc','marceloDesc', 'kalckerDesc', 
+      'constanzaDesc', 'qunanDesc', 'simonettaDesc'
     ];
     cardInfos.forEach((card, index) => {
       if (descKeys[index]) {

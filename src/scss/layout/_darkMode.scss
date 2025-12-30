@@ -497,3 +497,6 @@ body.light-mode .icon-home{
   background-color: v.$blanco;
   border: 6px solid v.$blanco;
 }
+body.light-mode .card{
+  background-image: url('/src/img/portfolio/bg-light.png');
+}

@@ -11,7 +11,7 @@
 /* información */
 
 .informacion {
-    @include m.bento(v.$f-primario);
+    @include m.bento(v.$f-secundario);
 
     .info {
         display: flex;
@@ -34,7 +34,7 @@
 /* Idiomas */
 
 .idiomas {
-    @include m.bento(v.$f-primario);
+    @include m.bento(v.$f-secundario);
 
     .idioma {
         display: flex;
@@ -97,7 +97,7 @@
 /* Habilidades */
 
 .habilidades {
-    @include m.bento(v.$f-primario);
+    @include m.bento(v.$f-secundario);
 }
 
 .habilidad {
@@ -171,7 +171,7 @@
 /* Conocimientos */
 
 .conocimientos {
-    @include m.bento(v.$f-primario);
+    @include m.bento(v.$f-secundario);
 
     .skills-list {
         list-style: none;
@@ -201,7 +201,7 @@
 /* Curriculum */
 
 .curriculum {
-    @include m.bento(v.$f-primario);
+    @include m.bento(v.$f-secundario);
 
     .link-descarga {
         text-transform: uppercase;

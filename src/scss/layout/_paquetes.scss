@@ -16,7 +16,7 @@
 }
 
 .paquete {
-    @include m.bento(v.$f-primario);
+    @include m.bento(v.$f-secundario);
     position: relative;
     overflow: hidden;
     display: flex;

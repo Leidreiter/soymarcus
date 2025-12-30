@@ -338,7 +338,7 @@ body {
   font-style: normal;
   color: #000000;
   font-size: 1.6rem;
-  background-color: #191923;
+  background-color: #121212;
 }
 body.contenido {
   padding: 2rem;
@@ -531,7 +531,7 @@ img {
 }
 .redes {
   padding: 2rem;
-  background: #242430;
+  background: #1E1E1E;
   color: #FFFFFF;
   border-radius: 1rem;
   display: flex;
@@ -550,7 +550,7 @@ img {
 
 .footer {
   padding: 2rem;
-  background: #242430;
+  background: #1E1E1E;
   color: #FFFFFF;
   border-radius: 1rem;
   color: #aaa;
@@ -1070,12 +1070,16 @@ body.light-mode .icon-home {
   border: 6px solid #FFFFFF;
 }
 
+body.light-mode .card {
+  background-image: url("/src/img/portfolio/bg-light.png");
+}
+
 /* Switch Idioma */
 .switch-idioma {
   position: relative;
   display: inline-block;
-  width: 12rem;
-  height: 6rem;
+  width: 10rem;
+  height: 5rem;
   border-radius: 30px;
 }
 @media (min-width: 768px) {
@@ -1149,7 +1153,7 @@ body.light-mode .icon-home {
 }
 
 .switch-idioma input:checked + .slider-idioma {
-  background-color: #1a1a22;
+  background-color: #0A0A0A;
 }
 
 /* contenedor */
@@ -1162,7 +1166,7 @@ body.light-mode .icon-home {
 /* información */
 .informacion {
   padding: 2rem;
-  background: #20202a;
+  background: #1E1E1E;
   color: #FFFFFF;
   border-radius: 1rem;
 }
@@ -1183,7 +1187,7 @@ body.light-mode .icon-home {
 /* Idiomas */
 .idiomas {
   padding: 2rem;
-  background: #20202a;
+  background: #1E1E1E;
   color: #FFFFFF;
   border-radius: 1rem;
 }
@@ -1229,7 +1233,7 @@ body.light-mode .icon-home {
   width: fit-content;
   flex: 1;
   margin: 0;
-  background-color: #1a1a22;
+  background-color: #0A0A0A;
   border-radius: 50%;
 }
 
@@ -1241,7 +1245,7 @@ body.light-mode .icon-home {
 /* Habilidades */
 .habilidades {
   padding: 2rem;
-  background: #20202a;
+  background: #1E1E1E;
   color: #FFFFFF;
   border-radius: 1rem;
 }
@@ -1313,7 +1317,7 @@ body.light-mode .icon-home {
 /* Conocimientos */
 .conocimientos {
   padding: 2rem;
-  background: #20202a;
+  background: #1E1E1E;
   color: #FFFFFF;
   border-radius: 1rem;
 }
@@ -1341,7 +1345,7 @@ body.light-mode .icon-home {
 /* Curriculum */
 .curriculum {
   padding: 2rem;
-  background: #20202a;
+  background: #1E1E1E;
   color: #FFFFFF;
   border-radius: 1rem;
 }
@@ -1480,7 +1484,7 @@ body.light-mode .icon-home {
 }
 .sidebar {
   padding: 2rem;
-  background: #20202a;
+  background: #1E1E1E;
   color: #FFFFFF;
   border-radius: 1rem;
   width: 100%;
@@ -1591,11 +1595,10 @@ body.light-mode .icon-home {
 }
 .hero .hero-boton a {
   background-color: #00B8D9;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
   color: #FFFFFF;
   padding: 1rem 3rem;
-  letter-spacing: 0.1rem;
   border: none;
   border-radius: 5rem;
   display: inline-block;
@@ -1627,12 +1630,12 @@ body.light-mode .icon-home {
 @media (min-width: 768px) {
   .hero .hero-imagen {
     position: relative;
-    width: 50%;
+    width: 60%;
     height: 100%;
     margin-right: 2.4rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-end;
     opacity: 0;
     animation: fadeIn 3s forwards;
@@ -1680,7 +1683,7 @@ body.light-mode .icon-home {
   background-size: contain;
   border-radius: 50%;
   background-color: #2a2a2a;
-  border: 6px solid #2a2a2a;
+  border: 1rem solid #2a2a2a;
 }
 @media (min-width: 768px) {
   .icon-home {
@@ -1781,7 +1784,7 @@ body {
 }
 .numeros .numero {
   padding: 2rem;
-  background: #20202a;
+  background: #1E1E1E;
   color: #FFFFFF;
   border-radius: 1rem;
   text-align: center;
@@ -1827,7 +1830,7 @@ body {
   justify-content: space-between;
   gap: 1rem;
   padding: 2rem;
-  background: #20202a;
+  background: #1E1E1E;
   color: #FFFFFF;
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -1876,7 +1879,7 @@ body {
 
 .paquete {
   padding: 2rem;
-  background: #20202a;
+  background: #1E1E1E;
   color: #FFFFFF;
   border-radius: 1rem;
   position: relative;
@@ -2002,7 +2005,7 @@ body {
 }
 .testimonial-card {
   padding: 2rem;
-  background: #20202a;
+  background: #1E1E1E;
   color: #FFFFFF;
   border-radius: 1rem;
   height: 100%;
@@ -2048,7 +2051,7 @@ body {
   font-size: 1.2rem;
   color: gold;
   letter-spacing: 4px;
-  background-color: #1a1a22;
+  background-color: #0A0A0A;
   padding: 0.8rem;
   border-radius: 5rem;
   display: block;
@@ -2086,13 +2089,15 @@ body {
 }
 
 .arrow {
+  font-size: 3rem;
+  line-height: 0;
   cursor: pointer;
   background: #333;
   color: white;
   border: none;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 4rem;
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2120,6 +2125,10 @@ body {
   overflow: hidden;
   border-radius: 1rem;
   transition: transform 0.3s ease;
+  background-image: url("/src/img/portfolio/bg-dark.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .card:hover {
@@ -2128,8 +2137,9 @@ body {
 
 /* IMAGEN */
 .card-image img {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  padding: 4rem 0;
+  margin: 0 auto;
   display: block;
 }
 
@@ -2139,7 +2149,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #242430;
+  background: #1E1E1E;
   color: #fff;
   padding: 2rem;
   transform: translateY(100%);
@@ -2212,7 +2222,7 @@ body {
 
 .timeline-column {
   padding: 2rem;
-  background: #20202a;
+  background: #1E1E1E;
   color: #FFFFFF;
   border-radius: 1rem;
   display: flex;
@@ -2225,7 +2235,7 @@ body {
 }
 
 .timeline-item {
-  border-left: 0.4rem solid #1a1a22;
+  border-left: 0.4rem solid #0A0A0A;
   padding: 3rem;
   position: relative;
 }
@@ -2249,7 +2259,7 @@ body {
 }
 
 .timeline-item .date {
-  background: #1a1a22;
+  background: #0A0A0A;
   display: inline-block;
   padding: 6px 12px;
   border-radius: 20px;
@@ -2282,7 +2292,7 @@ body {
 
 .contacto-form {
   padding: 2rem;
-  background: #20202a;
+  background: #1E1E1E;
   color: #FFFFFF;
   border-radius: 1rem;
 }
@@ -2313,7 +2323,7 @@ body {
 .campo {
   padding: 2rem;
   border: none;
-  background-color: #1a1a22;
+  background-color: #0A0A0A;
   color: #FFFFFF;
   flex: 1;
   width: 100%;
@@ -2323,11 +2333,10 @@ body {
 
 .boton button {
   background-color: #00B8D9;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
   color: #FFFFFF;
-  padding: 2rem 3rem;
-  letter-spacing: 0.1rem;
+  padding: 1rem;
   border-radius: 5rem;
   border: none;
   width: 100%;
@@ -2336,12 +2345,21 @@ body {
 @media (min-width: 768px) {
   .boton button {
     width: auto;
-    padding: 1.4rem 3rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    padding-left: 0.4rem;
+    padding-right: 1.8rem;
   }
 }
 .boton button:hover {
   cursor: pointer;
   transform: translateY(-5px);
+}
+
+.iconBtn {
+  background-color: #121212;
+  border-radius: 50%;
+  padding: 1rem;
 }
 
 .tecnologias {

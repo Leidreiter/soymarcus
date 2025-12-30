@@ -36,7 +36,7 @@
 }
 
 .testimonial-card {
-    @include m.bento(v.$f-primario);
+    @include m.bento(v.$f-secundario);
 
     height: 100%;
     display: flex;
@@ -119,13 +119,15 @@
 }
 
 .arrow {
+    font-size: 3rem;
+    line-height: 0;
     cursor: pointer;
     background: #333;
     color: white;
     border: none;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 4rem;
+    height: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;

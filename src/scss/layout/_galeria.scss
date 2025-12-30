@@ -19,6 +19,10 @@
   overflow: hidden;
   border-radius: 1rem;
   transition: transform 0.3s ease;
+  background-image: url('/src/img/portfolio/bg-dark.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .card:hover {
@@ -27,8 +31,9 @@
 
 /* IMAGEN */
 .card-image img {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  padding: 4rem 0;
+  margin: 0 auto;
   display: block;
 }
 

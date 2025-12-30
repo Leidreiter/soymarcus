@@ -18,7 +18,7 @@
 }
 
 .contacto-form {
-  @include m.bento(v.$f-primario);
+  @include m.bento(v.$f-secundario);
 }
 
 .formulario {
@@ -57,11 +57,10 @@
 
 .boton button {
   background-color: v.$primario;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
   color: v.$blanco;
-  padding: 2rem 3rem;
-  letter-spacing: .1rem;
+  padding: 1rem;
   border-radius: 5rem;
   border: none;
   width: 100%;
@@ -69,11 +68,19 @@
 
   @include m.tablet {
     width: auto;
-    padding: 1.4rem 3rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    padding-left: .4rem;
+    padding-right: 1.8rem;
   }
 
   &:hover {
     cursor: pointer;
     transform: translateY(-5px);
   }
+}
+.iconBtn{
+  background-color: v.$f-primario;
+  border-radius: 50%;
+  padding: 1rem;
 }
