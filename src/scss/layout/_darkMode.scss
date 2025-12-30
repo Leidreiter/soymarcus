@@ -500,3 +500,7 @@ body.light-mode .icon-home{
 body.light-mode .card{
   background-image: url('/src/img/portfolio/bg-light.png');
 }
+body.light-mode .iconBtn{
+  background-color: v.$blanco;
+  color: v.$negro;
+}

@@ -431,7 +431,7 @@ function translatePage(lang) {
   const submitButton = document.querySelector('.boton button');
   if (submitButton) {
     const icon = submitButton.querySelector('i');
-    submitButton.innerHTML = (icon ? `<i class="${icon.className}"></i> ` : '') + t.enviarMensaje;
+    submitButton.childNodes[0].nodeValue = t.enviarMensaje;
   }
   
   // Footer

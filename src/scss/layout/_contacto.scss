@@ -70,8 +70,8 @@
     width: auto;
     padding-top: .4rem;
     padding-bottom: .4rem;
-    padding-left: .4rem;
-    padding-right: 1.8rem;
+    padding-left: 1.8rem;
+    padding-right: .4rem;
   }
 
   &:hover {
@@ -80,7 +80,9 @@
   }
 }
 .iconBtn{
-  background-color: v.$f-primario;
+  color: v.$blanco;
+  background-color: v.$f-secundario;
   border-radius: 50%;
   padding: 1rem;
+  margin-left: 1rem;
 }

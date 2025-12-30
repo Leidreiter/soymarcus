@@ -1074,6 +1074,11 @@ body.light-mode .card {
   background-image: url("/src/img/portfolio/bg-light.png");
 }
 
+body.light-mode .iconBtn {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
 /* Switch Idioma */
 .switch-idioma {
   position: relative;
@@ -2347,8 +2352,8 @@ body {
     width: auto;
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
-    padding-left: 0.4rem;
-    padding-right: 1.8rem;
+    padding-left: 1.8rem;
+    padding-right: 0.4rem;
   }
 }
 .boton button:hover {
@@ -2357,9 +2362,11 @@ body {
 }
 
 .iconBtn {
-  background-color: #121212;
+  color: #FFFFFF;
+  background-color: #1E1E1E;
   border-radius: 50%;
   padding: 1rem;
+  margin-left: 1rem;
 }
 
 .tecnologias {
