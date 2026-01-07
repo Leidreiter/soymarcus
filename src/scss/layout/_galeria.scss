@@ -31,10 +31,14 @@
 
 /* IMAGEN */
 .card-image img {
-  width: 50%;
-  padding: 4rem 0;
+  width: 30%;
+  padding: 2rem 0;
   margin: 0 auto;
   display: block;
+  @include m.tablet{
+    width: 50%;
+    padding: 4rem 0;
+  }
 }
 
 /* INFO OCULTA (DESKTOP) */
@@ -97,8 +101,6 @@
 }
 
 .card-image {
-  height: 26rem;
-
   @include m.tablet{
     height: 100%;
   }

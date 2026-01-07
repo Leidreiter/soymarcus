@@ -1,15 +1,9 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-/* Hero */
-.webp .hero{
-    background-image: url('/src/img/bg.webp');
-}
-.no-webp .hero{
-    background-image: url('/src/img/bg.jpg');
-}
+
 .hero {
-  background: url('/src/img/bg.jpg');
+  background: url('/src/img/fondo-dark.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -214,10 +208,10 @@
 
 /* alternar lados */
 .iconos-foto i:nth-child(1){
-  margin-left: 2rem;
+  margin-left: 4rem;
 }
 .iconos-foto i:nth-child(2){
-  margin-left: 1.2rem;
+  margin-left: 2rem;
 }
 .iconos-foto i:nth-child(1),
 .iconos-foto i:nth-child(3) {

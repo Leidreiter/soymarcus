@@ -222,13 +222,6 @@
     }
 }
 
-.webp .hero {
-    background-image: url('/src/img/bg-tienda.webp');
-}
-
-.no-webp .hero {
-    background-image: url('/src/img/bg-tienda.png');
-}
 
 .tienda {
     @include m.bento(url('/src/img/bg-tienda.png'));

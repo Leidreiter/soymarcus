@@ -47,6 +47,7 @@
   @include m.tablet{
     grid-column: 2 / 3;
     width: var(--sidebar-width, 8rem);
+    margin-bottom: 10rem;
   }
 
   @include m.bento(v.$f-secundario);
@@ -56,6 +57,7 @@
   margin: 0 auto;
   transition: width 0.25s ease; 
   overflow: hidden;
+  margin-bottom: 10rem;
 }
 
 .main-content.open {

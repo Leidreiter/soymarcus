@@ -406,7 +406,12 @@ body.light-mode .footer a:hover {
 
 /* Cambio de overlay del hero - de dark a light */
 body.light-mode .hero .overlay {
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, .9) 15%, rgba(255, 255, 255, .7) 50%, rgba(250, 250, 250, .7) 100%);
+  background-image: linear-gradient(
+  90deg,
+  rgba(255, 255, 255, 0.65) 15%,
+  rgba(255, 255, 255, 0.5) 50%,
+  rgba(250, 250, 250, 0.45) 100%
+);
 }
 
 /* Cambio de color de texto en hero - de blanco a oscuro */
@@ -509,4 +514,7 @@ body.light-mode .iconos-foto i{
 }
 body.light-mode .icono-idiomas{
   background-image: url('/src/img/iconos/icono-idiomasDm.svg');
+}
+body.light-mode .hero{
+  background-image: url('/src/img/fondo-light.png');
 }

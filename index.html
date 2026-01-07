@@ -260,12 +260,13 @@
                             </div>
 
                             <div class="contenedor-foto foto">
-                                <img src="src/img/Leidreiter_Martin.png" alt="Martin Leidreiter - Fotografía de estudio">
-                              
+                                <img src="src/img/Leidreiter_Martin.png"
+                                    alt="Martin Leidreiter - Fotografía de estudio">
+
                                 <div class="iconos-foto">
-                                  <i class="fa-solid fa-code float"></i>
-                                  <i class="fa-brands fa-wordpress-simple float"></i>
-                                  <i class="fa-brands fa-figma float"></i>
+                                    <i class="fa-solid fa-code float"></i>
+                                    <i class="fa-brands fa-wordpress-simple float"></i>
+                                    <i class="fa-brands fa-figma float"></i>
                                 </div>
                             </div>
                         </div>
@@ -582,7 +583,8 @@
                     <div class="portfolio">
                         <div class="card">
                             <div class="card-image">
-                                <img src="src/img/portfolio/la-veneciana.png" alt="La Veneciana – Helados + Café + Delikatessen">
+                                <img src="src/img/portfolio/la-veneciana.png"
+                                    alt="La Veneciana – Helados + Café + Delikatessen">
                             </div>
                             <div class="card-info">
                                 <h3>La Veneciana</h3>
@@ -593,7 +595,8 @@
                         </div>
                         <div class="card">
                             <div class="card-image">
-                                <img src="src/img/portfolio/margaret.png" alt="Margaret automotores - Vehículos usados seleccionados en Sierras Chicas">
+                                <img src="src/img/portfolio/margaret.png"
+                                    alt="Margaret automotores - Vehículos usados seleccionados en Sierras Chicas">
                             </div>
                             <div class="card-info">
                                 <h3>Margaret Automotores</h3>
@@ -627,7 +630,8 @@
 
                         <div class="card">
                             <div class="card-image">
-                                <img src="src/img/portfolio/hola-mundo-store.png" alt="Hola Mundo - tienda online de merchandising para developers">
+                                <img src="src/img/portfolio/hola-mundo-store.png"
+                                    alt="Hola Mundo - tienda online de merchandising para developers">
                             </div>
                             <div class="card-info">
                                 <h3>Hola Mundo Store</h3>
@@ -683,7 +687,7 @@
                                     <span>&gt;</span></a>
                             </div>
                         </div>
-                        
+
                         <div class="card">
                             <div class="card-image">
                                 <img src="src/img/portfolio/eden.png" alt="Eden Agua">
@@ -721,7 +725,8 @@
 
                         <div class="card">
                             <div class="card-image">
-                                <img src="src/img/portfolio/maquinarias-pesadas.png" alt="Maquinarias | Autos, Equipos, Repuestos y Servicio Técnico">
+                                <img src="src/img/portfolio/maquinarias-pesadas.png"
+                                    alt="Maquinarias | Autos, Equipos, Repuestos y Servicio Técnico">
                             </div>
                             <div class="card-info">
                                 <h3>Maquinarias pesadas</h3>
@@ -742,7 +747,7 @@
                                     <span>&gt;</span></a>
                             </div>
                         </div>
-                        
+
                         <div class="card">
                             <div class="card-image">
                                 <img src="src/img/portfolio/cm-powertech.png" alt="CMPowerTech">
@@ -990,7 +995,8 @@
                             <li><a href="#portfolio">Portfolio</a></li>
                             <li><a href="#contacto">Contacto</a></li>
 
-                            <li><a href="https://soymarcuslinks.pages.dev/" target="_blank" class="color">Mis Links</a></li>
+                            <li><a href="#" class="popup-open-btn color" id="popupOpen">Mis Links</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -999,7 +1005,79 @@
 
     </div>
 
+    <!-- POPUP -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-modal">
+
+            <button class="popup-close" id="popupClose">×</button>
+
+            <!-- HEADER -->
+            <header class="popup-header popup-contenedor">
+                <div class="popup-header__logo popup-centrar">
+                    <div class="popup-logo">
+                        <img src="/src/img/popup/perfil.png" alt="perfil Martin Leidreiter aka @soymarcusdev">
+                    </div>
+
+                    <h1 class="popup-header__user">@soymarcusdev</h1>
+
+                    <h2 class="popup-header__info">
+                        Para colaboraciones, envíame un correo a:<br>
+                        <a href="mailto:marcus.contenido@gmail.com">📧 marcus.contenido@gmail.com</a>
+                    </h2>
+                </div>
+            </header>
+
+            <!-- MAIN -->
+            <main class="popup-contenedor popup-principal popup-flex">
+
+                <h2 class="popup-principal__titulo">Todos mis proyectos 💼</h2>
+
+                <div class="sponsors-logos">
+                    <img src="/src/img/popup/soymarcus.svg" class="sponsor fade-item" alt="logo soy marcus">
+                    <a href="https://holamundo.store/" target="_blank">
+                        <img src="/src/img/popup/holamundostore.svg" class="sponsor fade-item" alt="logo hola mundo store">
+                    </a>
+                    <img src="/src/img/popup/logo-awp.svg" class="sponsor fade-item" alt="logo academia soy marcus">
+                    <img src="/src/img/popup/gatonegro.svg" class="sponsor fade-item" alt="logo gato negro diseño">
+                    <!--<img src="/src/img/popup/codeinjection.svg" class="sponsor fade-item" alt="logo code injection">-->
+                    <a href="https://vidafreelancer.netlify.app/" target="_blank">
+                        <img src="/src/img/popup/vidafreelancer.svg" class="sponsor fade-item" alt="logo vida freelance">
+                    </a>
+                </div>
+
+            </main>
+
+            <!-- LINKS QUE PIDEN -->
+            <section class="popup-contenedor">
+                <h2 class="popup-principal__titulo">Links que me piden 🔗</h2>
+
+                <div class="popup-flex">
+                    <a href="https://gist.github.com/Leidreiter/f0bcd5dc3b3c151e942cb8ab9f795daa" target="_blank">
+                        <div class="popup-red">
+                            <img src="/src/img/popup/link.png" alt="" class="popup-red__foto">
+                            <div class="popup-red__info">
+                                <h3>Open Graph ➞</h3>
+                                <h4>Título, Descripción e Imagen personalizados</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="popup-footer">
+                <div class="popup-footer__info popup-centrar">
+                    <h2>Gracias por pasar por aquí 🫂</h2>
+                    <h3><i>No olvides seguirme en mis otras redes</i></h3>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+
     <script src="src/js/app.js"></script>
+    <script src="src/js/popup.js"></script>
     <script src="src/js/modernizr.js"></script>
     <script src="src/js/contacto.js"></script>
     <script src="src/js/idiomas.js"></script>

@@ -39,6 +39,9 @@
 @mixin bento($color-fondo){
     padding: 2rem;
     background: $color-fondo;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     color: v.$blanco;
     border-radius: 1rem;
 }
