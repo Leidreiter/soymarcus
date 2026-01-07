@@ -148,7 +148,6 @@
   }
 
   .hero-imagen img {
-
     @include m.tablet{
       width: 100%;
       height: auto;
@@ -176,7 +175,70 @@
       opacity: 1;
     }
   }
+}
 
+// iconos hero
+
+.contenedor-foto {
+  position: relative;
+}
+
+.contenedor-foto img {
+  width: 100%;
+  display: block;
+}
+
+/* contenedor de iconos */
+.iconos-foto {
+  position: absolute;
+  inset: 0; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  pointer-events: none;
+}
+
+
+.iconos-foto i {
+  font-size: 3rem;
+  width: 64px;
+  height: 64px;
+  background: v.$primario;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: v.$blanco;
+  pointer-events: auto;
+}
+
+/* alternar lados */
+.iconos-foto i:nth-child(1){
+  margin-left: 2rem;
+}
+.iconos-foto i:nth-child(2){
+  margin-left: 1.2rem;
+}
+.iconos-foto i:nth-child(1),
+.iconos-foto i:nth-child(3) {
+  align-self: flex-start;
+}
+
+.iconos-foto i:nth-child(2) {
+  align-self: flex-end;
+  margin-right: 12px;
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
 }
 
 

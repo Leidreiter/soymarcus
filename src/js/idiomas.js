@@ -103,18 +103,21 @@ const translations = {
     visitaTienda: "Visita la tienda",
     
     // Descripciones de trabajos
-    vidafreelancerDesc: "One-page site para escuchar el podcast vida freelancer y descargar recursos adicionales.",
-    edenaguaDesc: "Web profesional corporativo: servicios, productos y trayectoria de Eden Agua, Perú.",
-    venecianaDesc: "Web corporativa sencilla para comunicación de productos y sucursales.",
-    tecnocellDesc: "Catálogo web moderno y usabilidad fluida para toma de pedidos directa.",
-    voediaDesc: "Tienda online elegante con enfoque en experiencia visual.",
-    auralDesc: "E-commerce musical con foco en su diseño audiovisual.",
-    cmpowerDesc: "Sitio institucional informativo con comunicación clara y profesional.",
-    marceloDesc: "Landing-page para estudio de abogados con estilo minimalista informativo y conciso.",
-    kalckerDesc: "E-commerce / Plataforma educativa con interfaz amigable y funcionalidad clara.",
-    constanzaDesc: "Sitio personal con estética cuidada y presentación profesional.",
-    qunanDesc: "Web institucional arquitectónica con diseño limpio y visual potente.",
+    lavenecianaDesc: "Web corporativa sencilla para comunicación de productos y sucursales.",
+    margaretDesc: "Web de catálogo de vehículos disponibles con información detallada y contacto.",
+    vidafreelancerDesc: "One-page site para escuchar el podcast vida freelancer y descargar recursos.",
     simonettaDesc: "Página institucional corporativa con estructura clara y presencia sólida.",
+    holamundoDesc: "Web catálogo simil ecommerce para venta de productos vía WhatsApp.",
+    tecnocellDesc: "Catálogo web moderno y usabilidad fluida para toma de pedidos directa.",
+    constanzaDesc: "Sitio personal con estética cuidada y presentación profesional.",
+    auralDesc: "E-commerce musical con foco en su diseño audiovisual.",
+    qunanDesc: "Web institucional arquitectónica con diseño limpio y visual potente.",
+    edenDesc: "Web profesional corporativo: servicios, productos y trayectoria de Eden Agua, Perú.",
+    kalckerDesc: "E-commerce / Plataforma educativa con interfaz amigable y funcionalidad clara.",
+    voediaDesc: "Tienda online elegante con enfoque en experiencia visual.",
+    maquinariasDesc: "Web corporativa para información, contacto y localización de sucursales.",
+    marcelojaimeDesc: "Landing-page para estudio de abogados con estilo minimalista informativo y conciso.",
+    cmpowerDesc: "Sitio institucional informativo con comunicación clara y profesional.",
   },
   en: {
     // Hero
@@ -219,18 +222,21 @@ const translations = {
     
     // Descripciones de trabajos
     
-    vidafreelancerDesc: "One-page website to listen to the Vida Freelancer podcast and download additional resources.",
-    edenaguaDesc: "Professional corporate website: services, products, and company background of Eden Agua, Peru.",
-    venecianaDesc: "Simple corporate website for communicating products and branch locations.",
-    tecnocellDesc: "Tech E-commerce similar with modern catalog and fluid usability.",
-    voediaDesc: "Elegant online store with focus on visual experience.",
-    auralDesc: "Musical e-commerce with focus on its audiovisual design.",
-    cmpowerDesc: "Informative institutional site with clear and professional communication.",
-    marceloDesc: "Landing-page for law firm with informative and concise minimalist style.",
-    kalckerDesc: "E-commerce / Educational platform with friendly interface and clear functionality.",
-    constanzaDesc: "Personal site with careful aesthetics and professional presentation.",
-    qunanDesc: "Architectural institutional website with clean design and powerful visuals.",
-    simonettaDesc: "Corporate institutional page with clear structure and solid presence.",
+    lavenecianaDesc: "Simple corporate website for product and branch communication.",
+    margaretDesc: "Vehicle catalog website with detailed information and contact.",
+    vidafreelancerDesc: "One-page site to listen to the Vida Freelancer podcast and download resources.",
+    simonettaDesc: "Corporate institutional website with a clear structure and solid presence.",
+    holamundoDesc: "Catalog-style website similar to e-commerce for selling products via WhatsApp.",
+    tecnocellDesc: "Modern web catalog with smooth usability for direct order placement.",
+    constanzaDesc: "Personal site with refined aesthetics and professional presentation.",
+    auralDesc: "Music e-commerce focused on audiovisual design.",
+    qunanDesc: "Architectural institutional website with clean design and strong visuals.",
+    edenDesc: "Professional corporate website: services, products, and track record of Eden Agua, Peru.",
+    kalckerDesc: "E-commerce / Educational platform with a friendly interface and clear functionality.",
+    voediaDesc: "Elegant online store with a focus on visual experience.",
+    maquinariasDesc: "Corporate website for information, contact, and branch locations.",
+    marcelojaimeDesc: "Landing page for a law firm with a minimalist, informative, and concise style.",
+    cmpowerDesc: "Informational institutional site with clear and professional communication.",
   }
 };
 
@@ -359,11 +365,13 @@ function translatePage(lang) {
   
   // Actualizar descripciones de trabajos
   const cardInfos = document.querySelectorAll('.card-info p');
-  if (cardInfos.length >= 12) {
+  if (cardInfos.length >= 15) {
     const descKeys = [
-      'vidafreelancerDesc', 'edenaguaDesc', 'venecianaDesc','tecnocellDesc', 
-      'voediaDesc', 'auralDesc', 'cmpowerDesc','marceloDesc', 'kalckerDesc', 
-      'constanzaDesc', 'qunanDesc', 'simonettaDesc'
+      'lavenecianaDesc', 'margaretDesc', 'vidafreelancerDesc',
+      'simonettaDesc', 'holamundoDesc', 'tecnocellDesc', 
+      'constanzaDesc', 'auralDesc', 'qunanDesc',
+      'edenDesc','kalckerDesc', 'voediaDesc', 
+      'maquinariasDesc', 'marcelojaimeDesc', 'cmpowerDesc'
     ];
     cardInfos.forEach((card, index) => {
       if (descKeys[index]) {

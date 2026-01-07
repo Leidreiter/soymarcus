@@ -504,3 +504,9 @@ body.light-mode .iconBtn{
   background-color: v.$blanco;
   color: v.$negro;
 }
+body.light-mode .iconos-foto i{
+  background-color: v.$primario-hover;
+}
+body.light-mode .icono-idiomas{
+  background-image: url('/src/img/iconos/icono-idiomasDm.svg');
+}

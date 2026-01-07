@@ -52,8 +52,8 @@ h1, h2, h3, p, a {
 
 /* --- Base (Móvil ≤480px) --- */
 h1 { font-size: 2.2rem; }
-h2 { font-size: 1.6rem; }
-h3 { font-size: 1.5rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
 
 /* --- Tablet (≥481px) --- */
 @media (min-width: 481px) {
@@ -79,8 +79,8 @@ h3 { font-size: 1.5rem; }
 /* --- XL (≥1441px) --- */
 @media (min-width: 1441px) {
   h1 { font-size: 4.4rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.8rem; }
+  h2 { font-size: 2.4rem; }
+  h3 { font-size: 2rem; }
 }
 
 img {

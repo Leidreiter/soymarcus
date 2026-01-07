@@ -375,11 +375,11 @@ h1 {
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 /* --- Tablet (≥481px) --- */
@@ -425,10 +425,10 @@ h3 {
     font-size: 4.4rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
   h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 img {
@@ -1079,6 +1079,14 @@ body.light-mode .iconBtn {
   color: #000000;
 }
 
+body.light-mode .iconos-foto i {
+  background-color: #006c9c;
+}
+
+body.light-mode .icono-idiomas {
+  background-image: url("/src/img/iconos/icono-idiomasDm.svg");
+}
+
 /* Switch Idioma */
 .switch-idioma {
   position: relative;
@@ -1234,17 +1242,21 @@ body.light-mode .iconBtn {
   font-weight: bold;
 }
 
-.bitmoji {
-  width: fit-content;
+.icono-idiomas {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto;
   flex: 1;
-  margin: 0;
-  background-color: #0A0A0A;
-  border-radius: 50%;
+  background-image: url("/src/img/iconos/icono-idiomas.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
-.bitmoji img {
-  width: 100%;
-  border-radius: 50%;
+@media (min-width: 768px) {
+  .icono-idiomas {
+    width: 4rem;
+    height: 4rem;
+  }
 }
 
 /* Habilidades */
@@ -1377,7 +1389,6 @@ body.light-mode .iconBtn {
 }
 
 .tienda {
-  background-color: #1e1e28;
   padding: 2rem;
   background: url("/src/img/bg-tienda.png");
   color: #FFFFFF;
@@ -1386,12 +1397,11 @@ body.light-mode .iconBtn {
   margin: 0 auto;
   position: relative;
   width: 100%;
-  height: 16rem;
+  height: 18rem;
 }
 .tienda .logo-tienda {
   width: 6rem;
   height: 6rem;
-  margin: 0 auto;
   background-image: url("/src/img/logo-hms.svg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -1399,8 +1409,8 @@ body.light-mode .iconBtn {
 }
 @media (min-width: 768px) {
   .tienda .logo-tienda {
-    width: 8rem;
-    height: 8rem;
+    width: 5rem;
+    height: 5rem;
   }
 }
 .tienda .tienda-overlay {
@@ -1414,15 +1424,17 @@ body.light-mode .iconBtn {
   align-items: center;
   justify-content: center;
   text-wrap: wrap;
+  row-gap: 1rem;
 }
 .tienda .tienda-sabias {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  column-gap: 1rem;
+  row-gap: 1rem;
 }
 .tienda .tienda-sabias p {
-  text-align: left;
+  text-align: center;
+  text-wrap: balance;
   display: block;
   color: #FFFFFF;
 }
@@ -1677,6 +1689,69 @@ body.light-mode .iconBtn {
   to {
     opacity: 1;
   }
+}
+
+.contenedor-foto {
+  position: relative;
+}
+
+.contenedor-foto img {
+  width: 100%;
+  display: block;
+}
+
+/* contenedor de iconos */
+.iconos-foto {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  pointer-events: none;
+}
+
+.iconos-foto i {
+  font-size: 3rem;
+  width: 64px;
+  height: 64px;
+  background: #00B8D9;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  pointer-events: auto;
+}
+
+/* alternar lados */
+.iconos-foto i:nth-child(1) {
+  margin-left: 2rem;
+}
+
+.iconos-foto i:nth-child(2) {
+  margin-left: 1.2rem;
+}
+
+.iconos-foto i:nth-child(1),
+.iconos-foto i:nth-child(3) {
+  align-self: flex-start;
+}
+
+.iconos-foto i:nth-child(2) {
+  align-self: flex-end;
+  margin-right: 12px;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.float {
+  animation: float 3s ease-in-out infinite;
 }
 
 .icon-home {
