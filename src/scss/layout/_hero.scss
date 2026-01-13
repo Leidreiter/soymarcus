@@ -121,7 +121,7 @@
     z-index: 10000;
     background-color: rgba(255, 166, 0, 0);
     backdrop-filter: blur(.6rem);
-    border: 1px solid #ffffff20;
+    border-top: 1px solid v.$f-primario;
 
     
     @include m.tablet {
@@ -240,6 +240,20 @@
 
 .icon-home{
   background-image: url('/src/img/home.svg');
+  background-repeat: no-repeat;
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: contain;
+  border-radius: 50%;
+  background-color: #2a2a2a;
+  border: 1rem solid #2a2a2a;
+  @include m.tablet{
+   display: none;
+  }
+}
+.icon-ws{
+  background-image: url('/src/img/whatsapp.svg');
   background-repeat: no-repeat;
   width: 5rem;
   height: 5rem;

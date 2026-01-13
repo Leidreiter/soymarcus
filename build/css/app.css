@@ -483,8 +483,8 @@ img {
 }
 
 .logo img {
-  width: 8rem;
-  height: 8rem;
+  width: 9rem;
+  height: 9rem;
   border-radius: 5rem;
 }
 
@@ -515,6 +515,17 @@ img {
   border-radius: 50%;
   bottom: 1rem;
   right: 1rem;
+  animation: pulso 2s infinite;
+}
+
+.pulseOnline {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: #87E64B;
+  border-radius: 50%;
+  bottom: 0.8rem;
+  right: 0.8rem;
   animation: pulso 2s infinite;
 }
 
@@ -1068,12 +1079,6 @@ body.light-mode .tienda-sabias p {
 
 body.light-mode .logo-tienda {
   background-image: url("/src/img/logo-hms-dm.svg");
-}
-
-body.light-mode .icon-home {
-  background-image: url("/src/img/home-dm.svg");
-  background-color: #FFFFFF;
-  border: 6px solid #FFFFFF;
 }
 
 body.light-mode .card {
@@ -1658,7 +1663,7 @@ body.light-mode .hero {
   z-index: 10000;
   background-color: rgba(255, 166, 0, 0);
   backdrop-filter: blur(0.6rem);
-  border: 1px solid rgba(255, 255, 255, 0.1254901961);
+  border-top: 1px solid #121212;
 }
 @media (min-width: 768px) {
   .hero .hero-imagen {
@@ -1783,6 +1788,23 @@ body.light-mode .hero {
 }
 @media (min-width: 768px) {
   .icon-home {
+    display: none;
+  }
+}
+
+.icon-ws {
+  background-image: url("/src/img/whatsapp.svg");
+  background-repeat: no-repeat;
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: contain;
+  border-radius: 50%;
+  background-color: #2a2a2a;
+  border: 1rem solid #2a2a2a;
+}
+@media (min-width: 768px) {
+  .icon-ws {
     display: none;
   }
 }
@@ -2737,4 +2759,18 @@ body {
   width: auto;
   display: block;
   object-fit: contain;
+}
+
+.mis-redes {
+  display: flex;
+  column-gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.mis-redes i {
+  color: #FFFFFF;
+  font-size: 3rem;
+}
+.mis-redes i:hover {
+  color: #00B8D9;
 }/*# sourceMappingURL=app.css.map */

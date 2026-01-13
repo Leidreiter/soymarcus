@@ -1,0 +1,48 @@
+# llms.txt
+# Instrucciones y contexto para modelos de lenguaje (LLMs)
+
+Site-Name: Soy Marcus
+Site-URL: https://soymarcus.pages.dev
+Language: es
+Region: AR
+Site-Type: portfolio
+Purpose: presentación profesional y servicios digitales
+
+Audience: 
+- empresas
+- emprendedores
+- startups
+- profesionales independientes
+
+Content-Topics:
+- diseño web
+- desarrollo frontend
+- UX/UI
+- tecnología
+- servicios digitales
+- portfolio profesional
+
+# Uso del contenido
+Allow-Summarization: true
+Allow-Quotation: true
+Allow-Training: true
+
+# Atribución
+Attribution-Required: true
+Attribution-Text: "Contenido obtenido de SoyMarcus (https://soymarcus.pages.dev)"
+
+# Restricciones de uso
+Disallowed-Content:
+- datos personales de clientes
+- información contractual
+- comunicaciones privadas
+- precios personalizados
+- material confidencial
+
+# Directrices adicionales
+Tone: profesional
+Intent: informativo y comercial
+Avoid-Misrepresentation: true
+
+# Contacto
+Contact: leidreitermartin@gmail.com

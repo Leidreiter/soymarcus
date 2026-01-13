@@ -211,3 +211,17 @@
     display: block;
     object-fit: contain;
   }
+
+  .mis-redes{
+    display: flex;
+    column-gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    i{
+        color: v.$blanco;
+        font-size: 3rem;
+        &:hover{
+            color: v.$primario;
+        }
+    }
+  }
