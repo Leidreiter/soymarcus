@@ -30,6 +30,10 @@ const translations = {
     sabiasTienda: "¿Sabías que tengo una tienda online?",
     visitaTienda: "Visita la tienda",
 
+    // Podcast
+    sabiasPodcast: "¿Sabías que tengo un Podcast sobre la vida freelancer?",
+    visitaWeb: "Visita la web",
+
     // Hero
     heroTitulo: "Diseño y Desarrollo web profesional a medida.",
     heroTypewriter: "<Yo>",
@@ -253,6 +257,10 @@ const translations = {
     // Store
     sabiasTienda: "Did you know I have an online store?",
     visitaTienda: "Visit the store",
+
+    // Podcast
+    sabiasPodcast: "Did you know that I have a podcast about the freelance lifestyle?",
+    visitaWeb: "Visit the website",
 
     // Hero
     heroTitulo: "Professional custom web design and development.",
@@ -528,6 +536,30 @@ function applyTranslations() {
   if (tiendaLink) {
     tiendaLink.innerHTML = `${t.visitaTienda} <span>&gt;</span>`;
   }
+
+  // Podcast
+  const podcastTexto = document.querySelector('.podcast-sabias p');
+  if (podcastTexto) podcastTexto.textContent = t.sabiasPodcast;
+  const podcastLink = document.querySelector('.podcast-link');
+  if (podcastLink) {
+    podcastLink.innerHTML = `${t.visitaWeb} <span>&gt;</span>`;
+  }
+
+  const publis = document.querySelectorAll('.publi');
+
+if (publis[0]) {
+  const texto = publis[0].querySelector('.publi-sabias p');
+  const link = publis[0].querySelector('.publi-link');
+  if (texto) texto.textContent = t.sabiasTienda;
+  if (link) link.innerHTML = `${t.visitaTienda} <span>&gt;</span>`;
+}
+
+if (publis[1]) {
+  const texto = publis[1].querySelector('.publi-sabias p');
+  const link = publis[1].querySelector('.publi-link');
+  if (texto) texto.textContent = t.sabiasPodcast;
+  if (link) link.innerHTML = `${t.visitaWeb} <span>&gt;</span>`;
+}
 
   // Hero
   const heroTitulo = document.querySelector('.hero-titulo h1');
