@@ -81,7 +81,7 @@
     }
 }
 
-.icono-idiomas{
+.icono-idiomas {
     width: 5rem;
     height: 5rem;
     margin: 0 auto;
@@ -91,7 +91,7 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    @include m.tablet{
+    @include m.tablet {
         width: 4rem;
         height: 4rem;
     }
@@ -223,8 +223,8 @@
 }
 
 
-.tienda {
-    @include m.bento(url('/src/img/bg-tienda.png'));
+.publi {
+    @include m.bento();
 
     text-align: center;
     margin: 0 auto;
@@ -232,13 +232,9 @@
     width: 100%;
     height: 18rem;
 
-    .logo-tienda {
+    .publi-logo {
         width: 6rem;
         height: 6rem;
-        background-image: url('/src/img/logo-hms.svg');
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
 
         @include m.tablet {
             width: 5rem;
@@ -246,8 +242,29 @@
         }
     }
 
+    &.publibg1 {
+        @include m.background(url('/src/img/bg-tienda.webp'));
+    }
+    &.publibg2 {
+        @include m.background(url('/src/img/bg-podcast.webp'));
+    }
+
+    .publilogo1 {
+        background-image: url('/src/img/logo-hms.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .publilogo2 {
+        background-image: url('/src/img/vidafreelance.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
     // --- CAPA 3: overlay superior ---
-    .tienda-overlay {
+    .publi-overlay {
         position: absolute;
         inset: 0;
         border-radius: 1rem;
@@ -263,7 +280,7 @@
         row-gap: 1rem;
     }
 
-    .tienda-sabias {
+    .publi-sabias {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -277,7 +294,7 @@
         }
     }
 
-    .tienda-link {
+    .publi-link {
         text-transform: uppercase;
         font-weight: bold;
         color: v.$blanco;

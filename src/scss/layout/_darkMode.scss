@@ -157,7 +157,7 @@ body.light-mode .dot{
 }
 /* Cambio color conocimientos, link tienda, yo(hero), btn hero, dot testimoniales, dots timeline, menu*/
 body.light-mode .skills-list li::before,
-body.light-mode .tienda-link:hover,
+body.light-mode .publi-link:hover,
 body.light-mode .texto-color,
 body.light-mode .servicio-link,
 body.light-mode .card-info a,
@@ -476,24 +476,24 @@ body.light-mode .tecnologias {
 }
 
 /* Cambio de fondo de tienda */
-body.light-mode .tienda {
+body.light-mode .publi {
   border: 1px solid #e0e0e0;
   background-color: #ffffff;
 }
 
 
-body.light-mode .tienda-overlay{
+body.light-mode .publi-overlay{
   background: rgba(255, 255, 255, 0.835);
 }
 
-body.light-mode .tienda-link{
+body.light-mode .publi-link{
   color: #333;
 }
-body.light-mode .tienda-sabias p{
+body.light-mode .publi-sabias p{
   color: #333;
 }
 
-body.light-mode .logo-tienda{
+body.light-mode .publilogo1{
   background-image: url('/src/img/logo-hms-dm.svg');
 }
 

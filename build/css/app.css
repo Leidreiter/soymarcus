@@ -431,6 +431,11 @@ h3 {
     font-size: 2rem;
   }
 }
+h4 {
+  font-size: 10px;
+  margin-top: 4px;
+}
+
 img {
   max-width: 100%;
   width: 100%;
@@ -548,6 +553,7 @@ img {
   background-position: center center;
   color: #FFFFFF;
   border-radius: 1rem;
+  background: #1E1E1E;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -570,6 +576,7 @@ img {
   background-position: center center;
   color: #FFFFFF;
   border-radius: 1rem;
+  background: #1E1E1E;
   color: #aaa;
   text-align: center;
   display: flex;
@@ -749,7 +756,7 @@ body.light-mode .dot {
 
 /* Cambio color conocimientos, link tienda, yo(hero), btn hero, dot testimoniales, dots timeline, menu*/
 body.light-mode .skills-list li::before,
-body.light-mode .tienda-link:hover,
+body.light-mode .publi-link:hover,
 body.light-mode .texto-color,
 body.light-mode .servicio-link,
 body.light-mode .card-info a,
@@ -1060,24 +1067,24 @@ body.light-mode .tecnologias {
 }
 
 /* Cambio de fondo de tienda */
-body.light-mode .tienda {
+body.light-mode .publi {
   border: 1px solid #e0e0e0;
   background-color: #ffffff;
 }
 
-body.light-mode .tienda-overlay {
+body.light-mode .publi-overlay {
   background: rgba(255, 255, 255, 0.835);
 }
 
-body.light-mode .tienda-link {
+body.light-mode .publi-link {
   color: #333;
 }
 
-body.light-mode .tienda-sabias p {
+body.light-mode .publi-sabias p {
   color: #333;
 }
 
-body.light-mode .logo-tienda {
+body.light-mode .publilogo1 {
   background-image: url("/src/img/logo-hms-dm.svg");
 }
 
@@ -1200,6 +1207,7 @@ body.light-mode .hero {
   background-position: center center;
   color: #FFFFFF;
   border-radius: 1rem;
+  background: #1E1E1E;
 }
 .informacion .info {
   display: flex;
@@ -1224,6 +1232,7 @@ body.light-mode .hero {
   background-position: center center;
   color: #FFFFFF;
   border-radius: 1rem;
+  background: #1E1E1E;
 }
 .idiomas .idioma {
   display: flex;
@@ -1289,6 +1298,7 @@ body.light-mode .hero {
   background-position: center center;
   color: #FFFFFF;
   border-radius: 1rem;
+  background: #1E1E1E;
 }
 
 .habilidad {
@@ -1364,6 +1374,7 @@ body.light-mode .hero {
   background-position: center center;
   color: #FFFFFF;
   border-radius: 1rem;
+  background: #1E1E1E;
 }
 .conocimientos .skills-list {
   list-style: none;
@@ -1395,6 +1406,7 @@ body.light-mode .hero {
   background-position: center center;
   color: #FFFFFF;
   border-radius: 1rem;
+  background: #1E1E1E;
 }
 .curriculum .link-descarga {
   text-transform: uppercase;
@@ -1410,9 +1422,8 @@ body.light-mode .hero {
   transform: translateX(1rem);
 }
 
-.tienda {
+.publi {
   padding: 2rem;
-  background: url("/src/img/bg-tienda.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1424,21 +1435,35 @@ body.light-mode .hero {
   width: 100%;
   height: 18rem;
 }
-.tienda .logo-tienda {
+.publi .publi-logo {
   width: 6rem;
   height: 6rem;
+}
+@media (min-width: 768px) {
+  .publi .publi-logo {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+.publi.publibg1 {
+  background: url("/src/img/bg-tienda.webp");
+}
+.publi.publibg2 {
+  background: url("/src/img/bg-podcast.webp");
+}
+.publi .publilogo1 {
   background-image: url("/src/img/logo-hms.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
 }
-@media (min-width: 768px) {
-  .tienda .logo-tienda {
-    width: 5rem;
-    height: 5rem;
-  }
+.publi .publilogo2 {
+  background-image: url("/src/img/vidafreelance.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-.tienda .tienda-overlay {
+.publi .publi-overlay {
   position: absolute;
   inset: 0;
   border-radius: 1rem;
@@ -1451,25 +1476,25 @@ body.light-mode .hero {
   text-wrap: wrap;
   row-gap: 1rem;
 }
-.tienda .tienda-sabias {
+.publi .publi-sabias {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 1rem;
 }
-.tienda .tienda-sabias p {
+.publi .publi-sabias p {
   text-align: center;
   text-wrap: balance;
   display: block;
   color: #FFFFFF;
 }
-.tienda .tienda-link {
+.publi .publi-link {
   text-transform: uppercase;
   font-weight: bold;
   color: #FFFFFF;
   transition: transform 0.3s ease;
 }
-.tienda .tienda-link:hover {
+.publi .publi-link:hover {
   cursor: pointer;
   color: #00B8D9;
   transform: translateX(1rem);
@@ -1533,6 +1558,7 @@ body.light-mode .hero {
   background-position: center center;
   color: #FFFFFF;
   border-radius: 1rem;
+  background: #1E1E1E;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -1652,7 +1678,6 @@ body.light-mode .hero {
   }
 }
 .hero .hero-imagen {
-  width: 100%;
   height: 8rem;
   display: flex;
   justify-content: center;
@@ -1660,10 +1685,14 @@ body.light-mode .hero {
   position: fixed;
   bottom: 0;
   left: 0;
+  right: 0;
   z-index: 10000;
   background-color: rgba(255, 166, 0, 0);
   backdrop-filter: blur(0.6rem);
-  border-top: 1px solid #121212;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 2rem;
+  margin: 1rem;
+  animation: fadeIn 1s ease-in-out;
 }
 @media (min-width: 768px) {
   .hero .hero-imagen {
@@ -1680,6 +1709,16 @@ body.light-mode .hero {
     background-color: none;
     backdrop-filter: none;
     border: none;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 @media (min-width: 768px) {
@@ -1908,6 +1947,7 @@ body {
   background-position: center center;
   color: #FFFFFF;
   border-radius: 1rem;
+  background: #1E1E1E;
   text-align: center;
 }
 .numeros .numero span {
@@ -1957,6 +1997,7 @@ body {
   background-position: center center;
   color: #FFFFFF;
   border-radius: 1rem;
+  background: #1E1E1E;
   margin-bottom: 1rem;
 }
 .grid-servicios .servicio-link {
@@ -2009,6 +2050,7 @@ body {
   background-position: center center;
   color: #FFFFFF;
   border-radius: 1rem;
+  background: #1E1E1E;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -2138,6 +2180,7 @@ body {
   background-position: center center;
   color: #FFFFFF;
   border-radius: 1rem;
+  background: #1E1E1E;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -2361,6 +2404,7 @@ body {
   background-position: center center;
   color: #FFFFFF;
   border-radius: 1rem;
+  background: #1E1E1E;
   display: flex;
   flex-direction: column;
   border-radius: 2rem;
@@ -2434,6 +2478,7 @@ body {
   background-position: center center;
   color: #FFFFFF;
   border-radius: 1rem;
+  background: #1E1E1E;
 }
 
 .formulario {
@@ -2723,9 +2768,12 @@ body {
 }
 
 .popup-red__foto {
-  width: 6rem;
+  width: 3rem;
   border-radius: 50rem;
-  border: 1px solid #fff;
+  border: 1px solid #121212;
+  image-rendering: -webkit-optimize-contrast; /* Para Chrome/Safari */
+  image-rendering: crisp-edges; /* Para otros navegadores */
+  vertical-align: middle;
 }
 
 .popup-red__info h3,

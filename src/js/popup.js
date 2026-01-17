@@ -1,11 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     const popup = document.getElementById("popupOverlay");
-    const btnOpen = document.getElementById("popupOpen");
+    const btnOpen = document.querySelectorAll(".popupOpen");
     const btnClose = document.getElementById("popupClose");
 
-    btnOpen.addEventListener("click", (e) => {
-        e.preventDefault();
-        popup.classList.add("active");
+    btnOpen.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            popup.classList.add("active");
+        });
     });
 
     btnClose.addEventListener("click", () => {

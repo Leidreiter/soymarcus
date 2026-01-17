@@ -36,18 +36,26 @@
     gap: $gap;
 }
 
-@mixin bento($color-fondo){
+@mixin bento($fondo : null ){
     padding: 2rem;
-    background: $color-fondo;
+    background: $fondo;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     color: v.$blanco;
     border-radius: 1rem;
+
+    @if $fondo != null {
+        background: $fondo;
+    }
 }
 
 @mixin reset-lista {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+@mixin background($imagen){
+    background: $imagen;
 }

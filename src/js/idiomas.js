@@ -5,7 +5,7 @@ const translations = {
   es: {
     // Header
     nombre: "Martin H. Leidreiter",
-    puesto1: "Programdor web",
+    puesto1: "Programador web",
     puesto2: "UX / UI",
     puesto3: "Diseñador gráfico",
 

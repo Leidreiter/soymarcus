@@ -175,9 +175,12 @@
 }
 
 .popup-red__foto {
-    width: 6rem;
+    width: 3rem;
     border-radius: 50rem;
-    border: 1px solid #fff;
+    border: 1px solid v.$f-primario;
+    image-rendering: -webkit-optimize-contrast; /* Para Chrome/Safari */
+    image-rendering: crisp-edges; /* Para otros navegadores */
+    vertical-align: middle;
 }
 
 .popup-red__info h3,

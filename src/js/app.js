@@ -150,7 +150,7 @@ function animarCirculos() {
   });
 }
 
-/* Carrusel testimoniales */
+/* Carrusel testimoniales con swipe */
 const track = document.querySelector('.testimonial-track');
 const testimonials = Array.from(document.querySelectorAll('.testimonial'));
 const dotsContainer = document.querySelector('.dots');
@@ -158,6 +158,12 @@ const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 
 let index = 0;
+
+// Variables para swipe
+let startX = 0;
+let currentX = 0;
+let isDragging = false;
+let startTransform = 0;
 
 function testimoniosPorVista() {
   return window.innerWidth <= 768 ? 1 : 2;
@@ -186,12 +192,101 @@ function moverA(pos) {
   moverCarrusel();
 }
 
-function moverCarrusel() {
+function moverCarrusel(suave = true) {
   const ancho = testimonials[0].clientWidth;
+  if (suave) {
+    track.style.transition = 'transform 0.3s ease-out';
+  }
   track.style.transform = `translateX(-${index * ancho}px)`;
   actualizarDots();
 }
 
+// Event listeners para swipe en móvil
+track.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+  isDragging = true;
+  const ancho = testimonials[0].clientWidth;
+  startTransform = index * ancho;
+  track.style.transition = 'none';
+});
+
+track.addEventListener('touchmove', (e) => {
+  if (!isDragging) return;
+  currentX = e.touches[0].clientX;
+  const diff = startX - currentX;
+  track.style.transform = `translateX(-${startTransform + diff}px)`;
+});
+
+track.addEventListener('touchend', (e) => {
+  if (!isDragging) return;
+  isDragging = false;
+  
+  const diff = startX - currentX;
+  const threshold = 50; // píxeles mínimos para considerar un swipe
+  
+  if (Math.abs(diff) > threshold) {
+    if (diff > 0) {
+      // Swipe izquierda - siguiente
+      if (index < testimonials.length - 1) index++;
+      else index = 0;
+    } else {
+      // Swipe derecha - anterior
+      if (index > 0) index--;
+      else index = testimonials.length - 1;
+    }
+  }
+  
+  moverCarrusel();
+});
+
+// Soporte para mouse (opcional, útil para testing en escritorio)
+track.addEventListener('mousedown', (e) => {
+  startX = e.clientX;
+  isDragging = true;
+  const ancho = testimonials[0].clientWidth;
+  startTransform = index * ancho;
+  track.style.transition = 'none';
+  track.style.cursor = 'grabbing';
+});
+
+track.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  e.preventDefault();
+  currentX = e.clientX;
+  const diff = startX - currentX;
+  track.style.transform = `translateX(-${startTransform + diff}px)`;
+});
+
+track.addEventListener('mouseup', (e) => {
+  if (!isDragging) return;
+  isDragging = false;
+  track.style.cursor = 'grab';
+  
+  const diff = startX - currentX;
+  const threshold = 50;
+  
+  if (Math.abs(diff) > threshold) {
+    if (diff > 0) {
+      if (index < testimonials.length - 1) index++;
+      else index = 0;
+    } else {
+      if (index > 0) index--;
+      else index = testimonials.length - 1;
+    }
+  }
+  
+  moverCarrusel();
+});
+
+track.addEventListener('mouseleave', () => {
+  if (isDragging) {
+    isDragging = false;
+    track.style.cursor = 'grab';
+    moverCarrusel();
+  }
+});
+
+// Botones originales
 nextBtn.addEventListener('click', () => {
   if (index < testimonials.length - 1) index++;
   else index = 0;
@@ -206,7 +301,10 @@ prevBtn.addEventListener('click', () => {
 
 window.addEventListener('resize', () => {
   crearDots();
-  moverCarrusel();
+  moverCarrusel(false);
 });
+
+// Agregar cursor visual
+track.style.cursor = 'grab';
 
 crearDots();
