@@ -219,7 +219,7 @@ const translations = {
 
     // Popup
     popupColaboraciones: "Para colaboraciones, envíame un correo a:",
-    popupProyectos: "Todos mis proyectos 💼",
+    popupProyectos: "Links que me piden 🔗",
     popupLinks: "Links que me piden 🔗",
     popupLinkOG: "Open Graph ➞",
     popupLinkOGDesc: "Título, Descripción e Imagen personalizados",
@@ -446,7 +446,7 @@ const translations = {
 
     // Popup
     popupColaboraciones: "For collaborations, send me an email to:",
-    popupProyectos: "All my projects 💼",
+    popupProyectos: "Links I'm asked for 🔗",
     popupLinks: "Links I'm asked for 🔗",
     popupLinkOG: "Open Graph ➞",
     popupLinkOGDesc: "Custom Title, Description and Image",

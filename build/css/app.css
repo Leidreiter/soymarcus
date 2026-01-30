@@ -527,7 +527,7 @@ img {
   position: absolute;
   width: 1rem;
   height: 1rem;
-  background-color: #87E64B;
+  background-color: #22c55e;
   border-radius: 50%;
   bottom: 0.8rem;
   right: 0.8rem;
@@ -1694,7 +1694,7 @@ body.light-mode .hero {
   background-color: rgba(255, 166, 0, 0);
   backdrop-filter: blur(0.6rem);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 2rem;
+  border-radius: 2.4rem;
   margin: 1rem;
 }
 @media (min-width: 768px) {
