@@ -2,7 +2,7 @@
 # Instrucciones y contexto para modelos de lenguaje (LLMs)
 
 Site-Name: Soy Marcus
-Site-URL: https://soymarcus.pages.dev
+Site-URL: https://soymarcus.dev
 Language: es
 Region: AR
 Site-Type: portfolio
@@ -29,7 +29,7 @@ Allow-Training: true
 
 # Atribución
 Attribution-Required: true
-Attribution-Text: "Contenido obtenido de SoyMarcus (https://soymarcus.pages.dev)"
+Attribution-Text: "Contenido obtenido de @soymarcus (https://soymarcus.dev)"
 
 # Restricciones de uso
 Disallowed-Content:

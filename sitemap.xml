@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://soymarcus.pages.dev/</loc>
+        <loc>https://soymarcus.dev/</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://soymarcus.pages.dev/#servicios</loc>
+        <loc>https://soymarcus.dev/links</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://soymarcus.dev/#servicios</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://soymarcus.pages.dev/#portfolio</loc>
+        <loc>https://soymarcus.dev/#portfolio</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://soymarcus.pages.dev/#contacto</loc>
+        <loc>https://soymarcus.dev/#contacto</loc>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
