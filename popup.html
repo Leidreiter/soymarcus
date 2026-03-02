@@ -1,0 +1,108 @@
+<!-- Agregar esta clase a un link para abrir popup con la clase popupOpen -->
+
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup-modal">
+
+        <button class="popup-close" id="popupClose">×</button>
+
+        <header class="popup-header popup-contenedor">
+            <div class="popup-header__logo popup-centrar">
+
+                <picture class="popup-logo">
+                    <source srcset="src/img/perfil.webp" type="image/webp">
+                    <img loading="lazy" src="src/img/perfil.png" alt="Martin Leidreiter"
+                        class="bloque__imagen" fetchpriority=high>
+                </picture>
+
+                <h1 class="popup-header__user">@soymarcusdev</h1>
+
+                <h2 class="popup-header__info">
+                    Para colaboraciones, envíame un correo a:<br>
+                    <a href="mailto:marcus.contenido@gmail.com">📧 marcus.contenido@gmail.com</a>
+                </h2>
+
+                <div class="mis-redes">
+                    <a href="https://www.tiktok.com/@soymarcusdev" target="_blank">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.instagram.com/soymarcusdev/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.threads.com/@soymarcusdev" target="_blank">
+                        <i class="fa-brands fa-threads"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@soymarcusdev" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.twitch.tv/soymarcusdev" target="_blank">
+                        <i class="fa-brands fa-twitch"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="popup-contenedor popup-principal popup-flex">
+
+            <h2 class="popup-principal__titulo">Todos mis proyectos 💼</h2>
+
+            <div class="sponsors-logos">
+                <img src="/src/img/popup/soymarcus.svg" class="sponsor fade-item" alt="logo soy marcus">
+                <a href="https://holamundo.store/" target="_blank">
+                    <img src="/src/img/popup/holamundostore.svg" class="sponsor fade-item"
+                        alt="logo hola mundo store">
+                </a>
+                <img src="/src/img/popup/logo-awp.svg" class="sponsor fade-item" alt="logo academia soy marcus">
+                <img src="/src/img/popup/gatonegro.svg" class="sponsor fade-item" alt="logo gato negro diseño">
+                <img src="/src/img/popup/codeinjection.svg" class="sponsor fade-item" alt="logo code injection">
+                <a href="https://vidafreelancer.netlify.app/" target="_blank">
+                    <img src="/src/img/popup/vidafreelancer.svg" class="sponsor fade-item"
+                        alt="logo vida freelance">
+                </a>
+            </div>
+
+        </main>
+
+        <section class="popup-contenedor">
+            <h2 class="popup-principal__titulo">Links que me piden 🔗</h2>
+
+            <div class="popup-flex">
+                <a href="https://gist.github.com/Leidreiter/f0bcd5dc3b3c151e942cb8ab9f795daa" target="_blank">
+                    <div class="popup-red">
+                        <img src="https://www.google.com/s2/favicons?domain=https://gist.github.com/" alt="favicon" class="popup-red__foto">
+                        <div class="popup-red__info">
+                            <h3>Open Graph ➞</h3>
+                            <h4>Título, Descripción e Imagen personalizados.</h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.thiings.co/things" target="_blank">
+                    <div class="popup-red">
+                        <img src="https://www.google.com/s2/favicons?domain=https://www.thiings.co/things" alt="favicon" class="popup-red__foto">
+                        <div class="popup-red__info">
+                            <h3>Thiing ➞</h3>
+                            <h4>+9000 íconos 3D en PNG gratuitos.</h4>
+                        </div>
+                    </div>
+                </a><a href="https://www.flaticon.es/" target="_blank">
+                    <div class="popup-red">
+                        <img src="https://www.google.com/s2/favicons?domain=https://www.flaticon.es/" alt="favicon" class="popup-red__foto">
+                        <div class="popup-red__info">
+                            <h3>Flaticon ➞</h3>
+                            <h4>íconos vectoriales, stickers e ilustraciones.</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <footer class="popup-footer">
+            <div class="popup-footer__info popup-centrar">
+                <h2>Gracias por pasar por aquí 🫂</h2>
+                <h3><i>No olvides seguirme en mis otras redes</i></h3>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+<script src="src/js/popup.js"></script>

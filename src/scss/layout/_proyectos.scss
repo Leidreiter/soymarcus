@@ -1,0 +1,87 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.proyectos h2 {
+    color: v.$blanco;
+    margin: 3rem 1rem;
+  }
+
+.proyecto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0;
+    
+    @include m.tablet{
+        margin: 8rem 0;
+    }
+
+    a {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+
+        @include m.tablet {
+            &::before {
+                content: attr(data-tooltip);
+                position: absolute;
+                bottom: calc(100% + 10px);
+                left: 50%;
+                transform: translateX(-50%) translateY(4px);
+                background: v.$primario;
+                color: v.$blanco;
+                font-family: v.$fuente_principal;
+                font-size: 1.2rem;
+                font-weight: 600;
+                white-space: nowrap;
+                padding: 0.35rem 0.75rem;
+                border-radius: 0.5rem;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease, transform 0.3s ease;
+                pointer-events: none;
+                z-index: 10;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: calc(100% + 2px);
+                left: 50%;
+                transform: translateX(-50%);
+                border: 5px solid transparent;
+                border-top-color: v.$primario;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease;
+                pointer-events: none;
+                z-index: 10;
+            }
+
+            &:hover::before {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(-50%) translateY(0);
+            }
+
+            &:hover::after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    img{
+        height: 2.4rem;
+        @include m.tablet{
+            height: 5rem;
+        }
+        object-fit: contain;
+        filter: grayscale(100%);
+        transition: filter 0.5s ease;
+        &:hover{
+            filter: grayscale(0%);
+        }
+    }
+
+}
