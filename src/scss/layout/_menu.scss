@@ -47,6 +47,7 @@ body {
   @include m.tablet {
     width: 100%;  
     opacity: 0;
+    pointer-events: none;
     transition: opacity v.$speed ease;
     text-align: left;
   }
@@ -55,6 +56,7 @@ body {
 
 .main-content.open .menu-items {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .menu-items li {

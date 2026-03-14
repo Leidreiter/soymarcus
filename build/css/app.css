@@ -559,6 +559,12 @@ img {
   justify-content: center;
   gap: 2rem;
 }
+.redes i {
+  flex: 1;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #aaa;
+}
 .redes a {
   color: #aaa;
   font-size: 2rem;
@@ -1888,6 +1894,7 @@ body {
   .menu-items {
     width: 100%;
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.3s ease;
     text-align: left;
   }
@@ -1895,6 +1902,7 @@ body {
 
 .main-content.open .menu-items {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .menu-items li {
