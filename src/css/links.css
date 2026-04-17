@@ -543,3 +543,6 @@ a:focus-visible {
   background: var(--primary-color);
   color: #fff;
 }
+.icoProyectos{
+  font-size: 32px;
+}
