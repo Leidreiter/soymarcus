@@ -5,9 +5,8 @@
 
 /* ===== CSS CUSTOM PROPERTIES ===== */
 :root {
-  /* Colors — Teal/Green palette */
-  --bg-primary: #05668d;
-  --bg-secondary: #028090;
+  --bg-primary: #e5491a;
+  --bg-secondary: #F24E1E;
   --bg-card: rgba(255, 255, 255, 0.04);
   --bg-card-hover: rgba(255, 255, 255, 0.1);
   --bg-glass: rgba(255, 166, 0, 0);
@@ -18,13 +17,6 @@
   --text-secondary: rgba(255, 255, 255, 0.8);
   --text-muted: rgba(255, 255, 255, 0.5);
 
-  --primary-color: #02c39a;
-  --primary-hover: #00a896;
-  --primary-dark: #05668d;
-
-  --accent: var(--primary-color);
-  --accent-glow: rgba(2, 195, 154, 0.35);
-  --accent-light: #02c39a;
 
   /* Spacing */
   --container-max: 480px;
@@ -79,12 +71,22 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 
-  /* Radial gradient background */
-  background: radial-gradient(circle at center,
-    #02c39a 0%,
-    #028090 45%,
-    #05668d 100%);
-  background-attachment: fixed;
+  /* Patrón en mosaico + degradado radial céntrico (#F24E1E → negro); fusión para que el patrón se filtre */
+  background-color: #000000;
+  background-image:
+    radial-gradient(
+      circle at center,
+      #F24E1E 0%,
+      #8b280f 38%,
+      #1a0804 68%,
+      #000000 100%
+    ),
+    url('../img/bg.jpg');
+  background-repeat: no-repeat, repeat;
+  background-position: center, center;
+  background-size: cover, auto;
+  background-attachment: fixed, fixed;
+  background-blend-mode: overlay, normal;
 }
 
 /* ===== CONTAINER ===== */
