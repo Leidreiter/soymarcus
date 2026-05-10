@@ -299,9 +299,14 @@ prevBtn.addEventListener('click', () => {
   moverCarrusel();
 });
 
+let lastWidth = window.innerWidth;
 window.addEventListener('resize', () => {
-  crearDots();
-  moverCarrusel(false);
+  // Solo actuamos si el ancho cambió (ignora cambios de altura por barras de navegación en móvil)
+  if (window.innerWidth !== lastWidth) {
+    lastWidth = window.innerWidth;
+    crearDots();
+    moverCarrusel(false);
+  }
 });
 
 // Agregar cursor visual

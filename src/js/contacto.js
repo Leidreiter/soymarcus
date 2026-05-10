@@ -1,4 +1,5 @@
 function sendMessage() {
+    try {
     // Obtengo los valores
     const origen = document.getElementById("origen").value;
     const fullName = document.getElementById("fullName").value;
@@ -9,20 +10,23 @@ function sendMessage() {
     const phone = "543515957014";
 
     // Armo el mensaje
-    let message = `Hola, soy ${fullName}.%0A`;
-    message += `Llegué a tu web por ${origen}.%0A`;
+    let messageText = `Hola, soy ${fullName}.\n`;
+    messageText += `Llegué a tu web por ${origen}.\n`;
     if (email) {
-        message += `Mi email es ${email}.%0A`;
+        messageText += `Mi email es ${email}.\n`;
     }
     if (consulta) {
-        message += `Quería consultar ${consulta}.%0A`;
+        messageText += `Quería consultar ${consulta}.\n`;
     }
 
     // URL de WhatsApp
-    const url = `https://wa.me/${phone}?text=${message}`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(messageText)}`;
 
     // Abrir en nueva pestaña
     window.open(url, "_blank");
+    } catch (e) {
+        console.error("Error al enviar mensaje:", e);
+    }
 
     return false; // Evita que el formulario se envíe de forma tradicional
 }
