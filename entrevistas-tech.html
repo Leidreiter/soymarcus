@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entrevistas Tech · Guía para Invitados</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0a0a;
+    --bg2: #111111;
+    --bg3: #171717;
+    --surface: #1c1c1c;
+    --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.12);
+    --text: #f0ede8;
+    --text2: #9a9690;
+    --text3: #5a5855;
+    --accent: #e8ff47;
+    --accent2: #ff6b35;
+    --accent3: #7b9fff;
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 6vw 8vh;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-bg::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 70vw;
+    height: 70vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,255,71,0.06) 0%, transparent 70%);
+  }
+
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: -15%;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(123,159,255,0.05) 0%, transparent 70%);
+  }
+
+  .hero-label {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+
+  .hero-label::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .hero-title {
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-display);
+    font-size: clamp(52px, 9vw, 120px);
+    font-weight: 800;
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    opacity: 0;
+    animation: fadeUp 0.9s 0.35s forwards;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    color: var(--accent);
+    display: block;
+  }
+
+  .hero-desc {
+    position: relative;
+    z-index: 1;
+    margin-top: 2.5rem;
+    max-width: 560px;
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--text2);
+    line-height: 1.7;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.5s forwards;
+  }
+
+  .hero-meta {
+    position: relative;
+    z-index: 1;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.65s forwards;
+  }
+
+  .hero-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface);
+    border: 0.5px solid var(--border2);
+    border-radius: 100px;
+    padding: 8px 16px;
+    font-size: 13px;
+    color: var(--text2);
+  }
+
+  .hero-pill span { color: var(--text); font-weight: 500; }
+
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+  .scroll-hint {
+    position: relative;
+    z-index: 1;
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: var(--text3);
+    letter-spacing: 0.05em;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.8s forwards;
+  }
+
+  .scroll-line {
+    width: 40px;
+    height: 1px;
+    background: var(--text3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scroll-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--accent);
+    animation: slideLine 2s 1.5s infinite;
+  }
+
+  /* ── SECTION LAYOUT ── */
+  .section {
+    padding: 6rem 6vw;
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text3);
+    margin-bottom: 1.5rem;
+  }
+
+  .section-label::before {
+    content: attr(data-num);
+    color: var(--accent);
+    font-size: 10px;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+
+  .section-sub {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text2);
+    max-width: 520px;
+    margin-bottom: 3.5rem;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border2), transparent);
+    margin: 0 6vw;
+    width: calc(100% - 12vw);
+  }
+
+  /* ── BLOQUES ── */
+  .blocks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .block-card {
+    background: var(--bg2);
+    padding: 2rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    position: relative;
+  }
+
+  .block-card:hover { background: var(--surface); }
+
+  .block-card.active { background: var(--surface); }
+
+  .block-card.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+  }
+
+  .block-num {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--text3);
+    margin-bottom: 0.75rem;
+  }
+
+  .block-name {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .block-time {
+    font-size: 12px;
+    color: var(--text3);
+  }
+
+  .block-icon {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 22px;
+    opacity: 0.35;
+  }
+
+  /* ── PREGUNTAS ── */
+  .questions-panel {
+    margin-top: 2rem;
+    background: var(--bg3);
+    border: 1px solid var(--border2);
+    border-radius: 16px;
+    overflow: hidden;
+    display: none;
+  }
+
+  .questions-panel.open { display: block; animation: fadeUp 0.4s forwards; }
+
+  .panel-header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .panel-title {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .panel-count {
+    font-size: 12px;
+    color: var(--text3);
+  }
+
+  .q-list { list-style: none; }
+
+  .q-item {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.25rem 2rem;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+
+  .q-item:last-child { border-bottom: none; }
+  .q-item:hover { background: rgba(255,255,255,0.02); }
+
+  .q-num {
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text3);
+    min-width: 28px;
+    padding-top: 3px;
+  }
+
+  .q-text {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text);
+    line-height: 1.65;
+    flex: 1;
+  }
+
+  .q-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  .tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 100px;
+    border: 1px solid;
+  }
+
+  .tag-fire { color: var(--accent2); border-color: rgba(255,107,53,0.3); background: rgba(255,107,53,0.08); }
+  .tag-debate { color: #ffc53d; border-color: rgba(255,197,61,0.3); background: rgba(255,197,61,0.08); }
+  .tag-viral { color: var(--accent); border-color: rgba(232,255,71,0.3); background: rgba(232,255,71,0.08); }
+  .tag-deep { color: var(--accent3); border-color: rgba(123,159,255,0.3); background: rgba(123,159,255,0.08); }
+
+  /* ── TIPS ── */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .tip-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.75rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .tip-card:hover {
+    border-color: var(--border2);
+    transform: translateY(-2px);
+  }
+
+  .tip-icon {
+    font-size: 24px;
+    margin-bottom: 1rem;
+  }
+
+  .tip-title {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    color: var(--text);
+  }
+
+  .tip-body {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text2);
+    line-height: 1.65;
+  }
+
+  /* ── SOBRE EL FORMATO ── */
+  .format-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 640px) { .format-grid { grid-template-columns: 1fr; } }
+
+  .format-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+  }
+
+  .format-card.featured {
+    border-color: rgba(232,255,71,0.25);
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, rgba(232,255,71,0.04), transparent);
+  }
+
+  .format-card-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text3);
+    margin-bottom: 0.75rem;
+  }
+
+  .format-card-value {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .format-card-desc {
+    font-size: 14px;
+    color: var(--text2);
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    padding: 4rem 6vw;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: gap;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-brand {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text);
+  }
+
+  .footer-brand em {
+    font-style: normal;
+    color: var(--accent);
+  }
+
+  .footer-note {
+    font-size: 13px;
+    color: var(--text3);
+  }
+
+  /* ── BIG TICKER ── */
+  .ticker-wrap {
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+    background: var(--bg2);
+    position: relative;
+    z-index: 1;
+  }
+
+  .ticker-track {
+    display: flex;
+    gap: 3rem;
+    white-space: nowrap;
+    animation: ticker 28s linear infinite;
+    width: max-content;
+  }
+
+  .ticker-item {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text3);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .ticker-item .sep { color: var(--accent); font-size: 16px; }
+
+  /* ── LEGEND ── */
+  .legend {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    color: var(--text2);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideLine {
+    0% { left: -100%; }
+    100% { left: 200%; }
+  }
+
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ── REVEAL ON SCROLL ── */
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    .hero { padding: 0 5vw 10vh; min-height: auto; padding-top: 10vh; }
+    .hero-meta { gap: 1rem; }
+    .section { padding: 4rem 5vw; }
+    .divider { margin: 0 5vw; width: calc(100% - 10vw); }
+    .footer { flex-direction: column; gap: 1rem; text-align: center; }
+    .blocks-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-label">Entrevistas Tech · Guía para invitados</div>
+  <h1 class="hero-title">
+    Hablemos<br>
+    <em>sin filtros.</em>
+  </h1>
+  <p class="hero-desc">
+    Una charla de 45–60 minutos sobre tu carrera, tus proyectos, tus errores y tus opiniones sobre el mundo tech. Nada formal, todo real.
+  </p>
+  <div class="hero-meta">
+    <div class="hero-pill"><div class="dot"></div> <span>45–60 min</span> · YouTube</div>
+    <div class="hero-pill"><div class="dot" style="background:var(--accent3)"></div> <span>7 bloques</span> de conversación</div>
+    <div class="hero-pill"><div class="dot" style="background:var(--accent2)"></div> Estilo <span>charla entre amigos</span></div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    Explorá la guía
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item">Tu historia <span class="sep">✦</span></span>
+    <span class="ticker-item">Carrera real <span class="sep">✦</span></span>
+    <span class="ticker-item">Anécdotas épicas <span class="sep">✦</span></span>
+    <span class="ticker-item">IA y futuro del trabajo <span class="sep">✦</span></span>
+    <span class="ticker-item">Preguntas sin filtro <span class="sep">✦</span></span>
+    <span class="ticker-item">Opiniones de verdad <span class="sep">✦</span></span>
+    <span class="ticker-item">Tu historia <span class="sep">✦</span></span>
+    <span class="ticker-item">Carrera real <span class="sep">✦</span></span>
+    <span class="ticker-item">Anécdotas épicas <span class="sep">✦</span></span>
+    <span class="ticker-item">IA y futuro del trabajo <span class="sep">✦</span></span>
+    <span class="ticker-item">Preguntas sin filtro <span class="sep">✦</span></span>
+    <span class="ticker-item">Opiniones de verdad <span class="sep">✦</span></span>
+  </div>
+</div>
+
+<!-- FORMATO -->
+<section class="section reveal">
+  <div class="section-label" data-num="01 ·">Sobre el formato</div>
+  <h2 class="section-title">¿Cómo va a ser<br>la charla?</h2>
+  <p class="section-sub">Sin libreto rígido. Con preguntas preparadas pero siguiendo la conversación hacia donde vaya.</p>
+
+  <div class="format-grid">
+    <div class="format-card featured">
+      <div class="format-card-label">La idea</div>
+      <div class="format-card-value">Tech sin corbata</div>
+      <div class="format-card-desc">Una entrevista al estilo de una conversación real entre personas que laburan en tech. La idea es que quien te vea sienta que está escuchando la charla de pasillo que siempre quiso escuchar. Contás tu historia, tus tropiezos, tus opiniones, lo que aprendiste y lo que todavía te genera dudas.</div>
+    </div>
+    <div class="format-card">
+      <div class="format-card-label">Duración</div>
+      <div class="format-card-value">45–60′</div>
+      <div class="format-card-desc">Tiempo justo para una charla profunda sin que se sienta larga. Nada se corta a la mitad.</div>
+    </div>
+    <div class="format-card">
+      <div class="format-card-label">Plataforma</div>
+      <div class="format-card-value">YouTube</div>
+      <div class="format-card-desc">Video completo en YouTube + clips cortos para Reels y Shorts con los momentos más destacados.</div>
+    </div>
+    <div class="format-card">
+      <div class="format-card-label">Preguntas</div>
+      <div class="format-card-value">~38</div>
+      <div class="format-card-desc">Distribuidas en 7 bloques temáticos. No se hacen todas siempre — la charla manda.</div>
+    </div>
+    <div class="format-card">
+      <div class="format-card-label">Tono</div>
+      <div class="format-card-value">Real</div>
+      <div class="format-card-desc">Sin respuestas corporativas. Se valoran las opiniones honestas, las anécdotas y los momentos de vulnerabilidad.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- BLOQUES -->
+<section class="section reveal">
+  <div class="section-label" data-num="02 ·">Los bloques</div>
+  <h2 class="section-title">De qué vamos<br>a hablar</h2>
+  <p class="section-sub">Hacé click en cada bloque para ver las preguntas. Es una guía, no un examen — no hay respuestas correctas.</p>
+
+  <div class="legend">
+    <div class="legend-item"><span class="tag tag-fire">bomba</span> Pregunta intensa</div>
+    <div class="legend-item"><span class="tag tag-debate">debatible</span> Genera debate</div>
+    <div class="legend-item"><span class="tag tag-viral">viral</span> Potencial clip</div>
+    <div class="legend-item"><span class="tag tag-deep">profunda</span> Para pensar</div>
+  </div>
+
+  <div class="blocks-grid" id="blocksGrid">
+
+    <div class="block-card" onclick="showBlock(0)" data-idx="0">
+      <div class="block-num">01 · 5 min</div>
+      <div class="block-name">El gancho — los primeros 5 min</div>
+      <div class="block-time">3 preguntas</div>
+      <div class="block-icon">🎯</div>
+    </div>
+
+    <div class="block-card" onclick="showBlock(1)" data-idx="1">
+      <div class="block-num">02 · 8–10 min</div>
+      <div class="block-name">Quién sos — origen e historia</div>
+      <div class="block-time">5 preguntas</div>
+      <div class="block-icon">🌱</div>
+    </div>
+
+    <div class="block-card" onclick="showBlock(2)" data-idx="2">
+      <div class="block-num">03 · 10–12 min</div>
+      <div class="block-name">La carrera — el camino real</div>
+      <div class="block-time">7 preguntas</div>
+      <div class="block-icon">🛤️</div>
+    </div>
+
+    <div class="block-card" onclick="showBlock(3)" data-idx="3">
+      <div class="block-num">04 · 7–8 min</div>
+      <div class="block-name">Anécdotas y momentos épicos</div>
+      <div class="block-time">5 preguntas</div>
+      <div class="block-icon">💥</div>
+    </div>
+
+    <div class="block-card" onclick="showBlock(4)" data-idx="4">
+      <div class="block-num">05 · 5–7 min</div>
+      <div class="block-name">Proyectos actuales</div>
+      <div class="block-time">4 preguntas</div>
+      <div class="block-icon">🚀</div>
+    </div>
+
+    <div class="block-card" onclick="showBlock(5)" data-idx="5">
+      <div class="block-num">06 · 10–12 min</div>
+      <div class="block-name">IA y el futuro del trabajo</div>
+      <div class="block-time">8 preguntas</div>
+      <div class="block-icon">🤖</div>
+    </div>
+
+    <div class="block-card" onclick="showBlock(6)" data-idx="6">
+      <div class="block-num">07 · 5 min</div>
+      <div class="block-name">El cierre — rápido y directo</div>
+      <div class="block-time">6 preguntas</div>
+      <div class="block-icon">⚡</div>
+    </div>
+
+  </div>
+
+  <div class="questions-panel" id="questionsPanel">
+    <div class="panel-header">
+      <span class="panel-title" id="panelTitle">Bloque 1</span>
+      <span class="panel-count" id="panelCount"></span>
+    </div>
+    <ul class="q-list" id="qList"></ul>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TIPS -->
+<section class="section reveal">
+  <div class="section-label" data-num="03 ·">Para el entrevistado</div>
+  <h2 class="section-title">Lo que hace una<br>buena entrevista</h2>
+  <p class="section-sub">No hay forma de prepararse mal. Pero estas cosas suelen hacer la diferencia.</p>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <div class="tip-icon">🎙️</div>
+      <div class="tip-title">Contá la historia fea también</div>
+      <div class="tip-body">Los errores, las dudas y los fracasos conectan más con la audiencia que los logros. No hay que disimularlos.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🔥</div>
+      <div class="tip-title">Las opiniones polémicas están bien</div>
+      <div class="tip-body">Si pensás que la IA va a matar ciertos trabajos, decilo. Si creés que la universidad no sirve para nada, decilo. La honestidad es lo que hace viral un clip.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">⏸️</div>
+      <div class="tip-title">No hace falta responder rápido</div>
+      <div class="tip-body">El silencio antes de una buena respuesta vale oro en cámara. Pensá antes de hablar, se ve bien.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">📖</div>
+      <div class="tip-title">Llegá con una historia en mente</div>
+      <div class="tip-body">Esa anécdota de cuando todo salió mal en un proyecto. La del cliente imposible. La del momento que casi dejás todo. Tenerla lista hace que fluya sola.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🚫</div>
+      <div class="tip-title">Sin respuestas de LinkedIn</div>
+      <div class="tip-body">Nada de "aprendí mucho de esa experiencia" o "fue un proceso de crecimiento personal". Todo eso se corta en edición igual.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">💬</div>
+      <div class="tip-title">Hablá como con un amigo</div>
+      <div class="tip-body">El formato es conversacional. Si quisiéramos respuestas corporativas, entrevistábamos a un comunicado de prensa.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-brand">Entrevistas<em>Tech</em></div>
+  <div class="footer-note">Guía para invitados · Confidencial</div>
+</footer>
+
+<script>
+const blocks = [
+  {
+    title: "El gancho — los primeros 5 min",
+    qs: [
+      { n: "01", t: "Si tuvieras que explicarle a alguien de 70 años lo que hacés en una sola frase, ¿qué le dirías?", tags: ["viral"] },
+      { n: "02", t: "¿Hubo un momento exacto en tu vida donde dijiste "esto es lo mío"? ¿Qué pasó ese día?", tags: [] },
+      { n: "03", t: "¿Cuál es la cosa más rara o inesperada de tu trabajo que nadie imaginaría desde afuera?", tags: ["viral"] }
+    ]
+  },
+  {
+    title: "Quién sos — origen e historia",
+    qs: [
+      { n: "04", t: "¿De dónde venís? ¿Creciste rodeado de tecnología o fue algo que llegó después?", tags: [] },
+      { n: "05", t: "¿Qué estudiaste y en qué punto sentiste que lo que te enseñaban no alcanzaba para lo que el mundo pedía?", tags: ["debate"] },
+      { n: "06", t: "¿Hay algo que aprendiste solo, sin ningún curso ni universidad, que hoy usás todo el tiempo?", tags: [] },
+      { n: "07", t: "¿Cuál fue tu primer proyecto o trabajo real? ¿Qué tan mal salió?", tags: ["fire"] },
+      { n: "08", t: "¿Alguna vez dudaste de si ibas por el camino correcto? ¿Qué te frenaba?", tags: ["deep"] }
+    ]
+  },
+  {
+    title: "La carrera — el camino real",
+    qs: [
+      { n: "09", t: "¿Trabajaste para empresa o siempre freelance? ¿Cuál de los dos te rompió más los nervios?", tags: ["viral"] },
+      { n: "10", t: "¿Tuviste algún jefe o cliente del que aprendiste lo que NO se debe hacer?", tags: [] },
+      { n: "11", t: "Contame de ese proyecto que parecía imposible y lo sacaste adelante igual. ¿Cómo fue?", tags: ["deep"] },
+      { n: "12", t: "¿Hubo algún momento donde casi lo dejás todo? ¿Qué te hizo seguir?", tags: ["deep"] },
+      { n: "13", t: "¿Cuánto le importa la experiencia laboral vs el portfolio a la hora de contratar gente?", tags: ["debate"] },
+      { n: "14", t: "Si tuvieras que hacer tu carrera de nuevo desde cero hoy, ¿cambiarías algo?", tags: [] },
+      { n: "15", t: "¿Pasaste por la famosa experiencia de "te piden 5 años de experiencia en una tecnología que tiene 2"?", tags: ["fire"] }
+    ]
+  },
+  {
+    title: "Anécdotas y momentos épicos",
+    qs: [
+      { n: "16", t: "¿Cuál fue el error más épico que cometiste en un proyecto? Vendelo bien, que la gente lo disfrute.", tags: ["fire", "viral"] },
+      { n: "17", t: "¿Alguna vez mandaste un mensaje comprometedor al canal equivocado, o algo por el estilo?", tags: [] },
+      { n: "18", t: "¿Tuviste alguna reunión o entrevista de trabajo que fue un desastre total?", tags: [] },
+      { n: "19", t: "¿Hubo algo que te prometieron en un laburo que nunca llegó?", tags: [] },
+      { n: "20", t: "La historia que contás siempre en reuniones con amigos de tecnología. Esa.", tags: ["viral"] }
+    ]
+  },
+  {
+    title: "Proyectos actuales",
+    qs: [
+      { n: "21", t: "¿En qué estás metido ahora mismo que te tiene más emocionado?", tags: [] },
+      { n: "22", t: "¿Tenés algún proyecto personal que nadie sabe todavía o que estás cocinando a fuego lento?", tags: [] },
+      { n: "23", t: "¿Cuál es el mayor problema que estás tratando de resolver hoy, sea personal o profesional?", tags: ["deep"] },
+      { n: "24", t: "¿Hacia dónde querés llevar tu carrera en los próximos 3 años?", tags: [] }
+    ]
+  },
+  {
+    title: "IA y el futuro del trabajo",
+    qs: [
+      { n: "25", t: "Seamos honestos: ¿la IA te quitó trabajo o te generó más trabajo?", tags: ["fire", "debate"] },
+      { n: "26", t: "¿Usás IA en tu día a día o creés que está sobrevalorada para tu área?", tags: ["debate"] },
+      { n: "27", t: "¿Contratarías a alguien que dice que no usa IA en su trabajo? ¿Por qué sí o no?", tags: ["fire"] },
+      { n: "28", t: "¿Hay alguna parte de tu trabajo que creas que la IA nunca va a poder reemplazar? Defenderla.", tags: ["debate"] },
+      { n: "29", t: "¿Se viene una burbuja tech o el mercado laboral tech va a explotar para bien?", tags: ["viral", "debate"] },
+      { n: "30", t: "¿Qué le dirías hoy a alguien que está empezando a estudiar programación / diseño / data con tanto ruido de IA?", tags: [] },
+      { n: "31", t: "Si pudieras ponerle un límite a la IA en tu campo, ¿qué no le dejarías hacer?", tags: ["deep"] },
+      { n: "32", t: "¿La gente junior de hoy tiene más o menos chances que las que tuviste vos al arrancar?", tags: ["debate", "viral"] }
+    ]
+  },
+  {
+    title: "El cierre — rápido y directo",
+    qs: [
+      { n: "33", t: "Tres herramientas sin las que no podés vivir. Sin pensar mucho.", tags: [] },
+      { n: "34", t: "¿Tech overrated vs tech underrated? Nombrá una de cada una.", tags: ["viral"] },
+      { n: "35", t: "¿Cuál es el consejo que más repetís pero que más te cuesta seguir a vos mismo?", tags: ["deep"] },
+      { n: "36", t: "Un libro, podcast o recurso que cambió cómo pensás.", tags: [] },
+      { n: "37", t: "¿Qué pregunta esperabas que te hiciera hoy y no te hice?", tags: ["viral"] },
+      { n: "38", t: "¿Dónde te puede seguir la gente que quiere ver más de lo que hacés?", tags: [] }
+    ]
+  }
+];
+
+const tagLabels = { fire: 'bomba', debate: 'debatible', viral: 'viral', deep: 'profunda' };
+let activeIdx = null;
+
+function showBlock(idx) {
+  const panel = document.getElementById('questionsPanel');
+  const title = document.getElementById('panelTitle');
+  const count = document.getElementById('panelCount');
+  const list = document.getElementById('qList');
+  const cards = document.querySelectorAll('.block-card');
+
+  if (activeIdx === idx) {
+    panel.classList.remove('open');
+    cards.forEach(c => c.classList.remove('active'));
+    activeIdx = null;
+    return;
+  }
+
+  activeIdx = idx;
+  const block = blocks[idx];
+
+  cards.forEach((c, i) => c.classList.toggle('active', i === idx));
+  title.textContent = block.title;
+  count.textContent = block.qs.length + ' preguntas';
+
+  list.innerHTML = block.qs.map(q => `
+    <li class="q-item">
+      <span class="q-num">${q.n}</span>
+      <div>
+        <span class="q-text">${q.t}</span>
+        ${q.tags.length ? '<div class="q-tags">' + q.tags.map(t => `<span class="tag tag-${t}">${tagLabels[t]}</span>`).join('') + '</div>' : ''}
+      </div>
+    </li>
+  `).join('');
+
+  panel.classList.add('open');
+
+  setTimeout(() => {
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, 100);
+}
+
+// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+reveals.forEach(r => observer.observe(r));
+</script>
+</body>
+</html>

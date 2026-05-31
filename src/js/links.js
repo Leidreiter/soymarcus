@@ -50,7 +50,7 @@
         left: ${x}px;
         top: ${y}px;
         border-radius: 50%;
-        background: rgba(2, 195, 154, 0.25);
+        background: rgba(255, 114, 98, 0.25);
         transform: scale(0);
         animation: ripple-effect 0.5s ease-out;
         pointer-events: none;
@@ -77,4 +77,37 @@
     }
   `;
   document.head.appendChild(style);
+
+  // ===== FAVICON FALLBACK =====
+  document.querySelectorAll('.resource-favicon').forEach(img => {
+    img.addEventListener('error', function () {
+      this.onerror = null;
+      this.style.display = 'none';
+    });
+  });
+
+  // ===== VISIT COUNTER =====
+  const visitsEl = document.getElementById('visits');
+  if (visitsEl) {
+    fetch('https://api.countapi.xyz/hit/soymarcusdev/links')
+      .then(res => res.json())
+      .then(data => { visitsEl.textContent = data.value; })
+      .catch(() => { visitsEl.textContent = '—'; });
+  }
+
+  // ===== BACK TO TOP =====
+  const backToTop = document.getElementById('back-to-top');
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 })();

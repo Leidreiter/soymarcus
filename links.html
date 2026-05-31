@@ -55,7 +55,7 @@
       <div class="profile-photo">
         <!-- Placeholder con iniciales — reemplazar src con foto real -->
 
-        <img src="src/img/link.png" alt="perfil @soymarcusdev" class="profile-img">
+        <img src="src/img/perfil.svg" alt="perfil @soymarcusdev" class="profile-img">
 
         <span class="pulseOnline" aria-label="En línea"></span>
       </div>
@@ -79,26 +79,32 @@
         <a href="https://www.instagram.com/soymarcusdev" target="_blank" rel="noopener noreferrer" class="social-icon"
           aria-label="Instagram de soymarcusdev">
           <i class="fa-brands fa-instagram"></i>
+          <span class="tooltip">Instagram</span>
         </a>
         <a href="https://www.tiktok.com/@soymarcusdev" target="_blank" rel="noopener noreferrer" class="social-icon"
           aria-label="TikTok de soymarcusdev">
           <i class="fa-brands fa-tiktok"></i>
+          <span class="tooltip">TikTok</span>
         </a>
         <a href="https://www.twitch.tv/soymarcusdev" target="_blank" rel="noopener noreferrer" class="social-icon"
           aria-label="Twitch de soymarcusdev">
           <i class="fa-brands fa-twitch"></i>
+          <span class="tooltip">Twitch</span>
         </a>
         <a href="https://www.youtube.com/@soymarcusdev" target="_blank" rel="noopener noreferrer" class="social-icon"
           aria-label="YouTube de soymarcusdev">
           <i class="fa-brands fa-youtube"></i>
+          <span class="tooltip">YouTube</span>
         </a>
         <a href="https://x.com/soymarcusdev" target="_blank" rel="noopener noreferrer" class="social-icon"
           aria-label="X de soymarcusdev">
           <i class="fa-brands fa-x-twitter"></i>
+          <span class="tooltip">X</span>
         </a>
         <a href="https://soundcloud.com/soymarcusdev" target="_blank" rel="noopener noreferrer" class="social-icon"
           aria-label="SoundCloud de soymarcusdev">
           <i class="fa-brands fa-soundcloud"></i>
+          <span class="tooltip">SoundCloud</span>
         </a>
         
       </div>
@@ -339,6 +345,7 @@
           <div class="resource-info">
             <span class="resource-name">Code Injection</span>
             <span class="resource-url">Mi música (Inteligencia Artificial)</span>
+            <span class="coming-badge">Próximamente</span>
           </div>
           <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
         </a>
@@ -351,6 +358,7 @@
           <div class="resource-info">
             <span class="resource-name">Gato Negro</span>
             <span class="resource-url">Blog UX/UI · Próximamente</span>
+            <span class="coming-badge">Próximamente</span>
           </div>
           <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
         </a>
@@ -362,6 +370,7 @@
           <div class="resource-info">
             <span class="resource-name">Academia WP</span>
             <span class="resource-url">Cursos online · Próximamente</span>
+            <span class="coming-badge">Próximamente</span>
           </div>
           <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
         </a>
@@ -375,9 +384,12 @@
     <footer class="footer animate-in">
       <p>Gracias por pasarte por acá 🫂</p>
       <p>No olvides seguirme en mis otras redes.</p>
+      <p class="visit-count">👁️ <span id="visits">--</span> visitas</p>
     </footer>
 
   </main>
+
+  <button id="back-to-top" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script src="src/js/links.js"></script>
 </body>
