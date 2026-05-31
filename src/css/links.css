@@ -278,6 +278,16 @@ body {
   gap: var(--spacing-md);
 }
 
+@media (min-width: 600px) {
+  .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+}
+
 .social-icon {
   display: flex;
   align-items: center;
