@@ -31,6 +31,11 @@ const translations = {
     heroTitulo: "Diseño y Desarrollo web profesional a medida.",
     heroTypewriter: "<Yo>",
     heroBoton: "Descubrelo ahora",
+    heroTypewriterTexts: [
+      "creo marcas memorables.",
+      "diseño interfaces únicas.",
+      "programo código limpio.",
+    ],
 
     // Números
     numeros1: "Años de EXP.",
@@ -84,8 +89,6 @@ const translations = {
     paqueteLink: "Contratar",
 
     // Testimoniales
-    testimonialesTitulo: "Recomendaciones",
-
     testimonialesTitulo: "Recomendaciones",
     testimonial1Nombre: "Constanza Estevan",
     testimonial1Puesto: "Artista",
@@ -201,7 +204,7 @@ const translations = {
     formBoton: "Enviar mensaje",
 
     // Footer
-    footerCopy: "© 2025 Todos los derechos reservados. Hecho con ♥️ por mi mismo.",
+    footerCopy: "Todos los derechos reservados. Hecho con ♥️ por mi mismo.",
 
     // Menu
     menuInicio: "Inicio",
@@ -247,17 +250,15 @@ const translations = {
     cvPath: "src/docs/CV-MartinLeidreiter/EN2026.pdf", // Agrega esta línea
     cvFilename: "CV-MartinLeidreiter-EN2026.pdf", // Agrega esta línea
 
-    // Store
-    sabiasTienda: "My work tools",
-
-    // Podcast
-    sabiasPodcast: "Did you know that I have a podcast about the freelance lifestyle?",
-    visitaWeb: "Visit the website",
-
     // Hero
     heroTitulo: "Professional custom web design and development.",
     heroTypewriter: "<Me>",
     heroBoton: "Discover now",
+    heroTypewriterTexts: [
+      "build memorable brands.",
+      "design unique interfaces.",
+      "write clean code.",
+    ],
 
     // Numbers
     numeros1: "Years of EXP.",
@@ -311,8 +312,6 @@ const translations = {
     paqueteLink: "Hire",
 
     // Testimonials
-    testimonialesTitulo: "Recommendations",
-
     testimonialesTitulo: "Recommendations",
     testimonial1Nombre: "Constanza Estevan",
     testimonial1Puesto: "Artist",
@@ -427,7 +426,7 @@ const translations = {
     formBoton: "Send message",
 
     // Footer
-    footerCopy: "© 2025 All rights reserved. Made with ♥️ by myself.",
+    footerCopy: "All rights reserved. Made with ♥️ by myself.",
 
     // Menu
     menuInicio: "Home",
@@ -529,7 +528,11 @@ function applyTranslations() {
   if (typewriterSpan) typewriterSpan.textContent = `< ${currentLanguage === 'es' ? 'Yo' : 'Me'} > `;
 
   const heroBoton = document.querySelector('.hero-boton a');
-  if (heroBoton) heroBoton.textContent = t.heroBoton;
+  if (heroBoton) heroBoton.innerHTML = `${t.heroBoton} <i class="fa-solid fa-arrow-trend-up iconBtn"></i>`;
+
+  if (typeof window.updateTypewriterTexts === 'function') {
+    window.updateTypewriterTexts(t.heroTypewriterTexts);
+  }
 
   // Números
   const numerosTextos = document.querySelectorAll('.numero p');
@@ -677,7 +680,7 @@ function applyTranslations() {
   if (formButton) formButton.innerHTML = `${t.formBoton} <i class="fab fa-whatsapp iconBtn"></i>`;
 
   // Footer
-  const footerText = document.querySelector('.footer p');
+  const footerText = document.querySelector('.footer-copy-text');
   if (footerText) footerText.textContent = t.footerCopy;
 
   // Menu

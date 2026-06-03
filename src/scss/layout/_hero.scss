@@ -87,22 +87,28 @@
 
   .hero-boton a {
     background-color: v.$primario;
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
     color: v.$blanco;
-    padding: 1rem 3rem;
-    border: none;
+    padding: 1rem;
     border-radius: 5rem;
+    border: none;
+    width: 100%;
     display: inline-block;
     transition: transform 0.3s ease;
+
+    @include m.tablet {
+      width: auto;
+      display: inline-block;
+      padding-top: .4rem;
+      padding-bottom: .4rem;
+      padding-left: 1.8rem;
+      padding-right: .4rem;
+    }
 
     &:hover {
       cursor: pointer;
       transform: translateY(-5px);
-    }
-
-    @include m.tablet {
-      padding: 1.4rem 3rem;
     }
   }
 
@@ -168,6 +174,20 @@
     }
   }
 
+  .hero-podcast {
+    display: none;
+    @include m.tablet {
+      display: block;
+      width: 80%;
+      max-width: 28rem;
+      height: auto;
+      object-fit: contain;
+      border-radius: 1.6rem;
+      margin-top: 1rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+  }
+
   @keyframes fadeIn {
     to {
       opacity: 1;
@@ -222,9 +242,16 @@
   align-self: flex-start;
 }
 
-.iconos-foto i:nth-child(2) {
+.iconos-foto i:nth-child(2),
+.iconos-foto i:nth-child(4) {
   align-self: flex-end;
   margin-right: 12px;
+}
+
+.iconos-foto i:nth-child(4) {
+  align-self: flex-end;
+  margin-right: 12px;
+  animation-delay: 0.5s;
 }
 @keyframes float {
   0%, 100% {

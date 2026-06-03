@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
   animarNumeros();
   // crearGaleria();
   type();
+
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
 /* Menu hamburguesa (optimizado solo para escritorio) */
