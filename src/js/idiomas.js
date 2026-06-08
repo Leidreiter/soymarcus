@@ -211,6 +211,7 @@ const translations = {
     menuServicios: "Servicios",
     menuPortfolio: "Portfolio",
     menuContacto: "Contacto",
+    menuTools: "My Tools",
     menuLinks: "Mis Links",
 
     // Popup
@@ -433,6 +434,7 @@ const translations = {
     menuServicios: "Services",
     menuPortfolio: "Portfolio",
     menuContacto: "Contact",
+    menuTools: "My Tools",
     menuLinks: "My Links",
 
     // Popup
@@ -689,7 +691,8 @@ function applyTranslations() {
   if (menuItems[1]) menuItems[1].textContent = t.menuServicios;
   if (menuItems[2]) menuItems[2].textContent = t.menuPortfolio;
   if (menuItems[3]) menuItems[3].textContent = t.menuContacto;
-  if (menuItems[4]) menuItems[4].textContent = t.menuLinks;
+  if (menuItems[4]) menuItems[4].textContent = t.menuTools;
+  if (menuItems[5]) menuItems[5].textContent = t.menuLinks;
 
   // Popup
   const popupHeaderInfo = document.querySelector('.popup-header__info');

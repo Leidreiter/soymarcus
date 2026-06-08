@@ -86,15 +86,6 @@
     });
   });
 
-  // ===== VISIT COUNTER =====
-  const visitsEl = document.getElementById('visits');
-  if (visitsEl) {
-    fetch('https://api.countapi.xyz/hit/soymarcusdev/links')
-      .then(res => res.json())
-      .then(data => { visitsEl.textContent = data.value; })
-      .catch(() => { visitsEl.textContent = '—'; });
-  }
-
   // ===== BACK TO TOP =====
   const backToTop = document.getElementById('back-to-top');
   if (backToTop) {
