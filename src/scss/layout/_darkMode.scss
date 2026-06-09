@@ -404,13 +404,13 @@ body.light-mode .footer a:hover {
   color: #333;
 }
 
-/* Cambio de overlay del hero - de dark a light */
+/* Cambio de overlay del hero - más sutil en light mode */
 body.light-mode .hero .overlay {
   background-image: linear-gradient(
   90deg,
-  rgba(255, 255, 255, 0.45) 15%,
-  rgba(255, 255, 255, 0.3) 50%,
-  rgba(250, 250, 250, 0.25) 100%
+  rgba(255, 255, 255, 0.15) 15%,
+  rgba(255, 255, 255, 0.1) 50%,
+  rgba(250, 250, 250, 0.08) 100%
 );
 }
 
@@ -422,7 +422,7 @@ body.light-mode .typewriter {
 
 /* Cambio de fondo de números - de dark (#20202a) a light (#ffffff) */
 body.light-mode .numero {
-  background-color: #ffffff;
+  background:none;
   border: 1px solid #e0e0e0;
   color: #333;
 }
