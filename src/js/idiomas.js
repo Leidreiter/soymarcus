@@ -149,40 +149,30 @@ const translations = {
     portfolio15Desc: "Sitio institucional informativo con comunicación clara y profesional.",
     verTrabajo: "Ver trabajo",
 
-    // Timeline
-    timelineFormacion: "Mi formación",
-    timeline1Titulo: "Estudios: Técnico Superior en Diseño de Comunicación Visual",
-    timeline1Fecha: "2010 - 2012",
-    timeline1Desc: "Completé la Tecnicatura de Diseño Gráfico en el instituto de formación profesional García Lorca, especializándome en identidad corporativa y desarrollo visual.",
-    timeline2Titulo: "Estudios: Técnico en Diseño Interactivo",
-    timeline2Fecha: "2013 - 2016",
-    timeline2Desc: "Completé la Tecnicatura en Diseño interactivo en la escuela de diseño y Comunicación audiovisual en La Metro, especializándome en Marketing digital y Desarrollo web.",
-    timeline3Titulo: "Estudios: Curso diseño UX UI de Cero a Experto",
-    timeline3Fecha: "2017 - 2018",
-    timeline3Desc: "Completé 2 cursos de formación online para desarrollo de aplicaciones web y móviles e inrtafeces de usuario con Figma en Domestika y Crehana.",
-    timeline4Titulo: "Estudios: Curso diseño web WordPress",
-    timeline4Fecha: "2017 - 2018",
-    timeline4Desc: "Completé 3 cursos de formación online para desarrollo de sitios web profesionales con WordPress en Domestiika.",
-    timeline5Titulo: "Estudios: Curso Desarrollo web Completo",
-    timeline5Fecha: "2019",
-    timeline5Desc: "Completé el curso de formación online Desarrollo web completo para crear webs front end y back end en Udemy",
+    // Problemas / Soluciones
+    problemasTitulo: "Tu problema",
+    problema1Titulo: "No tenés presencia digital",
+    problema1Desc: "Tu marca no está donde están tus clientes: online.",
+    problema2Titulo: "Tu web no convierte",
+    problema2Desc: "Los visitantes llegan pero no sabés por qué no contactan ni compran.",
+    problema3Titulo: "No aparecés en Google",
+    problema3Desc: "Tu sitio existe pero nadie lo encuentra en los buscadores.",
+    problema4Titulo: "Querés vender online",
+    problema4Desc: "Necesitás un ecommerce pero no sabés por dónde empezar.",
+    problema5Titulo: "No sabés cómo mantenerlo",
+    problema5Desc: "Tener una web no es solo crearla, hay que mantenerla viva.",
 
-    timelineExperiencia: "Mi experiencia",
-    timelineExp1Titulo: "Trabajo: Freelance",
-    timelineExp1Fecha: "2015 - ACTUALIDAD",
-    timelineExp1Desc: "Hace más de 10 años trabajando de manera independiente como Freelancer para clientes nacionales e internacionales, agencias y startups.",
-    timelineExp2Titulo: "Trabajo: Webmaster / UX UI Designer",
-    timelineExp2Fecha: "2023 - 2025",
-    timelineExp2Desc: "Trabajé en la modalidad contractor para Kalcker Institute (España), diseñando y desarrollando desde piezas gráficas hasta sitios web completos.",
-    timelineExp3Titulo: "Trabajo: Web Designer / UX UI Designer",
-    timelineExp3Fecha: "2020 - ACTUALIDAD",
-    timelineExp3Desc: "Trabajé en la modalidad contractor para la agencia Pulpo Way (Buenos Aires) y en modalidad freelance con proyectos principalmente de diseño web y UX UI.",
-    timelineExp4Titulo: "Trabajo: Web Designer / UX UI Designer / Graphic Designer",
-    timelineExp4Fecha: "2020 - 2023",
-    timelineExp4Desc: "Trabajé en la modalidad freelance para la agencia Punto Pro (Perú) en multiples proyectos de diseño web, UX UI y diseño gráfico.",
-    timelineExp5Titulo: "Trabajo: Web Designer / Webmaster / Graphic Designer",
-    timelineExp5Fecha: "2017 - 2019",
-    timelineExp5Desc: "Trabajé en relación de dependencia para la empresa Ciudad Empresaria (Córdoba) donde me desempeñé en el área de marketing y comunicación con multples roles y proyectos dentro de la empresa.",
+    solucionesTitulo: "Mi solución",
+    solucion1Titulo: "Creación de sitios web profesionales",
+    solucion1Desc: "Diseño y desarrollo webs modernas, responsive y alineadas con tu identidad de marca.",
+    solucion2Titulo: "Diseño UX/UI pensado en el usuario",
+    solucion2Desc: "Interfaces intuitivas, navegación clara y llamados a la acción estratégicos que convierten.",
+    solucion3Titulo: "Optimización SEO y rendimiento",
+    solucion3Desc: "Código limpio, velocidad de carga y buenas prácticas SEO para que Google te encuentre.",
+    solucion4Titulo: "Ecommerce funcional y atractivo",
+    solucion4Desc: "Tiendas online con carrito, pasarela de pago y gestión de productos lista para vender.",
+    solucion5Titulo: "Mantenimiento y soporte técnico",
+    solucion5Desc: "Actualizaciones, seguridad, backups y soporte continuo para que tu web funcione siempre.",
 
     // Contacto
     contactoTitulo: "Información de Contacto",
@@ -372,40 +362,30 @@ const translations = {
     portfolio15Desc: "Informative institutional site with clear and professional communication.",
     verTrabajo: "View work",
 
-    // Timeline
-    timelineFormacion: "My Education",
-    timeline1Titulo: "Studies: Higher Technician in Visual Communication Design",
-    timeline1Fecha: "2010 - 2012",
-    timeline1Desc: "I completed the Graphic Design Technician degree at the García Lorca professional training institute, specializing in corporate identity and visual development.",
-    timeline2Titulo: "Studies: Interactive Design Technician",
-    timeline2Fecha: "2013 - 2016",
-    timeline2Desc: "I completed the Interactive Design Technician degree at the design and audiovisual communication school La Metro, specializing in Digital Marketing and Web Development.",
-    timeline3Titulo: "Studies: UX UI Design Course from Zero to Expert",
-    timeline3Fecha: "2017 - 2018",
-    timeline3Desc: "I completed 2 online training courses for web and mobile application development and user interfaces with Figma at Domestika and Crehana.",
-    timeline4Titulo: "Studies: WordPress Web Design Course",
-    timeline4Fecha: "2017 - 2018",
-    timeline4Desc: "I completed 3 online training courses for professional website development with WordPress at Domestika.",
-    timeline5Titulo: "Studies: Complete Web Development Course",
-    timeline5Fecha: "2019",
-    timeline5Desc: "I completed the online training course Complete Web Development to create front end and back end websites on Udemy",
+    // Problemas / Soluciones
+    problemasTitulo: "Your problem",
+    problema1Titulo: "You have no digital presence",
+    problema1Desc: "Your brand isn't where your customers are: online.",
+    problema2Titulo: "Your website doesn't convert",
+    problema2Desc: "Visitors arrive but you don't know why they don't contact or buy.",
+    problema3Titulo: "You don't appear on Google",
+    problema3Desc: "Your site exists but nobody finds it on search engines.",
+    problema4Titulo: "You want to sell online",
+    problema4Desc: "You need an ecommerce but don't know where to start.",
+    problema5Titulo: "You don't know how to maintain it",
+    problema5Desc: "Having a website isn't just creating it, it needs to stay alive.",
 
-    timelineExperiencia: "My Experience",
-    timelineExp1Titulo: "Work: Freelance",
-    timelineExp1Fecha: "2015 - PRESENT",
-    timelineExp1Desc: "More than 10 years working independently as a Freelancer for national and international clients, agencies and startups.",
-    timelineExp2Titulo: "Work: Webmaster / UX UI Designer",
-    timelineExp2Fecha: "2023 - 2025",
-    timelineExp2Desc: "I worked as a contractor for Kalcker Institute (Spain), designing and developing from graphic pieces to complete websites.",
-    timelineExp3Titulo: "Work: Web Designer / UX UI Designer",
-    timelineExp3Fecha: "2020 - PRESENT",
-    timelineExp3Desc: "I worked as a contractor for the Pulpo Way agency (Buenos Aires) and as a freelancer with projects mainly in web design and UX UI.",
-    timelineExp4Titulo: "Work: Web Designer / UX UI Designer / Graphic Designer",
-    timelineExp4Fecha: "2020 - 2023",
-    timelineExp4Desc: "I worked as a freelancer for the Punto Pro agency (Peru) on multiple web design, UX UI and graphic design projects.",
-    timelineExp5Titulo: "Work: Web Designer / Webmaster / Graphic Designer",
-    timelineExp5Fecha: "2017 - 2019",
-    timelineExp5Desc: "I worked as an employee for the company Ciudad Empresaria (Córdoba) where I worked in the marketing and communication area with multiple roles and projects within the company.",
+    solucionesTitulo: "My solution",
+    solucion1Titulo: "Professional website creation",
+    solucion1Desc: "I design and develop modern, responsive websites aligned with your brand identity.",
+    solucion2Titulo: "UX/UI design focused on the user",
+    solucion2Desc: "Intuitive interfaces, clear navigation and strategic calls to action that convert.",
+    solucion3Titulo: "SEO optimization and performance",
+    solucion3Desc: "Clean code, fast loading and SEO best practices so Google finds you.",
+    solucion4Titulo: "Functional and attractive ecommerce",
+    solucion4Desc: "Online stores with cart, payment gateway and product management ready to sell.",
+    solucion5Titulo: "Maintenance and technical support",
+    solucion5Desc: "Updates, security, backups and ongoing support so your website always works.",
 
     // Contact
     contactoTitulo: "Contact Information",
@@ -609,37 +589,33 @@ function applyTranslations() {
     if (link) link.innerHTML = `${t.verTrabajo} <span>&gt;</span>`;
   });
 
-  // Timeline
+  // Problemas / Soluciones
   const timelineColumns = document.querySelectorAll('.timeline-column');
   if (timelineColumns[0]) {
-    const formacionTitulo = timelineColumns[0].querySelector('h2');
-    if (formacionTitulo) formacionTitulo.textContent = t.timelineFormacion;
+    const titulo = timelineColumns[0].querySelector('h2');
+    if (titulo) titulo.textContent = t.problemasTitulo;
 
-    const formacionItems = timelineColumns[0].querySelectorAll('.timeline-item');
-    formacionItems.forEach((item, index) => {
+    const items = timelineColumns[0].querySelectorAll('.timeline-item');
+    items.forEach((item, index) => {
       const h3 = item.querySelector('h3');
-      const fecha = item.querySelector('.date');
       const p = item.querySelector('p');
 
-      if (h3) h3.textContent = t[`timeline${index + 1}Titulo`];
-      if (fecha) fecha.textContent = t[`timeline${index + 1}Fecha`];
-      if (p) p.textContent = t[`timeline${index + 1}Desc`];
+      if (h3) h3.textContent = t[`problema${index + 1}Titulo`];
+      if (p) p.textContent = t[`problema${index + 1}Desc`];
     });
   }
 
   if (timelineColumns[1]) {
-    const experienciaTitulo = timelineColumns[1].querySelector('h2');
-    if (experienciaTitulo) experienciaTitulo.textContent = t.timelineExperiencia;
+    const titulo = timelineColumns[1].querySelector('h2');
+    if (titulo) titulo.textContent = t.solucionesTitulo;
 
-    const expItems = timelineColumns[1].querySelectorAll('.timeline-item');
-    expItems.forEach((item, index) => {
+    const items = timelineColumns[1].querySelectorAll('.timeline-item');
+    items.forEach((item, index) => {
       const h3 = item.querySelector('h3');
-      const fecha = item.querySelector('.date');
       const p = item.querySelector('p');
 
-      if (h3) h3.textContent = t[`timelineExp${index + 1}Titulo`];
-      if (fecha) fecha.textContent = t[`timelineExp${index + 1}Fecha`];
-      if (p) p.textContent = t[`timelineExp${index + 1}Desc`];
+      if (h3) h3.textContent = t[`solucion${index + 1}Titulo`];
+      if (p) p.textContent = t[`solucion${index + 1}Desc`];
     });
   }
 
