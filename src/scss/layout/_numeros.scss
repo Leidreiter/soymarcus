@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
     
     @include m.tablet{
             grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -18,7 +18,7 @@
         }
     
     .numero{
-        @include m.bento(v.$f-secundario);
+        color: v.$blanco;
         text-align: center;
 
         span{
