@@ -149,6 +149,9 @@ const translations = {
     portfolio15Desc: "Sitio institucional informativo con comunicación clara y profesional.",
     verTrabajo: "Ver trabajo",
 
+    // Intro historia
+    historiaIntro: "Después de más de 10 años trabajando con decenas de clientes, estos son los problemas que más veo y cómo los resuelvo.",
+
     // Problemas / Soluciones
     problemasTitulo: "Tu problema",
     problema1Titulo: "No tenés presencia digital",
@@ -361,6 +364,9 @@ const translations = {
     portfolio15Titulo: "CMPowerTech",
     portfolio15Desc: "Informative institutional site with clear and professional communication.",
     verTrabajo: "View work",
+
+    // Intro historia
+    historiaIntro: "After more than 10 years working with dozens of clients, these are the most common problems I see and how I solve them.",
 
     // Problemas / Soluciones
     problemasTitulo: "Your problem",
@@ -588,6 +594,10 @@ function applyTranslations() {
     if (desc) desc.textContent = t[`portfolio${index + 1}Desc`];
     if (link) link.innerHTML = `${t.verTrabajo} <span>&gt;</span>`;
   });
+
+  // Intro historia
+  const historiaIntro = document.querySelector('.historia-intro');
+  if (historiaIntro) historiaIntro.textContent = t.historiaIntro;
 
   // Problemas / Soluciones
   const timelineColumns = document.querySelectorAll('.timeline-column');
