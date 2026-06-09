@@ -161,6 +161,8 @@ const translations = {
     problema4Desc: "Necesitás un ecommerce pero no sabés por dónde empezar ni cómo vender.",
     problema5Titulo: "No sabés cómo mantenerlo",
     problema5Desc: "Tener una web no es solo crearla, hay que mantenerla viva, segura y actualizada.",
+    problema6Titulo: "No tenés identidad de marca",
+    problema6Desc: "Tu marca no tiene una identidad visual que la diferencie y conecte con tu audiencia.",
 
     solucionesTitulo: "Mi solución",
     solucion1Titulo: "Creación de sitios web profesionales",
@@ -173,6 +175,8 @@ const translations = {
     solucion4Desc: "Tiendas online con carrito, pasarela de pago y productos lista para vender.",
     solucion5Titulo: "Mantenimiento y soporte técnico",
     solucion5Desc: "Actualizaciones, seguridad, backups y soporte continuo para que tu web funcione.",
+    solucion6Titulo: "Diseño de identidad corporativa",
+    solucion6Desc: "Creación de marca completa con logo, paleta cromática y manual de identidad visual.",
 
     // Contacto
     contactoTitulo: "Información de Contacto",
@@ -374,6 +378,8 @@ const translations = {
     problema4Desc: "You need an ecommerce but don't know where to start or how to sell.",
     problema5Titulo: "You don't know how to maintain it",
     problema5Desc: "Having a website isn't just creating it, it needs to stay live and secure.",
+    problema6Titulo: "You have no brand identity",
+    problema6Desc: "Your brand has no visual identity that sets it apart and connects with your audience.",
 
     solucionesTitulo: "My solution",
     solucion1Titulo: "Professional website creation",
@@ -386,6 +392,8 @@ const translations = {
     solucion4Desc: "Online stores with cart, payment gateway and products ready to sell.",
     solucion5Titulo: "Maintenance and technical support",
     solucion5Desc: "Updates, security, backups and ongoing support so your website always works.",
+    solucion6Titulo: "Corporate identity design",
+    solucion6Desc: "Complete brand creation with logo, color palette, typography and identity manual.",
 
     // Contact
     contactoTitulo: "Contact Information",
