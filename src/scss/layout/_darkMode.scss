@@ -414,15 +414,10 @@ body.light-mode .hero .overlay {
 );
 }
 
-/* Cambio de color de texto en hero - de blanco a oscuro */
+/* Hero title y typewriter se mantienen blancos en light mode */
 body.light-mode .hero-titulo h1,
 body.light-mode .typewriter {
-  color: #333;
-}
-
-/* Cambio de color del borde del typewriter - de gris claro a oscuro */
-body.light-mode .typewriter {
-  border-right-color: #666;
+  color: v.$blanco;
 }
 
 /* Cambio de fondo de números - de dark (#20202a) a light (#ffffff) */
