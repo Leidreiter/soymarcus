@@ -23,8 +23,8 @@ const translations = {
 
     // Descarga CV
     descargarCV: "Descargar CV",
-    cvPath: "src/docs/CV-MartinLeidreiter/ES2026.pdf", // Agrega esta línea
-    cvFilename: "CV-MartinLeidreiter-ES2026.pdf", // Agrega esta línea
+    cvPath: "src/docs/CV-ES-MartinLeidreiter.pdf", // Agrega esta línea
+    cvFilename: "CV-ES-MartinLeidreiter.pdf", // Agrega esta línea
 
 
     // Hero
@@ -242,8 +242,8 @@ const translations = {
 
     // Download CV
     descargarCV: "Download CV",
-    cvPath: "src/docs/CV-MartinLeidreiter/EN2026.pdf", // Agrega esta línea
-    cvFilename: "CV-MartinLeidreiter-EN2026.pdf", // Agrega esta línea
+    cvPath: "src/docs/CV-EN-MartinLeidreiter.pdf", // Agrega esta línea
+    cvFilename: "CV-EN-MartinLeidreiter.pdf", // Agrega esta línea
 
     // Hero
     heroTitulo: "Professional custom web design and development.",
