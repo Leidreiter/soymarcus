@@ -130,8 +130,28 @@ function animarCirculos() {
   const items = document.querySelectorAll(".idioma");
 
   items.forEach((el, idx) => {
+    const rect = el.querySelector(".progress-rect");
     const percentageText = el.querySelector(".percentage");
     const target = +el.dataset.percentage;
+    const strokeWidth = 4;
+    const w = el.offsetWidth;
+    const h = el.offsetHeight;
+    const r = parseFloat(getComputedStyle(el).borderRadius) || 10;
+    const half = strokeWidth / 2;
+
+    rect.setAttribute("x", half);
+    rect.setAttribute("y", half);
+    rect.setAttribute("width", w - strokeWidth);
+    rect.setAttribute("height", h - strokeWidth);
+    rect.setAttribute("rx", r);
+
+    const rw = w - strokeWidth;
+    const rh = h - strokeWidth;
+    const perimeter = 2 * (rw + rh) - 8 * r + 2 * Math.PI * r;
+
+    rect.setAttribute("stroke-dasharray", perimeter);
+    rect.setAttribute("stroke-dashoffset", perimeter);
+
     let count = 0;
     const delay = 15;
     const increment = 1;
@@ -144,8 +164,8 @@ function animarCirculos() {
           clearInterval(timer);
         }
         percentageText.textContent = `${count}%`;
-        const ringSize = (count / target) * 4;
-        el.style.boxShadow = `0 0 0 ${ringSize}px #F24E1E`;
+        const offset = perimeter - (count / 100) * perimeter;
+        rect.setAttribute("stroke-dashoffset", offset);
       }, delay);
     }, idx * 300);
   });

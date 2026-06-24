@@ -49,6 +49,19 @@
         gap: 1rem;
         color: #fff;
 
+        .progress-border {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .progress-rect {
+            stroke: #F24E1E;
+        }
+
         .percentage {
             font-size: 4rem;
             font-weight: bold;

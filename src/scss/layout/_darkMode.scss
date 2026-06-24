@@ -150,6 +150,9 @@ body.light-mode h3 {
 body.light-mode .idioma .percentage {
   color: #333;
 }
+body.light-mode .progress-rect {
+  stroke: v.$primario-hover;
+}
 /* Cambio color habilidades y dot testimoniales*/
 body.light-mode .fill,
 body.light-mode .dot{
