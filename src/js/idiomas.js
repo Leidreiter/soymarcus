@@ -497,7 +497,7 @@ function applyTranslations() {
   }
 
   // Idiomas
-  const idiomas = document.querySelectorAll('.circulo_idioma p');
+  const idiomas = document.querySelectorAll('.idioma p');
   if (idiomas[0]) idiomas[0].textContent = t.espanol;
   if (idiomas[1]) idiomas[1].textContent = t.ingles;
 

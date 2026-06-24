@@ -127,11 +127,11 @@ function animarNumeros() {
 }
 
 function animarCirculos() {
-  const circles = document.querySelectorAll(".circulo_idioma");
+  const items = document.querySelectorAll(".idioma");
 
-  circles.forEach((el, idx) => {
+  items.forEach((el, idx) => {
     const percentageText = el.querySelector(".percentage");
-    const target = +percentageText.textContent.replace("%", "");
+    const target = +el.dataset.percentage;
     let count = 0;
     const delay = 15;
     const increment = 1;

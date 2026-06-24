@@ -146,12 +146,8 @@ body.light-mode h3 {
     color: #333;
   }
 
-/* Cambio color ring idiomas (box-shadow border) */
-body.light-mode .circulo_idioma {
-  background: #e8e8e8;
-}
-
-body.light-mode .circulo_idioma .percentage {
+/* Cambio color porcentaje idiomas */
+body.light-mode .idioma .percentage {
   color: #333;
 }
 /* Cambio color habilidades y dot testimoniales*/
