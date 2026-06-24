@@ -146,9 +146,13 @@ body.light-mode h3 {
     color: #333;
   }
 
-/* Cambio color ring idiomas (conic-gradient border) */
-body.light-mode .progress-ring::before {
-  background: conic-gradient(v.$primario-hover var(--porcentaje, 0%), transparent 0%) !important;
+/* Cambio color ring idiomas (box-shadow border) */
+body.light-mode .circulo_idioma {
+  background: #e8e8e8;
+}
+
+body.light-mode .circulo_idioma .percentage {
+  color: #333;
 }
 /* Cambio color habilidades y dot testimoniales*/
 body.light-mode .fill,
@@ -196,7 +200,6 @@ body.light-mode .paq3{
 
 /* Cambio de fondo en contenedores de información - de dark (#20202a) a light (#ffffff) */
 body.light-mode .informacion,
-body.light-mode .idiomas,
 body.light-mode .habilidades,
 body.light-mode .conocimientos,
 body.light-mode .curriculum,
@@ -227,14 +230,7 @@ body.light-mode .bitmoji {
   background-color: #f0f0f0;
 }
 
-/* Cambio de color del círculo de progreso ring */
-body.light-mode .progress-ring {
-  background: #e8e8e8;
-}
 
-body.light-mode .progress-ring .percentage {
-  color: #333;
-}
 
 body.light-mode .hamburger-menu{
     color: #333;

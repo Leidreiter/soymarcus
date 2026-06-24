@@ -127,16 +127,14 @@ function animarNumeros() {
 }
 
 function animarCirculos() {
-  const rings = document.querySelectorAll(".progress-ring");
+  const circles = document.querySelectorAll(".circulo_idioma");
 
-  rings.forEach((el, idx) => {
+  circles.forEach((el, idx) => {
     const percentageText = el.querySelector(".percentage");
     const target = +percentageText.textContent.replace("%", "");
     let count = 0;
     const delay = 15;
     const increment = 1;
-
-    el.style.setProperty("--porcentaje", "0%");
 
     setTimeout(() => {
       const timer = setInterval(() => {
@@ -146,7 +144,8 @@ function animarCirculos() {
           clearInterval(timer);
         }
         percentageText.textContent = `${count}%`;
-        el.style.setProperty("--porcentaje", `${count}%`);
+        const ringSize = (count / target) * 4;
+        el.style.boxShadow = `0 0 0 ${ringSize}px #F24E1E`;
       }, delay);
     }, idx * 300);
   });
