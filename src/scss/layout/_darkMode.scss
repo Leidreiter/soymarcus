@@ -146,9 +146,9 @@ body.light-mode h3 {
     color: #333;
   }
 
-/* Cambio color circulo idiomas */
-body.light-mode .progress{
-  stroke: v.$primario-hover;
+/* Cambio color ring idiomas (conic-gradient border) */
+body.light-mode .progress-ring::before {
+  background: conic-gradient(v.$primario-hover var(--porcentaje, 0%), transparent 0%) !important;
 }
 /* Cambio color habilidades y dot testimoniales*/
 body.light-mode .fill,
@@ -227,14 +227,13 @@ body.light-mode .bitmoji {
   background-color: #f0f0f0;
 }
 
-/* Cambio de color del círculo de progreso - de dark (#222) a light (#e0e0e0) */
-body.light-mode .idiomas .bg {
-  stroke: #e0e0e0;
+/* Cambio de color del círculo de progreso ring */
+body.light-mode .progress-ring {
+  background: #e8e8e8;
 }
 
-/* Cambio de color del porcentaje - de blanco a oscuro */
-body.light-mode .idiomas .percentage {
-  fill: #333;
+body.light-mode .progress-ring .percentage {
+  color: #333;
 }
 
 body.light-mode .hamburger-menu{
@@ -501,9 +500,6 @@ body.light-mode .iconBtn{
 }
 body.light-mode .iconos-foto i{
   background-color: v.$primario-hover;
-}
-body.light-mode .icono-idiomas{
-  background-image: url('/src/img/iconos/icono-idiomasDm.svg');
 }
 body.light-mode .hero{
   background-image: url('/src/img/banner.png');

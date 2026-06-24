@@ -127,16 +127,16 @@ function animarNumeros() {
 }
 
 function animarCirculos() {
-  const circulos = document.querySelectorAll(".circulo_idioma");
+  const rings = document.querySelectorAll(".progress-ring");
 
-  circulos.forEach((el, idx) => {
-    const progress = el.querySelector(".progress");
+  rings.forEach((el, idx) => {
     const percentageText = el.querySelector(".percentage");
-
     const target = +percentageText.textContent.replace("%", "");
     let count = 0;
-    const delay = 15; // ms entre pasos
-    const increment = 1; // aumento por paso
+    const delay = 15;
+    const increment = 1;
+
+    el.style.setProperty("--porcentaje", "0%");
 
     setTimeout(() => {
       const timer = setInterval(() => {
@@ -145,11 +145,10 @@ function animarCirculos() {
           count = target;
           clearInterval(timer);
         }
-
         percentageText.textContent = `${count}%`;
-        progress.setAttribute("stroke-dasharray", `${count}, 100`);
+        el.style.setProperty("--porcentaje", `${count}%`);
       }, delay);
-    }, idx * 300); // retraso escalonado
+    }, idx * 300);
   });
 }
 
