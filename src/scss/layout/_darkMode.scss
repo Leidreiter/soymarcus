@@ -202,7 +202,8 @@ body.light-mode .informacion,
 body.light-mode .habilidades,
 body.light-mode .conocimientos,
 body.light-mode .curriculum,
-body.light-mode .sidebar {
+body.light-mode .sidebar,
+body.light-mode .idioma {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
 }
@@ -499,3 +500,4 @@ body.light-mode .iconos-foto i{
 body.light-mode .hero{
   background-image: url('/src/img/banner.png');
 }
+
