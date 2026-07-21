@@ -3,7 +3,6 @@ node_modules/
 
 # Compilados / Output
 build/
-src/css/
 .sass-cache/
 *.map
 
