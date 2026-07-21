@@ -1,3 +1,19 @@
+# Dependencias
 node_modules/
+
+# Compilados / Output
+build/
+src/css/
+.sass-cache/
+*.map
+
+# SO / Editor
 .DS_Store
 .vscode/
+*.swp
+*.swo
+*~
+
+# Seguridad
+.env
+.env.*
