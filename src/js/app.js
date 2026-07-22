@@ -134,8 +134,8 @@ function animarCirculos() {
     const percentageText = el.querySelector(".percentage");
     const target = +el.dataset.percentage;
     const strokeWidth = 4;
-    const w = el.clientWidth;
-    const h = el.clientHeight;
+    const w = el.offsetWidth;
+    const h = el.offsetHeight;
     const r = parseFloat(getComputedStyle(el).borderRadius) || 10;
     const half = strokeWidth / 2;
 
