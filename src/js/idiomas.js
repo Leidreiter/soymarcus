@@ -205,7 +205,7 @@ const translations = {
     menuServicios: "Servicios",
     menuPortfolio: "Portfolio",
     menuContacto: "Contacto",
-    menuTools: "My Tools",
+    menuTools: "Mis Apps",
     menuLinks: "Mis Links",
 
     // Popup
@@ -422,7 +422,7 @@ const translations = {
     menuServicios: "Services",
     menuPortfolio: "Portfolio",
     menuContacto: "Contact",
-    menuTools: "My Tools",
+    menuTools: "My Apps",
     menuLinks: "My Links",
 
     // Popup
