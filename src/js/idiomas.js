@@ -667,7 +667,7 @@ function applyTranslations() {
 
   // Footer
   const footerText = document.querySelector('.footer-copy-text');
-  if (footerText) footerText.textContent = t.footerCopy;
+  if (footerText) footerText.innerHTML = t.footerCopy;
 
   // Menu
   const menuItems = document.querySelectorAll('.menu-items li a');
