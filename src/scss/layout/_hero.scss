@@ -206,6 +206,28 @@
   display: block;
 }
 
+/* Cursor Reveal Effect */
+.cursor-reveal {
+  .reveal-base {
+    width: 100%;
+    display: block;
+  }
+
+  .reveal-target {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: circle(0px at 50% 50%);
+    pointer-events: none;
+  }
+
+  &:hover .reveal-target {
+    clip-path: circle(150px at var(--mx, 50%) var(--my, 50%));
+  }
+}
+
 /* contenedor de iconos */
 .iconos-foto {
   position: absolute;
