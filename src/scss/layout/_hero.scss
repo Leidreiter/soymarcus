@@ -219,12 +219,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    clip-path: circle(0px at 50% 50%);
+    -webkit-mask-image: radial-gradient(circle 0px at 50% 50%, black 100%, transparent 100%);
+    mask-image: radial-gradient(circle 0px at 50% 50%, black 100%, transparent 100%);
     pointer-events: none;
   }
 
   &:hover .reveal-target {
-    clip-path: circle(150px at var(--mx, 50%) var(--my, 50%));
+    -webkit-mask-image: radial-gradient(circle 20px at var(--mx, 50%) var(--my, 50%), black 60%, transparent 100%);
+    mask-image: radial-gradient(circle 20px at var(--mx, 50%) var(--my, 50%), black 60%, transparent 100%);
   }
 }
 
