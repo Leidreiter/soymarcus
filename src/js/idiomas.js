@@ -198,7 +198,7 @@ const translations = {
     formBoton: "Enviar mensaje",
 
     // Footer
-    footerCopy: "Todos los derechos reservados. Hecho con ♥️ por mi mismo.",
+    footerCopy: 'Todos los derechos reservados. Hecho con <i class="fa-solid fa-heart footer-heart"></i> por mi mismo.',
 
     // Menu
     menuInicio: "Inicio",
@@ -415,7 +415,7 @@ const translations = {
     formBoton: "Send message",
 
     // Footer
-    footerCopy: "All rights reserved. Made with ♥️ by myself.",
+    footerCopy: 'All rights reserved. Made with <i class="fa-solid fa-heart footer-heart"></i> by myself.',
 
     // Menu
     menuInicio: "Home",
