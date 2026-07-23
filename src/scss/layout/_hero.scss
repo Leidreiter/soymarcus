@@ -225,8 +225,8 @@
   }
 
   &:hover .reveal-target {
-    -webkit-mask-image: radial-gradient(circle 20px at var(--mx, 50%) var(--my, 50%), black 60%, transparent 100%);
-    mask-image: radial-gradient(circle 20px at var(--mx, 50%) var(--my, 50%), black 60%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle 30px at var(--mx, 50%) var(--my, 50%), black 60%, transparent 100%);
+    mask-image: radial-gradient(circle 30px at var(--mx, 50%) var(--my, 50%), black 60%, transparent 100%);
   }
 }
 

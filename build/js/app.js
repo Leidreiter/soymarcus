@@ -6,7 +6,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  initCursorReveal();
 });
+
+function initCursorReveal() {
+  const container = document.querySelector('.cursor-reveal');
+  if (!container) return;
+  const target = container.querySelector('.reveal-target');
+  if (!target) return;
+
+  container.addEventListener('mousemove', function (e) {
+    const rect = container.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    target.style.setProperty('--mx', x + 'px');
+    target.style.setProperty('--my', y + 'px');
+  });
+}
 
 /* Menu hamburguesa (optimizado solo para escritorio) */
 document.addEventListener('DOMContentLoaded', () => {
