@@ -1,5 +1,3 @@
-document.addEventListener('DOMContentLoaded', initDarkMode);
-
 /* dark-mode.js
  * Responsabilidad única: gestión del tema (dark / light)
  * Reglas:

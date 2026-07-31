@@ -208,15 +208,6 @@ const translations = {
     menuTools: "Mis Apps",
     menuLinks: "Mis Links",
 
-    // Popup
-    popupColaboraciones: "Para colaboraciones, envíame un correo a:",
-    popupProyectos: "Links que me piden 🔗",
-    popupLinks: "Links que me piden 🔗",
-    popupLinkOG: "Open Graph ➞",
-    popupLinkOGDesc: "Título, Descripción e Imagen personalizados",
-    popupGracias: "Gracias por pasar por aquí 🫂",
-    popupSeguir: "No olvides seguirme en mis otras redes",
-
     // Accesibilidad
     srDarkMode: "Cambiar entre modo claro y oscuro",
     srIdioma: "Cambiar idioma entre español e inglés"
@@ -424,15 +415,6 @@ const translations = {
     menuContacto: "Contact",
     menuTools: "My Apps",
     menuLinks: "My Links",
-
-    // Popup
-    popupColaboraciones: "For collaborations, send me an email to:",
-    popupProyectos: "Links I'm asked for 🔗",
-    popupLinks: "Links I'm asked for 🔗",
-    popupLinkOG: "Open Graph ➞",
-    popupLinkOGDesc: "Custom Title, Description and Image",
-    popupGracias: "Thanks for stopping by 🫂",
-    popupSeguir: "Don't forget to follow me on my other networks",
 
     // Accessibility
     srDarkMode: "Switch between light and dark mode",
@@ -677,36 +659,6 @@ function applyTranslations() {
   if (menuItems[3]) menuItems[3].textContent = t.menuContacto;
   if (menuItems[4]) menuItems[4].textContent = t.menuTools;
   if (menuItems[5]) menuItems[5].textContent = t.menuLinks;
-
-  // Popup
-  const popupHeaderInfo = document.querySelector('.popup-header__info');
-  if (popupHeaderInfo) {
-    popupHeaderInfo.innerHTML = `${t.popupColaboraciones}<br>
-        <a href="mailto:marcus.contenido@gmail.com">📧 marcus.contenido@gmail.com</a>`;
-  }
-
-  // Popup - Títulos (hay dos h2 con la misma clase, los seleccionamos por contexto)
-  const popupTitulos = document.querySelectorAll('.popup-principal__titulo');
-  if (popupTitulos[0]) popupTitulos[0].textContent = t.popupProyectos;
-  if (popupTitulos[1]) popupTitulos[1].textContent = t.popupLinks;
-
-  // Popup - Link de Open Graph
-  const popupRedInfo = document.querySelector('.popup-red__info');
-  if (popupRedInfo) {
-    const h3 = popupRedInfo.querySelector('h3');
-    const h4 = popupRedInfo.querySelector('h4');
-    if (h3) h3.textContent = t.popupLinkOG;
-    if (h4) h4.textContent = t.popupLinkOGDesc;
-  }
-
-  // Popup - Footer
-  const popupFooterInfo = document.querySelector('.popup-footer__info');
-  if (popupFooterInfo) {
-    const h2 = popupFooterInfo.querySelector('h2');
-    const h3 = popupFooterInfo.querySelector('h3 i');
-    if (h2) h2.textContent = t.popupGracias;
-    if (h3) h3.textContent = t.popupSeguir;
-  }
 
   // Accesibilidad
   const srDarkMode = document.querySelector('.switch-dark .sr-only');
