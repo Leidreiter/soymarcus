@@ -14,12 +14,12 @@
   margin-top: 1rem;
 
   @include m.tablet {
-    height: 38rem;
+    height: 42rem;
     margin-top: 0px;
   }
 
   @include m.xl {
-    height: 46rem;
+    height: 48rem;
     margin-top: 0px;
   }
 
@@ -252,6 +252,12 @@
   justify-content: center;
   color: v.$blanco;
   pointer-events: auto;
+
+    @include m.tablet {
+      font-size: 2rem;
+      width: 4rem;
+      height: 4rem;
+  }
 }
 
 /* alternar lados */
