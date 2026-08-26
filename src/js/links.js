@@ -86,6 +86,70 @@
     });
   });
 
+  // ===== VIDEO CAROUSEL =====
+  const carousel = document.querySelector('.video-carousel');
+  if (carousel) {
+    const track = carousel.querySelector('.video-carousel-track');
+    const slides = carousel.querySelectorAll('.video-carousel-slide');
+    const dots = carousel.querySelectorAll('.carousel-dot');
+    const prevBtn = carousel.querySelector('.carousel-btn-prev');
+    const nextBtn = carousel.querySelector('.carousel-btn-next');
+    let currentIndex = 0;
+
+    function goToSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+
+      // Pause all videos
+      slides.forEach(slide => {
+        const iframe = slide.querySelector('iframe');
+        if (iframe) {
+          const src = iframe.src;
+          iframe.src = '';
+          iframe.src = src;
+        }
+      });
+
+      currentIndex = index;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+    nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => goToSlide(i));
+    });
+
+    // Touch/swipe support
+    let startX = 0;
+    let isDragging = false;
+
+    carousel.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+    });
+
+    carousel.addEventListener('touchend', (e) => {
+      if (!isDragging) return;
+      const endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+          goToSlide(currentIndex + 1);
+        } else {
+          goToSlide(currentIndex - 1);
+        }
+      }
+      isDragging = false;
+    });
+  }
+
   // ===== BACK TO TOP =====
   const backToTop = document.getElementById('back-to-top');
   if (backToTop) {
